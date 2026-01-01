@@ -157,6 +157,12 @@ a:hover {
   color: var(--accent-color) !important;
 }
 
+.navbar-brand img {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+}
+
 .nav-link {
   font-weight: 500;
   color: var(--text-dark) !important;
