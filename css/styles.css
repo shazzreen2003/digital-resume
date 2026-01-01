@@ -1,0 +1,1347 @@
+/* ============================================
+   RESUME WEBSITE - CUSTOM STYLES
+   Author: Shazzreen Elyana
+   Description: Custom styles for multi-page resume website
+   ============================================ */
+
+/* ============================================
+   1. CSS VARIABLES FOR THEMING
+   ============================================ */
+:root {
+  /* Color Scheme Option 1: Minimalist (Charcoal + Coral) - DEFAULT */
+  --primary-color: #2d3436;
+  --secondary-color: #636e72;
+  --accent-color: #ff7675;
+  --accent-hover: #ff6b6b;
+
+  /* Color Scheme Option 2: Creative (Deep Purple + Gold) - Uncomment to use */
+  /* --primary-color: #6c5ce7;
+  --secondary-color: #a29bfe;
+  --accent-color: #fdcb6e;
+  --accent-hover: #feca57; */
+
+  /* Color Scheme Option 3: Modern (Dark Navy + Teal) - Uncomment to use */
+  /* --primary-color: #0a3d62;
+  --secondary-color: #3c6382;
+  --accent-color: #38ada9;
+  --accent-hover: #079992; */
+
+  /* Neutral Colors */
+  --white: #ffffff;
+  --light-gray: #f8f9fa;
+  --gray: #dfe6e9;
+  --dark-gray: #b2bec3;
+  --text-dark: #2d3436;
+  --text-light: #636e72;
+
+  /* Typography */
+  --font-primary: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-heading: 'Poppins', 'Inter', sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
+  --spacing-xl: 5rem;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+/* ============================================
+   2. RESET AND BASE STYLES
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-color: var(--white);
+}
+
+/* ============================================
+   3. TYPOGRAPHY
+   ============================================ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-sm);
+  color: var(--primary-color);
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-md);
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-light);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+/* ============================================
+   4. NAVIGATION STYLES
+   ============================================ */
+.navbar {
+  padding: 1rem 0;
+  background-color: var(--white);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.navbar-brand {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color) !important;
+  transition: color var(--transition-fast);
+}
+
+.navbar-brand:hover {
+  color: var(--accent-color) !important;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: var(--text-dark) !important;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem !important;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--accent-color) !important;
+  background-color: rgba(255, 118, 117, 0.1);
+}
+
+.nav-link.active {
+  color: var(--accent-color) !important;
+  font-weight: 600;
+}
+
+.navbar-toggler {
+  border: 2px solid var(--accent-color);
+  padding: 0.5rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 118, 117, 0.25);
+}
+
+/* ============================================
+   5. HERO SECTIONS
+   ============================================ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: var(--white);
+  padding: var(--spacing-xl) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Optional: Background pattern overlay */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.hero h1 {
+  color: var(--white);
+  font-size: 3.5rem;
+  margin-bottom: var(--spacing-sm);
+  animation: fadeInUp 0.8s ease;
+}
+
+.hero .lead {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-md);
+  color: rgba(255, 255, 255, 0.9);
+  animation: fadeInUp 1s ease;
+}
+
+.hero .btn {
+  margin: 0.5rem;
+  animation: fadeInUp 1.2s ease;
+}
+
+/* Page Hero (for About, Portfolio, Contact pages) */
+.page-hero {
+  padding: var(--spacing-lg) 0;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: var(--white);
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.page-hero h1 {
+  color: var(--white);
+  margin-bottom: 0;
+}
+
+/* ============================================
+   6. CUSTOM COMPONENT OVERRIDES
+   ============================================ */
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--white);
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline-primary {
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--accent-color);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+  overflow: hidden;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.card-title {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.card-text {
+  color: var(--text-light);
+}
+
+/* Badges */
+.badge {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.badge-primary {
+  background-color: var(--accent-color);
+}
+
+/* Stats Section */
+.stats-section {
+  background-color: var(--light-gray);
+  padding: var(--spacing-lg) 0;
+}
+
+.stat-item {
+  text-align: center;
+  padding: var(--spacing-md);
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  display: block;
+  margin-bottom: var(--spacing-xs);
+}
+
+.stat-label {
+  color: var(--text-light);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Skills Section */
+.skill-item {
+  margin-bottom: var(--spacing-md);
+}
+
+.skill-name {
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-xs);
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress {
+  height: 10px;
+  border-radius: var(--radius-sm);
+  background-color: var(--gray);
+}
+
+.progress-bar {
+  background-color: var(--accent-color);
+  border-radius: var(--radius-sm);
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding: var(--spacing-md) 0;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 3rem;
+  padding-bottom: var(--spacing-md);
+  border-left: 2px solid var(--gray);
+}
+
+.timeline-item:last-child {
+  border-left: 2px solid transparent;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -9px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  border: 3px solid var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.timeline-date {
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-xs);
+}
+
+.timeline-title {
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+.timeline-description {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+/* Form Styles */
+.form-control,
+.form-select {
+  border: 2px solid var(--gray);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  transition: all var(--transition-fast);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 0.2rem rgba(255, 118, 117, 0.25);
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+.invalid-feedback {
+  display: block;
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: var(--spacing-xs);
+}
+
+.valid-feedback {
+  display: block;
+  color: #28a745;
+  font-size: 0.875rem;
+  margin-top: var(--spacing-xs);
+}
+
+/* Contact Info */
+.contact-info {
+  background-color: var(--light-gray);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.contact-info-item i {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  margin-right: var(--spacing-sm);
+  width: 30px;
+}
+
+/* Contact page specific fixes */
+.contact-info-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Ensure proper spacing for alert boxes */
+.alert.mt-4 {
+  margin-top: var(--spacing-md) !important;
+  margin-bottom: var(--spacing-lg) !important;
+  clear: both;
+}
+
+/* ============================================
+   7. ANIMATIONS AND TRANSITIONS
+   ============================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease;
+}
+
+/* Scroll animations (optional - add class via JS) */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   8. RESPONSIVE UTILITIES
+   ============================================ */
+
+/* Section Padding */
+section {
+  padding: var(--spacing-lg) 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure proper spacing between sections */
+section + section {
+  margin-top: 0;
+}
+
+/* Add breathing room to alerts */
+.alert {
+  margin-bottom: var(--spacing-md);
+}
+
+/* Ensure cards don't overlap */
+.card {
+  margin-bottom: var(--spacing-md);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--accent-color);
+  margin: var(--spacing-sm) auto 0;
+  border-radius: var(--radius-sm);
+}
+
+/* Container adjustments */
+.container {
+  max-width: 1200px;
+}
+
+/* Spacing utilities */
+.mb-section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.mt-section {
+  margin-top: var(--spacing-lg);
+}
+
+/* ============================================
+   9. FOOTER STYLES
+   ============================================ */
+.footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: var(--spacing-lg) 0 var(--spacing-md);
+}
+
+.footer h5 {
+  color: var(--white);
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.2rem;
+}
+
+.footer p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer a {
+  color: rgba(255, 255, 255, 0.8);
+  transition: color var(--transition-fast);
+}
+
+.footer a:hover {
+  color: var(--accent-color);
+}
+
+.social-links {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: all var(--transition-base);
+}
+
+.social-link:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+.social-link i {
+  font-size: 1.2rem;
+  color: var(--white);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: var(--spacing-md);
+  margin-top: var(--spacing-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* ============================================
+   10. RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* Large tablets and below */
+@media (max-width: 992px) {
+  /* Adjust navigation for tablets */
+  .navbar-collapse {
+    background-color: var(--white);
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .nav-link {
+    padding: 0.75rem 1rem !important;
+    margin: 0.25rem 0;
+    border-radius: var(--radius-sm);
+  }
+
+  /* Adjust hero for tablets */
+  .hero {
+    min-height: 70vh;
+    padding: var(--spacing-lg) 0;
+  }
+
+  /* Card adjustments */
+  .card-img-top {
+    height: 220px;
+  }
+}
+
+/* Tablet and below */
+@media (max-width: 768px) {
+  /* Typography adjustments */
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero .lead {
+    font-size: 1.1rem;
+  }
+
+  .page-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  /* Spacing adjustments */
+  section {
+    padding: var(--spacing-md) 0;
+  }
+
+  /* Stats adjustments */
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+  }
+
+  /* Navigation adjustments */
+  .nav-link {
+    margin: 0.25rem 0;
+    text-align: center;
+  }
+
+  /* Card adjustments */
+  .card-img-top {
+    height: 200px;
+  }
+
+  .card-body {
+    padding: 1.25rem;
+  }
+
+  /* Timeline adjustments */
+  .timeline-item {
+    padding-left: 2rem;
+  }
+
+  /* Form adjustments for better touch targets */
+  .form-control,
+  .form-select {
+    padding: 0.875rem 1rem;
+    font-size: 1rem;
+  }
+
+  /* Button adjustments - larger touch targets */
+  .btn {
+    padding: 0.75rem 1.75rem;
+    font-size: 1rem;
+    min-height: 48px; /* Minimum touch target size */
+  }
+
+  .btn-lg {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+
+  /* Footer adjustments */
+  .footer {
+    text-align: center;
+  }
+
+  .footer .social-links {
+    justify-content: center;
+    margin-top: var(--spacing-md);
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  /* Reset base font size for better readability */
+  html {
+    font-size: 15px;
+  }
+
+  /* Typography for mobile */
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  /* Hero section mobile */
+  .hero {
+    min-height: auto;
+    padding: var(--spacing-lg) 0;
+  }
+
+  .hero h1 {
+    font-size: 1.875rem;
+    line-height: 1.2;
+  }
+
+  .hero .lead {
+    font-size: 1rem;
+  }
+
+  .page-hero {
+    padding: var(--spacing-md) 0;
+  }
+
+  .page-hero h1 {
+    font-size: 2rem;
+  }
+
+  /* Buttons - full width on mobile for better UX */
+  .btn {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 0.75rem;
+    min-height: 48px; /* Touch target accessibility */
+  }
+
+  .btn-lg {
+    padding: 1rem 1.5rem;
+    font-size: 1.05rem;
+  }
+
+  /* Exception: inline buttons */
+  .btn-sm {
+    width: auto;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0;
+  }
+
+  /* Stats mobile layout */
+  .stat-number {
+    font-size: 1.875rem;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+  }
+
+  .stat-item {
+    padding: var(--spacing-sm);
+  }
+
+  /* Cards mobile optimization */
+  .card {
+    margin-bottom: 1.5rem;
+  }
+
+  .card-img-top {
+    height: 180px;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .card-title {
+    font-size: 1.15rem;
+  }
+
+  .card-text {
+    font-size: 0.95rem;
+  }
+
+  /* Navigation mobile */
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+
+  .navbar-toggler {
+    padding: 0.5rem 0.75rem;
+    font-size: 1.25rem;
+  }
+
+  /* Section spacing mobile */
+  section {
+    padding: var(--spacing-sm) 0;
+  }
+
+  .section-title {
+    margin-bottom: var(--spacing-md);
+  }
+
+  /* Timeline mobile */
+  .timeline-item {
+    padding-left: 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .timeline-dot {
+    width: 12px;
+    height: 12px;
+    left: -7px;
+  }
+
+  /* Skills mobile */
+  .skill-name {
+    font-size: 0.9rem;
+  }
+
+  .progress {
+    height: 8px;
+  }
+
+  /* Form mobile optimization */
+  .form-control,
+  .form-select,
+  textarea.form-control {
+    padding: 1rem;
+    font-size: 16px; /* Prevents zoom on iOS */
+    border-radius: var(--radius-md);
+    min-height: 48px;
+  }
+
+  textarea.form-control {
+    min-height: 120px;
+  }
+
+  .form-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  /* Social links mobile */
+  .social-links {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .social-link {
+    width: 44px;
+    height: 44px;
+    margin: 0.25rem;
+  }
+
+  /* Contact info mobile */
+  .contact-info {
+    padding: var(--spacing-sm);
+  }
+
+  .contact-info-item {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .contact-info-item i {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Footer mobile */
+  .footer {
+    padding: var(--spacing-md) 0 var(--spacing-sm);
+  }
+
+  .footer h5 {
+    font-size: 1.1rem;
+    margin-top: var(--spacing-sm);
+  }
+
+  .footer p,
+  .footer a {
+    font-size: 0.9rem;
+  }
+
+  /* Spacing utilities mobile */
+  .mb-section {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .mt-section {
+    margin-top: var(--spacing-md);
+  }
+}
+
+/* Very small mobile devices */
+@media (max-width: 375px) {
+  html {
+    font-size: 14px;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .page-hero h1 {
+    font-size: 1.875rem;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  .card-img-top {
+    height: 160px;
+  }
+}
+
+/* Landscape mobile optimization */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    min-height: auto;
+    padding: var(--spacing-md) 0;
+  }
+
+  .page-hero {
+    padding: var(--spacing-sm) 0;
+  }
+
+  section {
+    padding: var(--spacing-sm) 0;
+  }
+}
+
+/* ============================================
+   11. MOBILE-SPECIFIC ENHANCEMENTS
+   ============================================ */
+
+/* Prevent text size adjustment on orientation change */
+html {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Improve touch scrolling on iOS */
+body {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Remove tap highlight on mobile */
+a,
+button,
+.btn,
+.card,
+.nav-link {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Add active state for better touch feedback */
+.btn:active,
+.card:active,
+.nav-link:active {
+  opacity: 0.8;
+  transform: scale(0.98);
+}
+
+/* Improve card touch interaction */
+.card {
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Better mobile navigation */
+@media (max-width: 992px) {
+  .navbar-nav {
+    width: 100%;
+  }
+
+  .nav-link {
+    border: 1px solid transparent;
+  }
+
+  .nav-link:hover,
+  .nav-link:active {
+    background-color: var(--light-gray);
+    border-color: var(--accent-color);
+  }
+
+  .nav-link.active {
+    background-color: rgba(255, 118, 117, 0.1);
+    border-color: var(--accent-color);
+  }
+}
+
+/* Improve form usability on mobile */
+@media (max-width: 576px) {
+  /* Prevent zoom on input focus in iOS */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+
+  /* Better spacing for form elements */
+  .form-control,
+  .form-select {
+    margin-bottom: 1rem;
+  }
+
+  /* Full-width submit buttons */
+  button[type="submit"],
+  input[type="submit"] {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+
+/* Improve image loading on mobile */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-img-top {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Better spacing for mobile grids */
+@media (max-width: 576px) {
+  .row {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+
+  .row > * {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  /* Container padding adjustment */
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Sticky navigation enhancement for mobile */
+.navbar.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+/* Safe area for notched devices (iPhone X+) */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+  }
+
+  .navbar,
+  .footer {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+}
+
+/* Loading optimization for images */
+.card-img-top,
+img {
+  loading: lazy;
+}
+
+/* ============================================
+   12. OVERLAP PREVENTION
+   ============================================ */
+
+/* Prevent overlapping sections */
+section {
+  clear: both;
+  overflow: hidden;
+}
+
+/* Ensure rows don't overlap */
+.row {
+  margin-bottom: var(--spacing-md);
+}
+
+.row:last-child {
+  margin-bottom: 0;
+}
+
+/* Prevent column content overflow */
+.col,
+[class*="col-"] {
+  position: relative;
+}
+
+/* Add consistent bottom margin to common elements */
+.card,
+.timeline,
+.contact-info,
+.skill-item:last-child,
+form {
+  margin-bottom: var(--spacing-md);
+}
+
+/* Remove bottom margin from last elements in containers */
+.container > *:last-child,
+.row > *:last-child > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Ensure proper spacing around alert boxes */
+.alert {
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  clear: both;
+  position: relative;
+  z-index: 10;
+}
+
+/* Add buffer space between major sections */
+section.bg-light-gray {
+  padding-top: calc(var(--spacing-lg) + 1rem);
+  padding-bottom: calc(var(--spacing-lg) + 1rem);
+}
+
+/* Mobile-specific overlap prevention */
+@media (max-width: 768px) {
+  /* Add more spacing between sections on mobile */
+  section {
+    padding: var(--spacing-md) 0;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  /* Ensure alert boxes have space on mobile */
+  .alert {
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+  }
+
+  /* Add spacing after rows on mobile */
+  .row {
+    margin-bottom: var(--spacing-md);
+  }
+
+  /* Ensure card grids don't overlap */
+  .col-md-6,
+  .col-lg-4,
+  .col-lg-3 {
+    margin-bottom: var(--spacing-sm);
+  }
+}
+
+@media (max-width: 576px) {
+  /* Extra spacing for very small screens */
+  section {
+    padding: calc(var(--spacing-sm) + 0.5rem) 0;
+  }
+
+  section.bg-light-gray {
+    padding-top: calc(var(--spacing-md) + 0.5rem);
+    padding-bottom: calc(var(--spacing-md) + 0.5rem);
+  }
+
+  /* Ensure no overlap in timeline */
+  .timeline-item {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  /* Add space after form elements */
+  .card,
+  form,
+  .alert {
+    margin-bottom: var(--spacing-md);
+  }
+}
+
+/* ============================================
+   13. UTILITY CLASSES
+   ============================================ */
+.text-accent {
+  color: var(--accent-color) !important;
+}
+
+.bg-light-gray {
+  background-color: var(--light-gray);
+}
+
+.rounded-custom {
+  border-radius: var(--radius-lg);
+}
+
+.shadow-custom {
+  box-shadow: var(--shadow-md);
+}
+
+/* Spacing utility classes */
+.mb-safe {
+  margin-bottom: var(--spacing-md) !important;
+}
+
+.mt-safe {
+  margin-top: var(--spacing-md) !important;
+}
+
+.pb-safe {
+  padding-bottom: var(--spacing-md) !important;
+}
+
+.pt-safe {
+  padding-top: var(--spacing-md) !important;
+}
+
+/* Mobile-specific utility classes */
+@media (max-width: 576px) {
+  .mobile-full-width {
+    width: 100% !important;
+  }
+
+  .mobile-text-center {
+    text-align: center !important;
+  }
+
+  .mobile-mb-3 {
+    margin-bottom: 1rem !important;
+  }
+
+  .mobile-hide {
+    display: none !important;
+  }
+}
