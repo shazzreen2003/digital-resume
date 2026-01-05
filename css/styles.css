@@ -9,10 +9,10 @@
    ============================================ */
 :root {
   /* Color Scheme Option 1: Minimalist (Charcoal + Coral) - DEFAULT */
-  --primary-color: #2d3436;
-  --secondary-color: #636e72;
-  --accent-color: #ff7675;
-  --accent-hover: #ff6b6b;
+  --primary-color: #751113;
+  --secondary-color: #000000;
+  --accent-color: #751113;
+  --accent-hover: #000000;
 
   /* Color Scheme Option 2: Creative (Deep Purple + Gold) - Uncomment to use */
   /* --primary-color: #6c5ce7;
@@ -258,6 +258,10 @@ a:hover {
   margin-bottom: 0;
 }
 
+.page-hero .lead {
+  color: #fbf3c1;
+}
+
 /* ============================================
    6. CUSTOM COMPONENT OVERRIDES
    ============================================ */
@@ -305,17 +309,25 @@ a:hover {
   transition: all var(--transition-base);
   overflow: hidden;
   height: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-lg);
+  z-index: 2;
 }
 
 .card-img-top {
   height: 250px;
   object-fit: cover;
   transition: transform var(--transition-slow);
+}
+
+/* Full-width project cards (col-12) have taller images */
+.col-12 .card-img-top {
+  height: 500px;
 }
 
 .card:hover .card-img-top {
@@ -507,6 +519,10 @@ a:hover {
   margin-top: var(--spacing-md) !important;
   margin-bottom: var(--spacing-lg) !important;
   clear: both;
+  position: relative;
+  z-index: 1000;
+  display: block !important;
+  visibility: visible !important;
 }
 
 /* ============================================
@@ -1237,7 +1253,7 @@ form {
   margin-bottom: var(--spacing-md);
   clear: both;
   position: relative;
-  z-index: 10;
+  z-index: 100;
 }
 
 /* Add buffer space between major sections */
