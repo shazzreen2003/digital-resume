@@ -70,9 +70,39 @@
   <section>
     <div class="container">
       <div class="row">
-        <!-- Main Image -->
+        <!-- Carousel -->
         <div class="col-lg-4 mb-4">
-          <img src="https://picsum.photos/400/300?random=33" alt="Illustration Work" class="img-fluid rounded-custom shadow-custom">
+          <div id="illustrationCarousel" class="carousel slide shadow-custom rounded-custom" data-bs-ride="carousel">
+            <!-- Indicators -->
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#illustrationCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#illustrationCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#illustrationCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <!-- Slides -->
+            <div class="carousel-inner rounded-custom">
+              <div class="carousel-item active">
+                <img src="https://picsum.photos/400/300?random=33" class="d-block w-100" alt="Illustration Work 1">
+              </div>
+              <div class="carousel-item">
+                <img src="https://picsum.photos/400/300?random=33" class="d-block w-100" alt="Illustration Work 2">
+              </div>
+              <div class="carousel-item">
+                <img src="https://picsum.photos/400/300?random=33" class="d-block w-100" alt="Illustration Work 3">
+              </div>
+            </div>
+
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#illustrationCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#illustrationCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         </div>
 
         <!-- Project Info -->
@@ -82,12 +112,12 @@
               <h4 class="card-title mb-3">Project Details</h4>
 
               <div class="mb-3">
-                <h6 class="text-accent">Category</h6>
+                <h6 class="text-accent">Project Context</h6>
                 <p>Digital Illustration</p>
               </div>
 
               <div class="mb-3">
-                <h6 class="text-accent">Services</h6>
+                <h6 class="text-accent">Design Focus</h6>
                 <ul class="list-unstyled">
                   <li><i class="bi bi-check-circle-fill text-accent me-2"></i>Digital Illustration</li>
                   <li><i class="bi bi-check-circle-fill text-accent me-2"></i>Character Design</li>
