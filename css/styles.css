@@ -1380,23 +1380,80 @@ section.bg-light-gray {
 }
 
 /* ============================================
-   13. CAROUSEL STYLES
+   13. BREADCRUMBS
+   ============================================ */
+.breadcrumb {
+  background: transparent;
+  padding: 1rem 0;
+  margin-bottom: 0;
+}
+
+.breadcrumb-item {
+  font-size: 0.9rem;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "›";
+  color: var(--text-light);
+  padding: 0 0.5rem;
+}
+
+.breadcrumb-item a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.breadcrumb-item a:hover {
+  color: var(--accent-color);
+}
+
+.breadcrumb-item.active {
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+/* ============================================
+   14. CAROUSEL STYLES
    ============================================ */
 
-/* Carousel Controls */
+/* Carousel Controls - Minimalist Arrows */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: #751113;
-  border-radius: 50%;
-  padding: 20px;
-  width: 3rem;
-  height: 3rem;
+  background-image: none !important;
+  background: none !important;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+}
+
+.carousel-control-prev-icon::after,
+.carousel-control-next-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  border-left: 3px solid #751113;
+  border-bottom: 3px solid #751113;
+  background: transparent;
+}
+
+.carousel-control-prev-icon::after {
+  transform: translate(-40%, -50%) rotate(45deg);
+}
+
+.carousel-control-next-icon::after {
+  transform: translate(-60%, -50%) rotate(-135deg);
 }
 
 .carousel-control-prev,
 .carousel-control-next {
-  opacity: 0.8;
+  opacity: 0.7;
   transition: opacity var(--transition-base);
+  width: auto;
+  padding: 0 1rem;
 }
 
 .carousel-control-prev:hover,
@@ -1404,29 +1461,76 @@ section.bg-light-gray {
   opacity: 1;
 }
 
-/* Carousel Indicators */
+/* Carousel Indicators - Slim Lines Inside Image */
 .carousel-indicators {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0 !important;
+  position: absolute !important;
+  bottom: 200px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  display: flex !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  z-index: 15 !important;
 }
 
 .carousel-indicators [data-bs-target] {
-  background-color: #751113;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: none;
-  opacity: 0.5;
-  transition: all var(--transition-base);
+  background-color: #ffffff !important;
+  width: 35px !important;
+  height: 3px !important;
+  border-radius: 2px !important;
+  border: none !important;
+  opacity: 0.7 !important;
+  transition: all var(--transition-base) !important;
+  margin: 0 !important;
+  text-indent: -999px !important;
+  padding: 0 !important;
 }
 
 .carousel-indicators .active {
-  opacity: 1;
-  transform: scale(1.2);
+  opacity: 1 !important;
+  width: 50px !important;
+  background-color: #ffffff !important;
+}
+
+/* Responsive indicators positioning - adjust based on card body height */
+@media (max-width: 1200px) {
+  .carousel-indicators {
+    bottom: 190px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .carousel-indicators {
+    bottom: 185px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-indicators {
+    bottom: 180px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-indicators {
+    bottom: 175px !important;
+  }
+
+  .carousel-indicators [data-bs-target] {
+    width: 25px !important;
+    height: 2px !important;
+  }
+
+  .carousel-indicators .active {
+    width: 35px !important;
+  }
 }
 
 /* Carousel Section Spacing */
 section:has(.carousel) {
   padding-top: 0rem;
+  padding-bottom: 1rem;
 }
 
 /* Carousel Item Spacing */
@@ -1439,30 +1543,124 @@ section:has(.carousel) {
 }
 
 /* Carousel Card Height */
+.carousel .card {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
 .carousel .card-img-top {
-  height: 500px;
+  height: 350px;
   object-fit: cover;
+  width: 100%;
+  position: relative;
 }
 
 .carousel .card-body {
   padding: 1.5rem;
 }
 
+/* Position indicators at bottom of image */
+.carousel-item .card {
+  position: relative;
+}
+
+/* Carousel Responsive */
+@media (max-width: 1200px) {
+  .carousel .card {
+    max-width: 750px;
+  }
+
+  .carousel .card-img-top {
+    height: 320px;
+  }
+
+  .carousel .card-body {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .carousel .card {
+    max-width: 650px;
+  }
+
+  .carousel .card-img-top {
+    height: 280px;
+  }
+
+  .carousel .card-body {
+    padding: 1.25rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .carousel .card {
+    max-width: 100%;
+    margin: 0 0.5rem;
+  }
+
+  .carousel .card-img-top {
+    height: 250px;
+  }
+
+  .carousel .card-body {
+    padding: 1rem;
+  }
+
   .carousel-control-prev-icon,
   .carousel-control-next-icon {
-    width: 2.5rem;
-    height: 2.5rem;
-    padding: 15px;
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .carousel-control-prev-icon::after,
+  .carousel-control-next-icon::after {
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid #751113;
+    border-bottom: 2px solid #751113;
   }
 
   .carousel-item {
-    padding: 1rem 0;
+    padding: 0.5rem 0;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    padding: 0 0.25rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel .card {
+    margin: 0;
+  }
+
+  .carousel .card-img-top {
+    height: 220px;
+  }
+
+  .carousel .card-body {
+    padding: 1rem;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .carousel-control-prev-icon::after,
+  .carousel-control-next-icon::after {
+    width: 8px;
+    height: 8px;
   }
 }
 
 /* ============================================
-   14. UTILITY CLASSES
+   15. UTILITY CLASSES
    ============================================ */
 .text-accent {
   color: var(--accent-color) !important;
