@@ -1669,36 +1669,28 @@ section:has(.carousel) {
    14B. ARTWORK CAROUSEL STYLES
    ============================================ */
 
-/* Artwork carousel - fixed height images */
+/* Artwork carousel - natural image size */
 .artwork-carousel .carousel-inner img {
   width: 100%;
-  height: 500px;
-  object-fit: cover;
+  height: auto;
   display: block;
 }
 
-/* Position indicators at bottom */
-.artwork-carousel .carousel-indicators {
+/* Position indicators at bottom of image - NOT in the middle */
+.artwork-carousel .carousel-indicators,
+.artwork-carousel.carousel .carousel-indicators {
   bottom: 15px !important;
+  top: auto !important;
   margin-bottom: 0 !important;
-}
-
-/* Responsive image heights */
-@media (max-width: 992px) {
-  .artwork-carousel .carousel-inner img {
-    height: 420px;
-  }
-}
-
-@media (max-width: 768px) {
-  .artwork-carousel .carousel-inner img {
-    height: 350px;
-  }
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
 }
 
 @media (max-width: 576px) {
-  .artwork-carousel .carousel-inner img {
-    height: 250px;
+  .artwork-carousel .carousel-indicators,
+  .artwork-carousel.carousel .carousel-indicators {
+    bottom: 10px !important;
   }
 }
 
