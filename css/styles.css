@@ -378,6 +378,12 @@ a:hover {
   background-color: var(--accent-color);
 }
 
+/* Tools Used badges - all grey */
+.card-body .badge {
+  background-color: #6c757d !important;
+  color: white !important;
+}
+
 /* Stats Section */
 .stats-section {
   background-color: var(--light-gray);
@@ -1656,6 +1662,43 @@ section:has(.carousel) {
   .carousel-control-next-icon::after {
     width: 8px;
     height: 8px;
+  }
+}
+
+/* ============================================
+   14B. ARTWORK CAROUSEL STYLES
+   ============================================ */
+
+/* Artwork carousel - fixed height images */
+.artwork-carousel .carousel-inner img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Position indicators at bottom */
+.artwork-carousel .carousel-indicators {
+  bottom: 15px !important;
+  margin-bottom: 0 !important;
+}
+
+/* Responsive image heights */
+@media (max-width: 992px) {
+  .artwork-carousel .carousel-inner img {
+    height: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .artwork-carousel .carousel-inner img {
+    height: 350px;
+  }
+}
+
+@media (max-width: 576px) {
+  .artwork-carousel .carousel-inner img {
+    height: 250px;
   }
 }
 
