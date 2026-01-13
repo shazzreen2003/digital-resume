@@ -243,33 +243,33 @@ function clearFieldError(field) {
  */
 function handleFormSubmission(form) {
   // Get form data
-  const formData = {
-    name: form.name.value.trim(),
-    email: form.email.value.trim(),
-    subject: form.subject.value.trim(),
-    message: form.message.value.trim()
-  };
+  const formData = new FormData(form);
 
-  // Log form data (for development/testing)
-  console.log('Form submitted successfully:', formData);
-
-  // Show success message
-  showSuccessMessage(form);
-
-  // Reset form
-  form.reset();
-
-  // Clear all validation states
-  const fields = form.querySelectorAll('.form-control');
-  fields.forEach(field => clearFieldError(field));
-
-  // Note: In production, you would send this data to a backend service
-  // Example with Formspree:
-  // fetch('https://formspree.io/f/YOUR_FORM_ID', {
-  //   method: 'POST',
-  //   headers: { 'Content-Type': 'application/json' },
-  //   body: JSON.stringify(formData)
-  // });
+  // Send to Formspree
+  fetch(form.action, {
+    method: 'POST',
+    body: formData,
+    headers: {
+      'Accept': 'application/json'
+    }
+  })
+  .then(response => {
+    if (response.ok) {
+      // Show success message
+      showSuccessMessage(form);
+      // Reset form
+      form.reset();
+      // Clear all validation states
+      const fields = form.querySelectorAll('.form-control');
+      fields.forEach(field => clearFieldError(field));
+    } else {
+      throw new Error('Form submission failed');
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    showErrorMessage(form);
+  });
 }
 
 /**
@@ -296,6 +296,29 @@ function showSuccessMessage(form) {
 
   // Scroll to success message
   alertDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+/**
+ * Display error message if form submission fails
+ */
+function showErrorMessage(form) {
+  // Create error alert
+  const alertDiv = document.createElement('div');
+  alertDiv.className = 'alert alert-danger alert-dismissible fade show mt-3';
+  alertDiv.setAttribute('role', 'alert');
+  alertDiv.innerHTML = `
+    <strong>Error!</strong> Something went wrong. Please try again or contact me directly via email.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  `;
+
+  // Insert alert after form
+  form.insertAdjacentElement('afterend', alertDiv);
+
+  // Auto-remove alert after 5 seconds
+  setTimeout(() => {
+    alertDiv.classList.remove('show');
+    setTimeout(() => alertDiv.remove(), 150);
+  }, 5000);
 }
 
 /* ============================================

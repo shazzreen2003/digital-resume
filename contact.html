@@ -149,7 +149,7 @@
 
           <!-- Download CV -->
           <div class="mt-4">
-            <a href="images\resume digital-02.jpg" class="btn btn-outline-primary" download>
+            <a href="images\resume digital-01.jpg" class="btn btn-outline-primary" download>
               <i class="bi bi-download me-2"></i>Download My Resume
             </a>
           </div>
@@ -165,7 +165,11 @@
             <div class="card-body p-4">
               <h3 class="mb-4">Send Me a Message</h3>
 
-              <form id="contactForm" novalidate>
+              <form id="contactForm" action="https://formspree.io/f/xjggvaor" method="POST" novalidate>
+                <!-- Formspree hidden fields -->
+                <input type="hidden" name="_subject" value="New message from your portfolio website">
+                <input type="text" name="_gotcha" style="display:none">
+
                 <!-- Name Field -->
                 <div class="mb-3">
                   <label for="name" class="form-label">Full Name <span class="text-accent">*</span></label>
