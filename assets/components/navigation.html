@@ -46,8 +46,9 @@
           <a class="nav-link" href="{{PATH}}pages/contact.html" data-nav="contact">Contact</a>
         </li>
       </ul>
-      <button id="theme-toggle" class="btn btn-link nav-link theme-toggle"
-              type="button" aria-label="Toggle dark mode">
+      <button id="theme-toggle" class="theme-toggle"
+              type="button" aria-label="Toggle dark mode"
+              onclick="document.documentElement.setAttribute('data-theme', document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'); localStorage.setItem('theme-preference', document.documentElement.getAttribute('data-theme')); document.getElementById('theme-icon').className = document.documentElement.getAttribute('data-theme') === 'dark' ? 'bi bi-moon-fill' : 'bi bi-sun-fill';">
         <i id="theme-icon" class="bi bi-sun-fill"></i>
       </button>
     </div>
