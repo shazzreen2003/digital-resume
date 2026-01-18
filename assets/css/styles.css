@@ -228,11 +228,13 @@ img {
   background-color: rgba(255, 118, 117, 0.1);
 }
 
+.navbar .nav-link.active,
 .nav-link.active {
   color: var(--accent-color) !important;
-  font-weight: 600;
-  background-color: rgba(117, 17, 19, 0.1);
-  border-bottom: 2px solid var(--accent-color);
+  font-weight: 600 !important;
+  background-color: rgba(117, 17, 19, 0.15) !important;
+  border-bottom: 3px solid var(--accent-color) !important;
+  border-radius: 4px 4px 0 0;
 }
 
 .navbar-toggler {
