@@ -1,6 +1,6 @@
 /**
  * Build System Integration Tests
- * Tests for the complete build process
+ * Tests for the complete build process with i18n support
  */
 
 const fs = require('fs');
@@ -40,12 +40,14 @@ describe('Build System', () => {
       expect(fs.existsSync(CONFIG.componentsDir)).toBe(true);
     });
 
-    test('should have 17 HTML files configured', () => {
-      expect(CONFIG.htmlFiles.length).toBe(17);
+    test('should have languages configured', () => {
+      expect(CONFIG.languages).toBeDefined();
+      expect(CONFIG.languages).toContain('en');
+      expect(CONFIG.languages).toContain('ms');
     });
 
-    test('should include index.html', () => {
-      expect(CONFIG.htmlFiles).toContain('index.html');
+    test('should have 16 HTML files configured', () => {
+      expect(CONFIG.htmlFiles.length).toBe(16);
     });
 
     test('should include all pages files', () => {
@@ -181,7 +183,6 @@ describe('Build System', () => {
 
   describe('build integration', () => {
     // Note: These tests run the actual build, which may take time
-    // Consider skipping in CI environments if needed
 
     test('should complete without throwing errors', () => {
       expect(() => build()).not.toThrow();
@@ -192,41 +193,52 @@ describe('Build System', () => {
       expect(fs.existsSync(CONFIG.distDir)).toBe(true);
     });
 
-    test('should create index.html in dist', () => {
+    test('should create root index.html redirect in dist', () => {
       build();
       expect(fs.existsSync(path.join(CONFIG.distDir, 'index.html'))).toBe(true);
     });
 
-    test('should create pages directory in dist', () => {
+    test('should create language-specific directories', () => {
       build();
-      expect(fs.existsSync(path.join(CONFIG.distDir, 'pages'))).toBe(true);
+      expect(fs.existsSync(path.join(CONFIG.distDir, 'en'))).toBe(true);
+      expect(fs.existsSync(path.join(CONFIG.distDir, 'ms'))).toBe(true);
     });
 
-    test('should copy assets to dist', () => {
+    test('should create pages directory in each language folder', () => {
       build();
-      expect(fs.existsSync(path.join(CONFIG.distDir, 'assets', 'css'))).toBe(true);
-      expect(fs.existsSync(path.join(CONFIG.distDir, 'assets', 'js'))).toBe(true);
+      expect(fs.existsSync(path.join(CONFIG.distDir, 'en', 'pages'))).toBe(true);
+      expect(fs.existsSync(path.join(CONFIG.distDir, 'ms', 'pages'))).toBe(true);
+    });
+
+    test('should copy assets to each language folder', () => {
+      build();
+      expect(fs.existsSync(path.join(CONFIG.distDir, 'en', 'assets', 'css'))).toBe(true);
+      expect(fs.existsSync(path.join(CONFIG.distDir, 'en', 'assets', 'js'))).toBe(true);
+      expect(fs.existsSync(path.join(CONFIG.distDir, 'ms', 'assets', 'css'))).toBe(true);
+      expect(fs.existsSync(path.join(CONFIG.distDir, 'ms', 'assets', 'js'))).toBe(true);
     });
 
     test('should not include components.js in dist', () => {
       build();
-      expect(fs.existsSync(path.join(CONFIG.distDir, 'assets', 'js', 'components.js'))).toBe(false);
+      expect(fs.existsSync(path.join(CONFIG.distDir, 'en', 'assets', 'js', 'components.js'))).toBe(false);
+      expect(fs.existsSync(path.join(CONFIG.distDir, 'ms', 'assets', 'js', 'components.js'))).toBe(false);
     });
 
-    test('should process all 17 HTML files', () => {
+    test('should process all HTML files for each language', () => {
       build();
 
-      CONFIG.htmlFiles.forEach(filePath => {
-        const distPath = path.join(CONFIG.distDir, filePath);
-        expect(fs.existsSync(distPath)).toBe(true);
+      CONFIG.languages.forEach(lang => {
+        CONFIG.htmlFiles.forEach(filePath => {
+          const distPath = path.join(CONFIG.distDir, lang, filePath);
+          expect(fs.existsSync(distPath)).toBe(true);
+        });
       });
     });
 
     test('built HTML files should have navigation injected', () => {
       build();
 
-      // Use about.html instead of index.html (which is a redirect page)
-      const aboutHtml = fs.readFileSync(path.join(CONFIG.distDir, 'pages', 'about.html'), 'utf8');
+      const aboutHtml = fs.readFileSync(path.join(CONFIG.distDir, 'en', 'pages', 'about.html'), 'utf8');
       expect(aboutHtml).not.toContain('<div id="site-navigation"></div>');
       expect(aboutHtml).toContain('<nav');
     });
@@ -234,10 +246,26 @@ describe('Build System', () => {
     test('built HTML files should have footer injected', () => {
       build();
 
-      // Use about.html instead of index.html (which is a redirect page)
-      const aboutHtml = fs.readFileSync(path.join(CONFIG.distDir, 'pages', 'about.html'), 'utf8');
+      const aboutHtml = fs.readFileSync(path.join(CONFIG.distDir, 'en', 'pages', 'about.html'), 'utf8');
       expect(aboutHtml).not.toContain('<div id="site-footer"></div>');
       expect(aboutHtml).toContain('<footer');
+    });
+
+    test('built HTML files should have correct lang attribute', () => {
+      build();
+
+      const enAbout = fs.readFileSync(path.join(CONFIG.distDir, 'en', 'pages', 'about.html'), 'utf8');
+      const msAbout = fs.readFileSync(path.join(CONFIG.distDir, 'ms', 'pages', 'about.html'), 'utf8');
+
+      expect(enAbout).toContain('lang="en"');
+      expect(msAbout).toContain('lang="ms"');
+    });
+
+    test('built HTML files should have language switcher', () => {
+      build();
+
+      const aboutHtml = fs.readFileSync(path.join(CONFIG.distDir, 'en', 'pages', 'about.html'), 'utf8');
+      expect(aboutHtml).toContain('lang-switch');
     });
   });
 });

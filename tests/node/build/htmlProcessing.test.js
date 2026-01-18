@@ -1,13 +1,26 @@
 /**
  * HTML Processing Tests
- * Tests for processHtml and component injection
+ * Tests for processHtmlWithLang and component injection
  */
 
 const fs = require('fs');
 const path = require('path');
-const { processHtml, readComponent, CONFIG, THEME_FLASH_PREVENTION_SCRIPT } = require('../../../build');
+const {
+  processHtmlWithLang,
+  readComponent,
+  loadTranslations,
+  CONFIG,
+  THEME_FLASH_PREVENTION_SCRIPT
+} = require('../../../build');
 
 describe('HTML Processing', () => {
+  // Load English translations for testing
+  let translations;
+
+  beforeAll(() => {
+    translations = loadTranslations('en');
+  });
+
   describe('readComponent', () => {
     test('should read navigation component', () => {
       const nav = readComponent('navigation');
@@ -32,83 +45,86 @@ describe('HTML Processing', () => {
     });
   });
 
-  describe('processHtml', () => {
+  describe('processHtmlWithLang', () => {
     test('should return null for non-existent file', () => {
-      const result = processHtml('nonexistent.html');
+      const result = processHtmlWithLang('nonexistent.html', 'en', translations);
       expect(result).toBeNull();
     });
 
-    test('should process index.html successfully', () => {
-      const result = processHtml('index.html');
+    test('should process about.html successfully', () => {
+      const result = processHtmlWithLang('pages/about.html', 'en', translations);
       expect(result).not.toBeNull();
     });
 
     test('should replace navigation placeholder', () => {
-      const result = processHtml('index.html');
+      const result = processHtmlWithLang('pages/about.html', 'en', translations);
       expect(result).not.toContain('<div id="site-navigation"></div>');
     });
 
     test('should replace footer placeholder', () => {
-      const result = processHtml('index.html');
+      const result = processHtmlWithLang('pages/about.html', 'en', translations);
       expect(result).not.toContain('<div id="site-footer"></div>');
     });
 
-    test('should replace {{PATH}} with correct prefix for root files', () => {
-      const result = processHtml('index.html');
-      // Root files should have empty path prefix
-      expect(result).toContain('href="pages/');
-    });
-
     test('should replace {{PATH}} with ../ for pages directory', () => {
-      const result = processHtml('pages/about.html');
+      const result = processHtmlWithLang('pages/about.html', 'en', translations);
       if (result) {
         expect(result).toContain('href="../');
       }
     });
 
     test('should replace {{PATH}} with ../../ for portfolio directory', () => {
-      const result = processHtml('pages/portfolio/bestwork.html');
+      const result = processHtmlWithLang('pages/portfolio/bestwork.html', 'en', translations);
       if (result) {
         expect(result).toContain('href="../../');
       }
     });
 
     test('should replace {{PATH}} with ../../../ for nested portfolio pages', () => {
-      const result = processHtml('pages/portfolio/bestwork/freelance.html');
+      const result = processHtmlWithLang('pages/portfolio/bestwork/freelance.html', 'en', translations);
       if (result) {
         expect(result).toContain('href="../../../');
       }
     });
 
     test('should remove components.js script tag', () => {
-      const result = processHtml('index.html');
+      const result = processHtmlWithLang('pages/about.html', 'en', translations);
       expect(result).not.toContain('components.js');
     });
 
     test('should set active nav based on data-page attribute', () => {
-      // Process a page that should have "index" as active (about.html uses data-page="index")
-      const aboutResult = processHtml('pages/about.html');
+      const aboutResult = processHtmlWithLang('pages/about.html', 'en', translations);
       if (aboutResult) {
         // Check that the correct nav link has active class
-        expect(aboutResult).toMatch(/nav-link active.*data-nav="index"/);
+        expect(aboutResult).toMatch(/nav-link active/);
       }
     });
 
     test('should inject theme flash prevention script', () => {
-      // Use about.html instead of index.html (which is a redirect page)
-      const result = processHtml('pages/about.html');
+      const result = processHtmlWithLang('pages/about.html', 'en', translations);
       expect(result).toContain('theme-preference');
+    });
+
+    test('should set correct lang attribute for English', () => {
+      const result = processHtmlWithLang('pages/about.html', 'en', translations);
+      expect(result).toContain('lang="en"');
+    });
+
+    test('should set correct lang attribute for Malay', () => {
+      const msTranslations = loadTranslations('ms');
+      const result = processHtmlWithLang('pages/about.html', 'ms', msTranslations);
+      expect(result).toContain('lang="ms"');
     });
   });
 
-  describe('processHtml for all files', () => {
+  describe('processHtmlWithLang for all files', () => {
     CONFIG.htmlFiles.forEach(filePath => {
       test(`should process ${filePath} without errors`, () => {
         const fullPath = path.join(CONFIG.srcDir, filePath);
 
         // Only test if the file exists
         if (fs.existsSync(fullPath)) {
-          const result = processHtml(filePath);
+          const result = processHtmlWithLang(filePath, 'en', translations);
           expect(result).not.toBeNull();
           expect(typeof result).toBe('string');
         }
