@@ -1,0 +1,13 @@
+{
+  "name": "resume-website",
+  "version": "1.0.0",
+  "description": "Shazzreen Elyana's Portfolio Website",
+  "scripts": {
+    "build": "node build.js",
+    "preview": "npx serve dist",
+    "dev": "npx serve .",
+    "clean": "node -e \"const fs=require('fs'); fs.rmSync('dist',{recursive:true,force:true}); console.log('Cleaned dist folder');\""
+  },
+  "author": "Shazzreen Elyana",
+  "license": "MIT"
+}
