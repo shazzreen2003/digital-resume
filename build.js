@@ -142,39 +142,26 @@ function cleanDist() {
   fs.mkdirSync(CONFIG.distDir, { recursive: true });
 }
 
-// Concatenate CSS modules into a single styles.css
-function buildCss() {
+// Copy CSS modules to dist (keeping them separate)
+function copyCss() {
   const cssOutputDir = path.join(CONFIG.distDir, 'assets', 'css');
   fs.mkdirSync(cssOutputDir, { recursive: true });
 
-  const header = `/* ============================================
-   RESUME WEBSITE - CUSTOM STYLES
-   Author: Shazzreen Elyana
-   Description: Custom styles for multi-page resume website
-   Generated from modular CSS files by build.js
-   ============================================ */
+  // Copy main.css and all modules
+  const cssFiles = ['main.css', ...CONFIG.cssModules];
 
-`;
+  for (const cssFile of cssFiles) {
+    const srcPath = path.join(CONFIG.cssDir, cssFile);
+    const destPath = path.join(cssOutputDir, cssFile);
 
-  let combinedCss = header;
-
-  for (const cssFile of CONFIG.cssModules) {
-    const cssPath = path.join(CONFIG.cssDir, cssFile);
-
-    if (!fs.existsSync(cssPath)) {
-      console.error(`   CSS module not found: ${cssFile}`);
+    if (!fs.existsSync(srcPath)) {
+      console.error(`   CSS file not found: ${cssFile}`);
       continue;
     }
 
-    const cssContent = fs.readFileSync(cssPath, 'utf8');
-    combinedCss += cssContent + '\n\n';
+    fs.copyFileSync(srcPath, destPath);
     console.log(`   ✓ ${cssFile}`);
   }
-
-  const outputPath = path.join(cssOutputDir, 'styles.css');
-  fs.writeFileSync(outputPath, combinedCss, 'utf8');
-
-  return combinedCss.length;
 }
 
 // Main build function
@@ -206,10 +193,9 @@ function build() {
     }
   }
 
-  // Build CSS from modules
-  console.log('\n🎨 Building CSS from modules...');
-  const cssSize = buildCss();
-  console.log(`   Combined CSS: ${(cssSize / 1024).toFixed(1)} KB`);
+  // Copy CSS modules
+  console.log('\n🎨 Copying CSS modules...');
+  copyCss();
 
   // Copy assets (excluding CSS which is built separately)
   console.log('\n📦 Copying assets...');
