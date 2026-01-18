@@ -1,8 +1,21 @@
 /* ============================================
-   RESUME WEBSITE - MAIN CSS ENTRY POINT
+   RESUME WEBSITE - CSS MODULES (DEV REFERENCE)
    Author: Shazzreen Elyana
-   Description: Main entry point that imports all CSS modules.
-   Used by both development and production builds.
+
+   ⚠️  DO NOT EDIT styles.css DIRECTLY!
+
+   CSS Workflow:
+   1. Edit the individual module files:
+      - variables.css  → Colors, fonts, spacing
+      - base.css       → Body, typography, links
+      - components.css → Navbar, buttons, cards
+      - layouts.css    → Sections, grids, containers
+      - responsive.css → Media queries
+
+   2. Run: npm run build
+      This concatenates all modules into styles.css
+
+   3. Both dev and prod use the generated styles.css
    ============================================ */
 
 @import 'variables.css';
