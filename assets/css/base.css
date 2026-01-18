@@ -15,10 +15,11 @@ html {
 
 body {
   font-family: var(--font-primary);
-  color: var(--text-dark);
+  color: var(--color-text-primary);
   line-height: 1.6;
   overflow-x: hidden;
-  background-color: var(--white);
+  background-color: var(--color-background);
+  transition: background-color var(--transition-base), color var(--transition-base);
 }
 
 /* ============================================
@@ -72,7 +73,7 @@ h6 {
 
 p {
   margin-bottom: var(--spacing-sm);
-  color: var(--text-light);
+  color: var(--color-text-secondary);
   font-size: 1rem;
 }
 

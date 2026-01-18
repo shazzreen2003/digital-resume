@@ -109,7 +109,7 @@
   }
 
   .nav-link.active {
-    background-color: rgba(255, 118, 117, 0.1);
+    background-color: var(--color-active-bg);
     border-color: var(--accent-color);
   }
 }
@@ -762,8 +762,8 @@ img {
   .carousel-control-next-icon::after {
     width: 10px;
     height: 10px;
-    border-left: 2px solid #751113;
-    border-bottom: 2px solid #751113;
+    border-left: 2px solid var(--carousel-arrow-color);
+    border-bottom: 2px solid var(--carousel-arrow-color);
   }
 
   .carousel-item {

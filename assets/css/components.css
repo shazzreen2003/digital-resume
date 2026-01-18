@@ -39,14 +39,14 @@
 
 .nav-link:hover {
   color: var(--accent-color) !important;
-  background-color: rgba(255, 118, 117, 0.1);
+  background-color: var(--color-hover-bg);
 }
 
 .navbar .nav-link.active,
 .nav-link.active {
   color: var(--accent-color) !important;
   font-weight: 600 !important;
-  background-color: rgba(117, 17, 19, 0.15) !important;
+  background-color: var(--color-active-bg) !important;
   border-bottom: 3px solid var(--accent-color) !important;
   border-radius: 4px 4px 0 0;
 }
@@ -57,7 +57,7 @@
 }
 
 .navbar-toggler:focus {
-  box-shadow: 0 0 0 0.2rem rgba(255, 118, 117, 0.25);
+  box-shadow: 0 0 0 0.2rem var(--shadow-accent);
 }
 
 /* Dropdown Styles */
@@ -80,10 +80,10 @@
   min-width: 220px;
   padding: 0.75rem 0;
   margin: 0;
-  background-color: var(--white);
-  border: none;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 40px var(--shadow-color-strong);
   z-index: 1000;
   opacity: 0;
   transform: translateY(10px);
@@ -95,7 +95,7 @@
   padding: 0.65rem 1.25rem;
   font-weight: 500;
   font-size: 0.95rem;
-  color: var(--text-dark);
+  color: var(--color-text-primary);
   text-decoration: none;
   transition: all var(--transition-fast);
   border-left: 3px solid transparent;
@@ -103,7 +103,7 @@
 
 .dropdown-item:hover,
 .dropdown-item:focus {
-  background-color: rgba(117, 17, 19, 0.08);
+  background-color: var(--color-hover-bg);
   color: var(--accent-color);
   border-left-color: var(--accent-color);
 }
@@ -163,13 +163,13 @@
 .card {
   border: none;
   border-radius: var(--radius-lg);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 16px var(--shadow-color-strong), 0 4px 8px var(--shadow-color);
   transition: all var(--transition-base);
   overflow: hidden;
   height: 100%;
   position: relative;
   z-index: 1;
-  background: var(--white);
+  background: var(--color-surface);
   margin-bottom: var(--spacing-md);
   cursor: pointer;
   -webkit-touch-callout: none;
@@ -179,7 +179,7 @@
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(117, 17, 19, 0.25), 0 8px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 24px var(--shadow-accent), 0 8px 16px var(--shadow-color-strong);
   z-index: 2;
 }
 
@@ -346,16 +346,24 @@
 
 .form-control,
 .form-select {
-  border: 2px solid var(--gray);
+  border: 2px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: 0.75rem 1rem;
   transition: all var(--transition-fast);
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
 }
 
 .form-control:focus,
 .form-select:focus {
   border-color: var(--accent-color);
-  box-shadow: 0 0 0 0.2rem rgba(255, 118, 117, 0.25);
+  box-shadow: 0 0 0 0.2rem var(--shadow-accent);
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+}
+
+.form-control::placeholder {
+  color: var(--color-text-secondary);
 }
 
 .form-label {
@@ -474,8 +482,8 @@
   left: 50%;
   width: 14px;
   height: 14px;
-  border-left: 3px solid #751113;
-  border-bottom: 3px solid #751113;
+  border-left: 3px solid var(--carousel-arrow-color);
+  border-bottom: 3px solid var(--carousel-arrow-color);
   background: transparent;
 }
 
@@ -593,4 +601,274 @@ section:has(.carousel) {
   position: absolute !important;
   left: 50% !important;
   transform: translateX(-50%) !important;
+}
+
+/* ============================================
+   THEME TOGGLE BUTTON
+   ============================================ */
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0 !important;
+  margin-left: 1rem;
+  border-radius: 50%;
+  background-color: var(--color-surface-elevated);
+  border: 2px solid var(--color-border);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.theme-toggle:hover {
+  background-color: var(--color-hover-bg);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  transform: scale(1.05);
+}
+
+.theme-toggle:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem var(--shadow-accent);
+}
+
+.theme-toggle i {
+  font-size: 1.1rem;
+  transition: transform var(--transition-base);
+}
+
+.theme-toggle:hover i {
+  transform: rotate(15deg);
+}
+
+/* Dark mode icon states */
+[data-theme="light"] .theme-toggle #theme-icon::before {
+  content: "\F5A2"; /* bi-sun-fill */
+}
+
+[data-theme="dark"] .theme-toggle #theme-icon::before {
+  content: "\F497"; /* bi-moon-fill */
+}
+
+/* ============================================
+   DARK MODE - NAVBAR OVERRIDES
+   ============================================ */
+
+[data-theme="dark"] .navbar {
+  background-color: var(--color-surface) !important;
+  border-bottom: 1px solid var(--color-border);
+}
+
+[data-theme="dark"] .navbar-light .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* ============================================
+   DARK MODE - CARD OVERRIDES
+   ============================================ */
+
+[data-theme="dark"] .card {
+  border: 1px solid var(--color-border);
+}
+
+[data-theme="dark"] .card-title {
+  color: var(--primary-color);
+}
+
+[data-theme="dark"] .card-text {
+  color: var(--color-text-secondary);
+}
+
+/* ============================================
+   DARK MODE - STATS SECTION
+   ============================================ */
+
+[data-theme="dark"] .stats-section {
+  background-color: var(--color-surface);
+}
+
+/* ============================================
+   DARK MODE - CONTACT INFO
+   ============================================ */
+
+[data-theme="dark"] .contact-info {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+
+/* ============================================
+   DARK MODE - TIMELINE
+   ============================================ */
+
+[data-theme="dark"] .timeline-item {
+  border-left-color: var(--color-border);
+}
+
+[data-theme="dark"] .timeline-dot {
+  border-color: var(--color-surface);
+}
+
+/* ============================================
+   DARK MODE - PROGRESS BARS
+   ============================================ */
+
+[data-theme="dark"] .progress {
+  background-color: var(--color-border);
+}
+
+/* ============================================
+   DARK MODE - BREADCRUMBS
+   ============================================ */
+
+[data-theme="dark"] .breadcrumb-item + .breadcrumb-item::before {
+  color: var(--color-text-secondary);
+}
+
+/* ============================================
+   DARK MODE - MOBILE NAV
+   ============================================ */
+
+@media (max-width: 992px) {
+  [data-theme="dark"] .navbar-collapse {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+  }
+}
+
+@media (max-width: 991px) {
+  [data-theme="dark"] .nav-item.dropdown .dropdown-menu {
+    background-color: var(--color-surface-elevated);
+  }
+}
+
+/* ============================================
+   DARK MODE - BOOTSTRAP OVERRIDES
+   ============================================ */
+
+[data-theme="dark"] .bg-white {
+  background-color: var(--color-surface) !important;
+}
+
+[data-theme="dark"] .bg-light {
+  background-color: var(--color-surface-elevated) !important;
+}
+
+[data-theme="dark"] .text-dark {
+  color: var(--color-text-primary) !important;
+}
+
+[data-theme="dark"] .text-muted {
+  color: var(--color-text-secondary) !important;
+}
+
+[data-theme="dark"] .border {
+  border-color: var(--color-border) !important;
+}
+
+[data-theme="dark"] .shadow-sm {
+  box-shadow: 0 2px 4px var(--shadow-color) !important;
+}
+
+/* ============================================
+   DARK MODE - TEXT & CONTENT OVERRIDES
+   ============================================ */
+
+/* All text elements inside cards */
+[data-theme="dark"] .card h5,
+[data-theme="dark"] .card h6,
+[data-theme="dark"] .card li,
+[data-theme="dark"] .card p:not(.card-text),
+[data-theme="dark"] .card span,
+[data-theme="dark"] .card label {
+  color: var(--color-text-primary);
+}
+
+/* List items everywhere */
+[data-theme="dark"] li {
+  color: var(--color-text-primary);
+}
+
+/* Headings inside bg-white containers */
+[data-theme="dark"] .bg-white h5,
+[data-theme="dark"] .bg-white h6 {
+  color: var(--color-text-primary);
+}
+
+/* Lead text and muted text inside dark sections */
+[data-theme="dark"] .lead {
+  color: var(--color-text-secondary);
+}
+
+/* Section titles */
+[data-theme="dark"] .section-title p {
+  color: var(--color-text-secondary);
+}
+
+/* General paragraphs */
+[data-theme="dark"] p {
+  color: var(--color-text-secondary);
+}
+
+/* Headings in dark mode */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+  color: var(--primary-color);
+}
+
+/* But keep hero/footer headings white */
+[data-theme="dark"] .hero h1,
+[data-theme="dark"] .page-hero h1,
+[data-theme="dark"] .footer h5 {
+  color: #ffffff;
+}
+
+/* Small text and muted text */
+[data-theme="dark"] small,
+[data-theme="dark"] .small {
+  color: var(--color-text-secondary);
+}
+
+/* Breadcrumb */
+[data-theme="dark"] .breadcrumb-item a {
+  color: var(--color-text-secondary);
+}
+
+[data-theme="dark"] .breadcrumb-item.active {
+  color: var(--primary-color);
+}
+
+/* Form labels */
+[data-theme="dark"] .form-label {
+  color: var(--primary-color);
+}
+
+/* Skill names */
+[data-theme="dark"] .skill-name {
+  color: var(--primary-color);
+}
+
+[data-theme="dark"] .skill-name span {
+  color: var(--color-text-primary);
+}
+
+/* Timeline text */
+[data-theme="dark"] .timeline-description {
+  color: var(--color-text-secondary);
+}
+
+/* Stat labels */
+[data-theme="dark"] .stat-label {
+  color: var(--color-text-secondary);
+}
+
+/* Contact info text */
+[data-theme="dark"] .contact-info-item {
+  color: var(--color-text-primary);
 }
