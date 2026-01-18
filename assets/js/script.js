@@ -33,6 +33,38 @@ function initNavigation() {
       }
     });
   });
+
+  // Mobile dropdown toggle
+  initMobileDropdowns();
+}
+
+/**
+ * Initialize mobile dropdown functionality
+ */
+function initMobileDropdowns() {
+  const dropdownItems = document.querySelectorAll('.nav-item.dropdown');
+
+  dropdownItems.forEach(item => {
+    const link = item.querySelector('.nav-link');
+    const arrow = item.querySelector('.dropdown-arrow');
+
+    if (arrow && window.innerWidth < 992) {
+      // On mobile, clicking the arrow toggles dropdown
+      arrow.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        item.classList.toggle('show');
+      });
+    }
+  });
+
+  // Handle window resize
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 992) {
+      // Remove show class on desktop
+      dropdownItems.forEach(item => item.classList.remove('show'));
+    }
+  });
 }
 
 /**

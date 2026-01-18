@@ -25,17 +25,19 @@ const CONFIG = {
     'pages/contact.html',
     'pages/portfolio/bestwork.html',
     'pages/portfolio/projects.html',
-    'pages/portfolio/branding/index.html',
-    'pages/portfolio/branding/pearliewhite.html',
-    'pages/portfolio/branding/rimbrew.html',
-    'pages/portfolio/freelance/index.html',
-    'pages/portfolio/uiux/careerbuddy.html',
-    'pages/portfolio/uiux/jxtravel.html',
-    'pages/portfolio/print/advertising.html',
-    'pages/portfolio/print/packaging.html',
-    'pages/portfolio/digital/3d.html',
-    'pages/portfolio/digital/illustration.html',
-    'pages/portfolio/digital/socialmedia.html'
+    // Best Work pages
+    'pages/portfolio/bestwork/freelance.html',
+    'pages/portfolio/bestwork/jxtravel.html',
+    'pages/portfolio/bestwork/pearliewhite.html',
+    'pages/portfolio/bestwork/rimbrew.html',
+    'pages/portfolio/bestwork/careerbuddy.html',
+    // Projects pages
+    'pages/portfolio/projects/advertising.html',
+    'pages/portfolio/projects/3d.html',
+    'pages/portfolio/projects/illustration.html',
+    'pages/portfolio/projects/branding.html',
+    'pages/portfolio/projects/socialmedia.html',
+    'pages/portfolio/projects/packaging.html'
   ]
 };
 
