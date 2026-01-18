@@ -1,0 +1,777 @@
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* Hover dropdown for desktop */
+@media (min-width: 992px) {
+  .nav-item.dropdown:hover > .dropdown-menu,
+  .nav-item.dropdown:focus-within > .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-item.dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+  }
+
+  /* Invisible bridge to prevent dropdown from closing */
+  .nav-item.dropdown::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 10px;
+  }
+}
+
+/* Mobile dropdown styles */
+@media (max-width: 991px) {
+  .nav-item.dropdown .dropdown-menu {
+    position: static;
+    display: none;
+    opacity: 1;
+    transform: none;
+    box-shadow: none;
+    background-color: var(--light-gray);
+    border-radius: var(--radius-sm);
+    margin: 0.5rem 0;
+    padding: 0.5rem 0;
+  }
+
+  .nav-item.dropdown.show .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-item {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+    border-left: none;
+  }
+
+  .dropdown-item:hover {
+    border-left: none;
+    padding-left: 1.5rem;
+  }
+
+  .dropdown-divider {
+    margin: 0.25rem 1rem;
+  }
+
+  .dropdown-arrow {
+    float: right;
+    margin-top: 0.2rem;
+  }
+}
+
+/* Large tablets and below */
+@media (max-width: 992px) {
+  /* Adjust navigation for tablets */
+  .navbar-collapse {
+    background-color: var(--white);
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .nav-link {
+    padding: 0.75rem 1rem !important;
+    margin: 0.25rem 0;
+    border-radius: var(--radius-sm);
+  }
+
+  /* Adjust hero for tablets */
+  .hero {
+    min-height: 70vh;
+    padding: var(--spacing-lg) 0;
+  }
+
+  /* Card adjustments */
+  .card-img-top {
+    height: 220px;
+  }
+
+  /* Better mobile navigation */
+  .navbar-nav {
+    width: 100%;
+  }
+
+  .nav-link {
+    border: 1px solid transparent;
+  }
+
+  .nav-link:hover,
+  .nav-link:active {
+    background-color: var(--light-gray);
+    border-color: var(--accent-color);
+  }
+
+  .nav-link.active {
+    background-color: rgba(255, 118, 117, 0.1);
+    border-color: var(--accent-color);
+  }
+}
+
+/* Tablet and below */
+@media (max-width: 768px) {
+  /* Typography adjustments */
+  h1, .display-4 {
+    font-size: 2rem !important;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero .lead, .page-hero .lead {
+    font-size: 1.1rem;
+  }
+
+  .lead {
+    font-size: 1.1rem;
+  }
+
+  .page-hero h1, .page-hero .display-4 {
+    font-size: 2rem !important;
+  }
+
+  /* Spacing adjustments */
+  section {
+    padding: var(--spacing-md) 0;
+  }
+
+  /* Stats adjustments */
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+  }
+
+  /* Navigation adjustments */
+  .nav-link {
+    margin: 0.25rem 0;
+    text-align: center;
+  }
+
+  /* Card adjustments */
+  .card-img-top {
+    height: 200px;
+  }
+
+  .card-body {
+    padding: 1.25rem;
+  }
+
+  /* Timeline adjustments */
+  .timeline-item {
+    padding-left: 2rem;
+  }
+
+  /* Form adjustments for better touch targets */
+  .form-control,
+  .form-select {
+    padding: 0.875rem 1rem;
+    font-size: 1rem;
+  }
+
+  /* Button adjustments - larger touch targets */
+  .btn {
+    padding: 0.75rem 1.75rem;
+    font-size: 1rem;
+    min-height: 48px; /* Minimum touch target size */
+  }
+
+  .btn-lg {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+
+  /* Footer adjustments */
+  .footer {
+    text-align: center;
+  }
+
+  .footer .social-links {
+    justify-content: center;
+    margin-top: var(--spacing-md);
+  }
+
+  /* Mobile-specific overlap prevention */
+  section {
+    padding: var(--spacing-md) 0;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .alert {
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .row {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .col-md-6,
+  .col-lg-4,
+  .col-lg-3 {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  /* Carousel responsive */
+  .carousel-indicators {
+    bottom: 180px !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  /* Reset base font size for better readability */
+  html {
+    font-size: 16px;
+  }
+
+  /* Typography for mobile */
+  h1, .display-4 {
+    font-size: 1.75rem !important;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.35rem;
+  }
+
+  h4 {
+    font-size: 1.15rem;
+  }
+
+  h5 {
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .lead {
+    font-size: 1.05rem;
+  }
+
+  /* Hero section mobile */
+  .hero {
+    min-height: auto;
+    padding: var(--spacing-lg) 0;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem !important;
+    line-height: 1.2;
+  }
+
+  .hero .lead {
+    font-size: 1.05rem;
+  }
+
+  .page-hero {
+    padding: var(--spacing-md) 0;
+  }
+
+  .page-hero h1, .page-hero .display-4 {
+    font-size: 1.75rem !important;
+  }
+
+  .page-hero .lead {
+    font-size: 1.05rem;
+  }
+
+  /* Buttons - full width on mobile for better UX */
+  .btn {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 0.75rem;
+    min-height: 48px; /* Touch target accessibility */
+  }
+
+  .btn-lg {
+    padding: 1rem 1.5rem;
+    font-size: 1.05rem;
+  }
+
+  /* Exception: inline buttons */
+  .btn-sm {
+    width: auto;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0;
+  }
+
+  /* Stats mobile layout */
+  .stat-number {
+    font-size: 1.875rem;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+  }
+
+  .stat-item {
+    padding: var(--spacing-sm);
+  }
+
+  /* Cards mobile optimization */
+  .card {
+    margin-bottom: 1.5rem;
+  }
+
+  .card-img-top {
+    height: 180px;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .card-title {
+    font-size: 1.15rem;
+  }
+
+  .card-text {
+    font-size: 0.95rem;
+  }
+
+  /* Navigation mobile */
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+
+  .navbar-toggler {
+    padding: 0.5rem 0.75rem;
+    font-size: 1.25rem;
+  }
+
+  /* Section spacing mobile */
+  section {
+    padding: var(--spacing-sm) 0;
+  }
+
+  .section-title {
+    margin-bottom: var(--spacing-md);
+  }
+
+  /* Timeline mobile */
+  .timeline-item {
+    padding-left: 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .timeline-dot {
+    width: 12px;
+    height: 12px;
+    left: -7px;
+  }
+
+  /* Skills mobile */
+  .skill-name {
+    font-size: 0.9rem;
+  }
+
+  .progress {
+    height: 8px;
+  }
+
+  /* Form mobile optimization */
+  .form-control,
+  .form-select,
+  textarea.form-control {
+    padding: 1rem;
+    font-size: 16px; /* Prevents zoom on iOS */
+    border-radius: var(--radius-md);
+    min-height: 48px;
+  }
+
+  textarea.form-control {
+    min-height: 120px;
+  }
+
+  .form-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  /* Social links mobile */
+  .social-links {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .social-link {
+    width: 44px;
+    height: 44px;
+    margin: 0.25rem;
+  }
+
+  /* Contact info mobile */
+  .contact-info {
+    padding: var(--spacing-sm);
+  }
+
+  .contact-info-item {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .contact-info-item i {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Footer mobile */
+  .footer {
+    padding: var(--spacing-md) 0 var(--spacing-sm);
+  }
+
+  .footer h5 {
+    font-size: 1.1rem;
+    margin-top: var(--spacing-sm);
+  }
+
+  .footer p,
+  .footer a {
+    font-size: 0.9rem;
+  }
+
+  /* Spacing utilities mobile */
+  .mb-section {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .mt-section {
+    margin-top: var(--spacing-md);
+  }
+
+  /* Mobile form usability */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+
+  .form-control,
+  .form-select {
+    margin-bottom: 1rem;
+  }
+
+  button[type="submit"],
+  input[type="submit"] {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  /* Better spacing for mobile grids */
+  .row {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+
+  .row > * {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  /* Container padding adjustment */
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Extra spacing for very small screens */
+  section {
+    padding: calc(var(--spacing-sm) + 0.5rem) 0;
+  }
+
+  section.bg-light-gray {
+    padding-top: calc(var(--spacing-md) + 0.5rem);
+    padding-bottom: calc(var(--spacing-md) + 0.5rem);
+  }
+
+  .timeline-item {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .card,
+  form,
+  .alert {
+    margin-bottom: var(--spacing-md);
+  }
+
+  /* Mobile utility classes */
+  .mobile-full-width {
+    width: 100% !important;
+  }
+
+  .mobile-text-center {
+    text-align: center !important;
+  }
+
+  .mobile-mb-3 {
+    margin-bottom: 1rem !important;
+  }
+
+  .mobile-hide {
+    display: none !important;
+  }
+
+  /* Carousel responsive */
+  .carousel-indicators {
+    bottom: 175px !important;
+  }
+
+  .carousel-indicators [data-bs-target] {
+    width: 25px !important;
+    height: 2px !important;
+  }
+
+  .carousel-indicators .active {
+    width: 35px !important;
+  }
+
+  .carousel .card {
+    margin: 0;
+  }
+
+  .carousel .card-img-top {
+    height: 220px;
+  }
+
+  .carousel .card-body {
+    padding: 1rem;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .carousel-control-prev-icon::after,
+  .carousel-control-next-icon::after {
+    width: 8px;
+    height: 8px;
+  }
+
+  /* Artwork carousel */
+  .artwork-carousel .carousel-indicators,
+  .artwork-carousel.carousel .carousel-indicators {
+    bottom: 10px !important;
+  }
+}
+
+/* Very small mobile devices */
+@media (max-width: 375px) {
+  html {
+    font-size: 15px;
+  }
+
+  h1, .display-4 {
+    font-size: 1.5rem !important;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .page-hero h1, .page-hero .display-4 {
+    font-size: 1.5rem !important;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  .card-img-top {
+    height: 160px;
+  }
+}
+
+/* Landscape mobile optimization */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    min-height: auto;
+    padding: var(--spacing-md) 0;
+  }
+
+  .page-hero {
+    padding: var(--spacing-sm) 0;
+  }
+
+  section {
+    padding: var(--spacing-sm) 0;
+  }
+}
+
+/* ============================================
+   MOBILE-SPECIFIC ENHANCEMENTS
+   ============================================ */
+
+/* Prevent text size adjustment on orientation change */
+html {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Improve touch scrolling on iOS */
+body {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Remove tap highlight on mobile */
+a,
+button,
+.btn,
+.card,
+.nav-link {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Add active state for better touch feedback */
+.btn:active,
+.card:active,
+.nav-link:active {
+  opacity: 0.8;
+  transform: scale(0.98);
+}
+
+/* Loading optimization for images */
+.card-img-top,
+img {
+  loading: lazy;
+}
+
+/* Safe area for notched devices (iPhone X+) */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+  }
+
+  .navbar,
+  .footer {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+}
+
+/* ============================================
+   CAROUSEL RESPONSIVE
+   ============================================ */
+
+@media (max-width: 1200px) {
+  .carousel-indicators {
+    bottom: 190px !important;
+  }
+
+  .carousel .card {
+    max-width: 750px;
+  }
+
+  .carousel .card-img-top {
+    height: 320px;
+  }
+
+  .carousel .card-body {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .carousel-indicators {
+    bottom: 185px !important;
+  }
+
+  .carousel .card {
+    max-width: 650px;
+  }
+
+  .carousel .card-img-top {
+    height: 280px;
+  }
+
+  .carousel .card-body {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel .card {
+    max-width: 100%;
+    margin: 0 0.5rem;
+  }
+
+  .carousel .card-img-top {
+    height: 250px;
+  }
+
+  .carousel .card-body {
+    padding: 1rem;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .carousel-control-prev-icon::after,
+  .carousel-control-next-icon::after {
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid #751113;
+    border-bottom: 2px solid #751113;
+  }
+
+  .carousel-item {
+    padding: 0.5rem 0;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    padding: 0 0.25rem;
+  }
+}

@@ -13,9 +13,19 @@ const CONFIG = {
   srcDir: __dirname,
   distDir: path.join(__dirname, 'dist'),
   componentsDir: path.join(__dirname, 'assets', 'components'),
+  cssDir: path.join(__dirname, 'assets', 'css'),
+
+  // CSS modules in concatenation order
+  cssModules: [
+    'variables.css',
+    'base.css',
+    'components.css',
+    'layouts.css',
+    'responsive.css'
+  ],
 
   // Files/folders to copy as-is (not process)
-  assetsToCopy: ['assets/css', 'assets/images', 'assets/js', 'assets/pdf'],
+  assetsToCopy: ['assets/images', 'assets/js', 'assets/pdf'],
 
   // HTML files to process (relative to srcDir)
   htmlFiles: [
@@ -132,6 +142,41 @@ function cleanDist() {
   fs.mkdirSync(CONFIG.distDir, { recursive: true });
 }
 
+// Concatenate CSS modules into a single styles.css
+function buildCss() {
+  const cssOutputDir = path.join(CONFIG.distDir, 'assets', 'css');
+  fs.mkdirSync(cssOutputDir, { recursive: true });
+
+  const header = `/* ============================================
+   RESUME WEBSITE - CUSTOM STYLES
+   Author: Shazzreen Elyana
+   Description: Custom styles for multi-page resume website
+   Generated from modular CSS files by build.js
+   ============================================ */
+
+`;
+
+  let combinedCss = header;
+
+  for (const cssFile of CONFIG.cssModules) {
+    const cssPath = path.join(CONFIG.cssDir, cssFile);
+
+    if (!fs.existsSync(cssPath)) {
+      console.error(`   CSS module not found: ${cssFile}`);
+      continue;
+    }
+
+    const cssContent = fs.readFileSync(cssPath, 'utf8');
+    combinedCss += cssContent + '\n\n';
+    console.log(`   ✓ ${cssFile}`);
+  }
+
+  const outputPath = path.join(cssOutputDir, 'styles.css');
+  fs.writeFileSync(outputPath, combinedCss, 'utf8');
+
+  return combinedCss.length;
+}
+
 // Main build function
 function build() {
   console.log('🔨 Building resume website...\n');
@@ -161,14 +206,16 @@ function build() {
     }
   }
 
-  // Copy assets
+  // Build CSS from modules
+  console.log('\n🎨 Building CSS from modules...');
+  const cssSize = buildCss();
+  console.log(`   Combined CSS: ${(cssSize / 1024).toFixed(1)} KB`);
+
+  // Copy assets (excluding CSS which is built separately)
   console.log('\n📦 Copying assets...');
   for (const assetPath of CONFIG.assetsToCopy) {
     const srcPath = path.join(CONFIG.srcDir, assetPath);
     const destPath = path.join(CONFIG.distDir, assetPath);
-
-    // Skip components folder - not needed in dist
-    if (assetPath === 'assets/components') continue;
 
     if (fs.existsSync(srcPath)) {
       copyDir(srcPath, destPath);

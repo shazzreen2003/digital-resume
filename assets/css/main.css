@@ -1,0 +1,14 @@
+/* ============================================
+   RESUME WEBSITE - MAIN CSS ENTRY POINT
+   Author: Shazzreen Elyana
+   Description: Development entry point that imports all CSS modules
+
+   For production, use the build script which concatenates
+   all modules into a single styles.css file.
+   ============================================ */
+
+@import 'variables.css';
+@import 'base.css';
+@import 'components.css';
+@import 'layouts.css';
+@import 'responsive.css';
