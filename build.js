@@ -14,13 +14,24 @@ const CONFIG = {
   distDir: path.join(__dirname, 'dist'),
   componentsDir: path.join(__dirname, 'assets', 'components'),
   localesDir: path.join(__dirname, 'locales'),
+  cssDir: path.join(__dirname, 'assets', 'css'),
 
   // Supported languages
   languages: ['en', 'ms'],
   defaultLanguage: 'en',
 
+  // CSS files to concatenate (in order)
+  cssOrder: [
+    'variables.css',
+    'base.css',
+    'components.css',
+    'layouts.css',
+    'responsive.css',
+    'dark-mode.css'
+  ],
+
   // Files/folders to copy as-is (not process)
-  assetsToCopy: ['assets/css', 'assets/images', 'assets/js', 'assets/pdf'],
+  assetsToCopy: ['assets/images', 'assets/js', 'assets/pdf'],
 
   // HTML files to process (relative to srcDir)
   htmlFiles: [
@@ -157,6 +168,18 @@ const THEME_FLASH_PREVENTION_SCRIPT = `<script>
   })();
 </script>`;
 
+// Language preference script - saves current language to localStorage
+const LANG_PREFERENCE_SCRIPT = `<script>
+  (function() {
+    // Detect current language from URL path
+    var path = window.location.pathname;
+    var lang = path.match(/\\/(en|ms)\\//);
+    if (lang) {
+      localStorage.setItem('lang-preference', lang[1]);
+    }
+  })();
+</script>`;
+
 // ============================================
 // HTML Processing
 // ============================================
@@ -263,6 +286,23 @@ function cleanDist() {
   fs.mkdirSync(CONFIG.distDir, { recursive: true });
 }
 
+// Concatenate CSS files in order for production
+function concatenateCss() {
+  let combinedCss = '';
+
+  for (const cssFile of CONFIG.cssOrder) {
+    const cssPath = path.join(CONFIG.cssDir, cssFile);
+    if (fs.existsSync(cssPath)) {
+      const content = fs.readFileSync(cssPath, 'utf8');
+      combinedCss += `/* === ${cssFile} === */\n${content}\n\n`;
+    } else {
+      console.warn(`  Warning: CSS file not found: ${cssFile}`);
+    }
+  }
+
+  return combinedCss;
+}
+
 // Generate root index.html with redirect to English
 function generateRootIndex() {
   const html = `<!DOCTYPE html>
@@ -354,6 +394,11 @@ function build() {
   generateRootIndex();
   console.log('\nGenerated root index.html (redirect to English)');
 
+  // Concatenate CSS files
+  console.log('\nConcatenating CSS files...');
+  const combinedCss = concatenateCss();
+  console.log(`   Combined ${CONFIG.cssOrder.length} CSS files`);
+
   // Copy assets to each language folder
   console.log('\nCopying assets...');
   for (const lang of CONFIG.languages) {
@@ -365,6 +410,12 @@ function build() {
         copyDir(srcPath, destPath);
       }
     }
+
+    // Write combined CSS to dist/{lang}/assets/css/main.css
+    const cssDestDir = path.join(CONFIG.distDir, lang, 'assets', 'css');
+    fs.mkdirSync(cssDestDir, { recursive: true });
+    fs.writeFileSync(path.join(cssDestDir, 'main.css'), combinedCss, 'utf8');
+
     console.log(`   Assets copied to dist/${lang}/`);
 
     // Remove components.js from dist (not needed)
@@ -404,6 +455,7 @@ module.exports = {
   processHtmlWithLang,
   copyDir,
   cleanDist,
+  concatenateCss,
   build,
   THEME_FLASH_PREVENTION_SCRIPT
 };

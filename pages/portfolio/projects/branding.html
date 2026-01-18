@@ -7,14 +7,14 @@
   <!-- Meta Tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Branding Design Work - Shazzreen Elyana">
+  <meta name="description" content="{{t:portfolio.branding.metaDescription}}">
   <meta name="author" content="Shazzreen Elyana">
 
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
 
   <!-- Page Title -->
-  <title>Branding - Shazzreen Elyana</title>
+  <title>{{t:portfolio.branding.title}}</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="../../../assets/css/styles.css">
+  <link rel="stylesheet" href="../../../assets/css/main.css">
 </head>
 <body data-page="projects">
 
@@ -39,9 +39,9 @@
   <div class="container" style="margin-top: 90px;">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="../../../index.html">Home</a></li>
-        <li class="breadcrumb-item"><a href="../projects.html">Projects</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Branding</li>
+        <li class="breadcrumb-item"><a href="../../../index.html">{{t:common.breadcrumbs.home}}</a></li>
+        <li class="breadcrumb-item"><a href="../projects.html">{{t:common.breadcrumbs.projects}}</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{t:portfolio.branding.heading}}</li>
       </ol>
     </nav>
   </div>
@@ -49,8 +49,8 @@
   <!-- Artwork Hero -->
   <section class="page-hero" style="margin-top: 0;">
     <div class="container">
-      <h1 class="display-4">Branding</h1>
-      <p class="lead">Visual Identity & Brand Systems</p>
+      <h1 class="display-4">{{t:portfolio.branding.heading}}</h1>
+      <p class="lead">{{t:portfolio.branding.tagline}}</p>
     </div>
   </section>
 
@@ -63,9 +63,9 @@
           <div id="brandingCarousel" class="carousel slide shadow-custom rounded-custom artwork-carousel" data-bs-ride="carousel" data-bs-interval="2000">
             <!-- Indicators -->
             <div class="carousel-indicators">
-              <button type="button" data-bs-target="#brandingCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#brandingCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#brandingCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#brandingCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="{{t:common.carousel.slide}} 1"></button>
+              <button type="button" data-bs-target="#brandingCarousel" data-bs-slide-to="1" aria-label="{{t:common.carousel.slide}} 2"></button>
+              <button type="button" data-bs-target="#brandingCarousel" data-bs-slide-to="2" aria-label="{{t:common.carousel.slide}} 3"></button>
             </div>
 
             <!-- Slides -->
@@ -78,11 +78,11 @@
             <!-- Controls -->
             <button class="carousel-control-prev" type="button" data-bs-target="#brandingCarousel" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
+              <span class="visually-hidden">{{t:common.carousel.previous}}</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#brandingCarousel" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
+              <span class="visually-hidden">{{t:common.carousel.next}}</span>
             </button>
           </div>
         </div>
@@ -91,32 +91,32 @@
         <div class="col-lg-4">
           <div class="card">
             <div class="card-body">
-              <h4 class="card-title mb-3">Project Details</h4>
+              <h4 class="card-title mb-3">{{t:portfolio.projectDetails}}</h4>
 
               <div class="mb-3">
-                <h6 class="text-accent">Project Context</h6>
-                <p>DummyBunny creates a safe and welcoming identity that frames learning and creativity as a positive, pressure-free experience.</p>
+                <h6 class="text-accent">{{t:portfolio.projectContext}}</h6>
+                <p>{{t:portfolio.branding.context}}</p>
               </div>
 
               <div class="mb-3">
-                <h6 class="text-accent">Design Focus</h6>
+                <h6 class="text-accent">{{t:portfolio.designFocus}}</h6>
                 <ul class="list-unstyled">
-                  <li><i class="bi bi-check-circle-fill text-accent me-2"></i>Logo Design</li>
-                  <li><i class="bi bi-check-circle-fill text-accent me-2"></i>Typography Systems</li>
-                  <li><i class="bi bi-check-circle-fill text-accent me-2"></i>Brand Guidelines</li>
-                  <li><i class="bi bi-check-circle-fill text-accent me-2"></i>Visual Identity</li>
+                  <li><i class="bi bi-check-circle-fill text-accent me-2"></i>{{t:portfolio.logoDesign}}</li>
+                  <li><i class="bi bi-check-circle-fill text-accent me-2"></i>{{t:portfolio.typographySystems}}</li>
+                  <li><i class="bi bi-check-circle-fill text-accent me-2"></i>{{t:portfolio.brandGuidelines}}</li>
+                  <li><i class="bi bi-check-circle-fill text-accent me-2"></i>{{t:portfolio.visualIdentity}}</li>
                 </ul>
               </div>
 
               <div class="mb-3">
-                <h6 class="text-accent">Tools Used</h6>
+                <h6 class="text-accent">{{t:portfolio.toolsUsed}}</h6>
                 <div>
                   <span class="badge badge-primary me-1 mb-1">Adobe Illustrator</span>
               </div>
 
               <div class="mt-4">
                 <a href="../projects.html" class="btn btn-outline-primary w-100">
-                  <i class="bi bi-arrow-left me-2"></i>Back to Projects
+                  <i class="bi bi-arrow-left me-2"></i>{{t:common.buttons.backToProjects}}
                 </a>
               </div>
             </div>
@@ -127,9 +127,8 @@
       <!-- Project Description -->
       <div class="row mt-5">
         <div class="col-12">
-          <h3 class="mb-3">About This Project</h3>
-          <p>I'm Yana, a graphic designer with the capability to showcase one’s personality, mood, and contrast through minimal graphics. My brand, DmyBny, embodies my ambivert personality that inspires me to portray duality of emotions ; the seemingly grumpy outer self and the soft, expressive inner self. I use outline based graphic design techniques, systematic color choices, friendly symbolically real emotion representation, and emotive creativity to express that duality. To me, good design is not only beautiful, but meaningful. It has to be real, truthful, and hold deep emotions and sentiments from its makers. I want to become a designer who assists brands, individual creators, and emotionally driven clients in constructing distinct visual representations that are sincerely simple yet powerful. Whether it is designing logos, branding systems or microsites that tell imaginative tales, I seek to provide the heart of the brand, which goes beyond the superficial.
-</p>
+          <h3 class="mb-3">{{t:portfolio.aboutProject}}</h3>
+          <p>{{t:portfolio.branding.about1}}</p>
         </div>
       </div>
     </div>

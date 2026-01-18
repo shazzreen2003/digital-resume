@@ -7,15 +7,15 @@
   <!-- Meta Tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Shazzreen Elyana's design skills - Adobe Creative Suite, Figma, branding, and more.">
-  <meta name="keywords" content="graphic design skills, adobe illustrator, photoshop, indesign, figma, branding">
+  <meta name="description" content="{{t:pages.skills.metaDescription}}">
+  <meta name="keywords" content="{{t:pages.skills.metaKeywords}}">
   <meta name="author" content="Shazzreen Elyana">
 
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
 
   <!-- Page Title -->
-  <title>My Skills - Shazzreen Elyana</title>
+  <title>{{t:pages.skills.title}}</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body data-page="skills">
 
@@ -40,8 +40,8 @@
   <div class="container" style="margin-top: 90px;">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Skills</li>
+        <li class="breadcrumb-item"><a href="../index.html">{{t:common.breadcrumbs.home}}</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{t:common.breadcrumbs.skills}}</li>
       </ol>
     </nav>
   </div>
@@ -49,8 +49,8 @@
   <!-- Page Hero -->
   <section class="page-hero" style="margin-top: 0;">
     <div class="container">
-      <h1 class="display-4">My Skills</h1>
-      <p class="lead">Tools, technologies, and expertise I bring to every project</p>
+      <h1 class="display-4">{{t:pages.skills.hero.heading}}</h1>
+      <p class="lead">{{t:pages.skills.hero.tagline}}</p>
     </div>
   </section>
 
@@ -61,7 +61,7 @@
         <!-- Design Software -->
         <div class="col-lg-6 mb-5">
           <h3 class="mb-4">
-            <i class="bi bi-laptop text-accent me-2"></i>Design Software
+            <i class="bi bi-laptop text-accent me-2"></i>{{t:pages.skills.sections.designSoftware}}
           </h3>
 
           <div class="skill-item">
@@ -118,12 +118,12 @@
         <!-- Design Skills -->
         <div class="col-lg-6 mb-5">
           <h3 class="mb-4">
-            <i class="bi bi-palette text-accent me-2"></i>Design Expertise
+            <i class="bi bi-palette text-accent me-2"></i>{{t:pages.skills.sections.designExpertise}}
           </h3>
 
           <div class="skill-item">
             <div class="skill-name">
-              <span>Brand Identity Design</span>
+              <span>{{t:pages.skills.expertise.brandIdentity}}</span>
               <span>60%</span>
             </div>
             <div class="progress">
@@ -133,7 +133,7 @@
 
           <div class="skill-item">
             <div class="skill-name">
-              <span>Print Design</span>
+              <span>{{t:pages.skills.expertise.printDesign}}</span>
               <span>80%</span>
             </div>
             <div class="progress">
@@ -143,7 +143,7 @@
 
           <div class="skill-item">
             <div class="skill-name">
-              <span>Social Media Graphics</span>
+              <span>{{t:pages.skills.expertise.socialMediaGraphics}}</span>
               <span>85%</span>
             </div>
             <div class="progress">
@@ -153,7 +153,7 @@
 
           <div class="skill-item">
             <div class="skill-name">
-              <span>Typography</span>
+              <span>{{t:pages.skills.expertise.typography}}</span>
               <span>50%</span>
             </div>
             <div class="progress">
@@ -163,7 +163,7 @@
 
           <div class="skill-item">
             <div class="skill-name">
-              <span>Logo Design</span>
+              <span>{{t:pages.skills.expertise.logoDesign}}</span>
               <span>40%</span>
             </div>
             <div class="progress">
@@ -179,16 +179,16 @@
   <section class="bg-light-gray">
     <div class="container">
       <div class="section-title">
-        <h2>Core Competencies</h2>
-        <p class="lead text-muted">Professional skills that set me apart</p>
+        <h2>{{t:pages.skills.sections.coreCompetencies}}</h2>
+        <p class="lead text-muted">{{t:pages.skills.sections.coreCompetenciesTagline}}</p>
       </div>
 
       <div class="row g-4">
         <div class="col-md-4 col-lg-3">
           <div class="text-center p-4 bg-white rounded-custom shadow-sm h-100">
             <i class="bi bi-lightbulb-fill text-accent" style="font-size: 3rem;"></i>
-            <h5 class="mt-3 mb-2">Creative Thinking</h5>
-            <p class="text-muted mb-0">Innovative solutions for unique design challenges</p>
+            <h5 class="mt-3 mb-2">{{t:pages.skills.competencies.creativeThinking.title}}</h5>
+            <p class="text-muted mb-0">{{t:pages.skills.competencies.creativeThinking.description}}</p>
           </div>
         </div>
 
@@ -196,56 +196,56 @@
         <div class="col-md-4 col-lg-3">
           <div class="text-center p-4 bg-white rounded-custom shadow-sm h-100">
             <i class="bi bi-people-fill text-accent" style="font-size: 3rem;"></i>
-            <h5 class="mt-3 mb-2">Client Communication</h5>
-            <p class="text-muted mb-0">Clear and effective collaboration</p>
+            <h5 class="mt-3 mb-2">{{t:pages.skills.competencies.clientCommunication.title}}</h5>
+            <p class="text-muted mb-0">{{t:pages.skills.competencies.clientCommunication.description}}</p>
           </div>
         </div>
 
         <div class="col-md-4 col-lg-3">
           <div class="text-center p-4 bg-white rounded-custom shadow-sm h-100">
             <i class="bi bi-clock-fill text-accent" style="font-size: 3rem;"></i>
-            <h5 class="mt-3 mb-2">Time Management</h5>
-            <p class="text-muted mb-0">Meeting deadlines without compromising quality</p>
+            <h5 class="mt-3 mb-2">{{t:pages.skills.competencies.timeManagement.title}}</h5>
+            <p class="text-muted mb-0">{{t:pages.skills.competencies.timeManagement.description}}</p>
           </div>
         </div>
 
         <div class="col-md-4 col-lg-3">
           <div class="text-center p-4 bg-white rounded-custom shadow-sm h-100">
             <i class="bi bi-eye-fill text-accent" style="font-size: 3rem;"></i>
-            <h5 class="mt-3 mb-2">Attention to Detail</h5>
-            <p class="text-muted mb-0">Precision in every pixel and element</p>
+            <h5 class="mt-3 mb-2">{{t:pages.skills.competencies.attentionToDetail.title}}</h5>
+            <p class="text-muted mb-0">{{t:pages.skills.competencies.attentionToDetail.description}}</p>
           </div>
         </div>
 
         <div class="col-md-4 col-lg-3">
           <div class="text-center p-4 bg-white rounded-custom shadow-sm h-100">
             <i class="bi bi-puzzle-fill text-accent" style="font-size: 3rem;"></i>
-            <h5 class="mt-3 mb-2">Problem Solving</h5>
-            <p class="text-muted mb-0">Finding creative design solutions</p>
+            <h5 class="mt-3 mb-2">{{t:pages.skills.competencies.problemSolving.title}}</h5>
+            <p class="text-muted mb-0">{{t:pages.skills.competencies.problemSolving.description}}</p>
           </div>
         </div>
 
         <div class="col-md-4 col-lg-3">
           <div class="text-center p-4 bg-white rounded-custom shadow-sm h-100">
             <i class="bi bi-chat-dots-fill text-accent" style="font-size: 3rem;"></i>
-            <h5 class="mt-3 mb-2">Feedback Integration</h5>
-            <p class="text-muted mb-0">Adapting designs based on client input</p>
+            <h5 class="mt-3 mb-2">{{t:pages.skills.competencies.feedbackIntegration.title}}</h5>
+            <p class="text-muted mb-0">{{t:pages.skills.competencies.feedbackIntegration.description}}</p>
           </div>
         </div>
 
         <div class="col-md-4 col-lg-3">
           <div class="text-center p-4 bg-white rounded-custom shadow-sm h-100">
             <i class="bi bi-graph-up-arrow text-accent" style="font-size: 3rem;"></i>
-            <h5 class="mt-3 mb-2">Trend Awareness</h5>
-            <p class="text-muted mb-0">Staying current with design trends</p>
+            <h5 class="mt-3 mb-2">{{t:pages.skills.competencies.trendAwareness.title}}</h5>
+            <p class="text-muted mb-0">{{t:pages.skills.competencies.trendAwareness.description}}</p>
           </div>
         </div>
 
         <div class="col-md-4 col-lg-3">
           <div class="text-center p-4 bg-white rounded-custom shadow-sm h-100">
             <i class="bi bi-trophy-fill text-accent" style="font-size: 3rem;"></i>
-            <h5 class="mt-3 mb-2">Quality Focus</h5>
-            <p class="text-muted mb-0">Commitment to excellence in every project</p>
+            <h5 class="mt-3 mb-2">{{t:pages.skills.competencies.qualityFocus.title}}</h5>
+            <p class="text-muted mb-0">{{t:pages.skills.competencies.qualityFocus.description}}</p>
           </div>
         </div>
       </div>
@@ -256,8 +256,8 @@
   <section>
     <div class="container">
       <div class="section-title">
-        <h2>My Specializations</h2>
-        <p class="lead text-muted">Areas where I excel</p>
+        <h2>{{t:pages.skills.sections.specializations}}</h2>
+        <p class="lead text-muted">{{t:pages.skills.sections.specializationsTagline}}</p>
       </div>
 
       <div class="row g-4">
@@ -267,10 +267,10 @@
               <div class="mb-3">
                 <i class="bi bi-brush-fill text-accent" style="font-size: 2.5rem;"></i>
               </div>
-              <h4 class="card-title">Branding & Identity</h4>
-              <p class="card-text">Creating cohesive brand identities including logos, color schemes, typography systems, and comprehensive brand guidelines that tell your story.</p>
+              <h4 class="card-title">{{t:pages.skills.specializations.branding.title}}</h4>
+              <p class="card-text">{{t:pages.skills.specializations.branding.description}}</p>
               <ul class="list-unstyled mt-3">
-                <li><i class="bi bi-check-circle-fill text-accent me-2"></i>Logo Design</li>
+                <li><i class="bi bi-check-circle-fill text-accent me-2"></i>{{t:pages.skills.expertise.logoDesign}}</li>
                 <li><i class="bi bi-check-circle-fill text-accent me-2"></i>Brand Guidelines</li>
                 <li><i class="bi bi-check-circle-fill text-accent me-2"></i>Visual Identity Systems</li>
                 <li><i class="bi bi-check-circle-fill text-accent me-2"></i>Brand Refresh</li>
@@ -285,8 +285,8 @@
               <div class="mb-3">
                 <i class="bi bi-printer-fill text-accent" style="font-size: 2.5rem;"></i>
               </div>
-              <h4 class="card-title">Print Design</h4>
-              <p class="card-text">Designing compelling print materials that capture attention and communicate effectively, from business cards to large-format posters.</p>
+              <h4 class="card-title">{{t:pages.skills.specializations.print.title}}</h4>
+              <p class="card-text">{{t:pages.skills.specializations.print.description}}</p>
               <ul class="list-unstyled mt-3">
                 <li><i class="bi bi-check-circle-fill text-accent me-2"></i>Business Cards</li>
                 <li><i class="bi bi-check-circle-fill text-accent me-2"></i>Brochures & Flyers</li>
@@ -303,10 +303,10 @@
               <div class="mb-3">
                 <i class="bi bi-phone-fill text-accent" style="font-size: 2.5rem;"></i>
               </div>
-              <h4 class="card-title">Digital Graphics</h4>
-              <p class="card-text">Creating engaging digital content for social media, websites, and digital marketing campaigns that drive engagement and results.</p>
+              <h4 class="card-title">{{t:pages.skills.specializations.digital.title}}</h4>
+              <p class="card-text">{{t:pages.skills.specializations.digital.description}}</p>
               <ul class="list-unstyled mt-3">
-                <li><i class="bi bi-check-circle-fill text-accent me-2"></i>Social Media Graphics</li>
+                <li><i class="bi bi-check-circle-fill text-accent me-2"></i>{{t:pages.skills.expertise.socialMediaGraphics}}</li>
                 <li><i class="bi bi-check-circle-fill text-accent me-2"></i>Web Graphics</li>
                 <li><i class="bi bi-check-circle-fill text-accent me-2"></i>Digital Ads</li>
                 <li><i class="bi bi-check-circle-fill text-accent me-2"></i>Email Templates</li>
@@ -317,19 +317,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Call to Action
-  <section class="bg-light-gray text-center">
-    <div class="container">
-      <h2 class="mb-4">Ready to See My Work?</h2>
-      <p class="lead mb-4">Explore my best projects and full portfolio</p>
-      <div>
-        <a href="../portfolio/bestwork.html" class="btn btn-primary btn-lg me-2">View Best Work</a>
-        <a href="../portfolio/projects.html" class="btn btn-outline-primary btn-lg">See All Projects</a>
-      </div>
-    </div>
-  </section>
- -->
 
   <!-- Footer -->
   <div id="site-footer"></div>

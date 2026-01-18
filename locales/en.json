@@ -312,6 +312,55 @@
     "toolsUsed": "Tools Used",
     "aboutProject": "About This Project",
     "printMaterials": "Print Materials",
+    "socialMediaGraphics": "Social Media Graphics",
+    "brochureDesign": "Brochure Design",
+    "promotionalPosters": "Promotional Posters",
+    "travelPackageDesign": "Travel Package Design",
+    "billboardDesign": "Billboard Design",
+    "catalogueDesign": "Catalogue Design",
+    "packagingDesign": "Packaging Design",
+    "menuDesign": "Menu Design",
+    "signageDesign": "Signage Design",
+    "takeawayCups": "Takeaway Cups",
+    "loyaltyCards": "Loyalty Cards",
+    "userResearch": "User Research",
+    "wireframing": "Wireframing",
+    "highFidelityMockups": "High-Fidelity Mockups",
+    "prototyping": "Prototyping",
+    "printAdvertisements": "Print Advertisements",
+    "digitalAds": "Digital Ads",
+    "campaignDesign": "Campaign Design",
+    "visualMessaging": "Visual Messaging",
+    "kioskDesign": "Kiosk Design",
+    "spatialLayout": "Spatial Layout",
+    "threeDVisualization": "3D Visualization",
+    "brandingPlacement": "Branding Placement",
+    "digitalIllustration": "Digital Illustration",
+    "characterDesign": "Character Design",
+    "visualStorytelling": "Visual Storytelling",
+    "conceptDevelopment": "Concept Development",
+    "logoDesign": "Logo Design",
+    "typographySystems": "Typography Systems",
+    "brandGuidelines": "Brand Guidelines",
+    "visualIdentity": "Visual Identity",
+    "instagramPosts": "Instagram Posts",
+    "facebookGraphics": "Facebook Graphics",
+    "linkedInContent": "LinkedIn Content",
+    "socialMediaCampaigns": "Social Media Campaigns",
+    "packageStructure": "Package Structure",
+    "labelDesign": "Label Design",
+    "productBranding": "Product Branding",
+    "visualCommunication": "Visual Communication",
+    "businessCards": "Business Cards",
+    "posterVisuals": "Poster Visuals",
+    "brandCommunication": "Brand Communication",
+    "businessCardDesign": "Business Card Design",
+    "vehicleWrapDesign": "Vehicle Wrap Design",
+    "banner": "Banner",
+    "brandIdentity": "Brand Identity",
+    "websiteAppInterface": "Website & App Interface",
+    "userFlowDesign": "User Flow Design",
+    "campaignVisuals": "Campaign Visuals",
     "freelance": {
       "title": "Freelance Work - Shazzreen Elyana",
       "metaDescription": "Freelance Design Work - Shazzreen Elyana",
@@ -325,61 +374,90 @@
       "title": "JX Travel & Tours - Shazzreen Elyana",
       "metaDescription": "JX Travel & Tours Design Work - Shazzreen Elyana",
       "heading": "JX Travel & Tours",
-      "tagline": "Marketing & Promotional Design"
+      "tagline": "Marketing & Promotional Design",
+      "context": "While working at JX Travel & Tours as Admin Cum Graphic Designer, I designed marketing materials to promote travel packages and enhance brand visibility across digital and print platforms.",
+      "about1": "Created comprehensive marketing campaign materials including social media graphics, brochures, and promotional posters for various travel packages. Each design was crafted to capture the excitement of travel while maintaining brand consistency.",
+      "about2": "The project involved close collaboration with the marketing team to ensure all visual materials aligned with campaign objectives and effectively communicated the value of travel packages to potential customers."
     },
     "pearliewhite": {
       "title": "Pearlie White - Shazzreen Elyana",
       "metaDescription": "Pearlie White Design Work - Shazzreen Elyana",
       "heading": "Pearlie White",
-      "tagline": "Packaging & Brand Design"
+      "tagline": "Packaging & Brand Design",
+      "context": "Academic project focused on redesigning packaging and visual materials for Pearlie White, a dental care brand, emphasizing clean aesthetics and modern design principles.",
+      "about1": "Developed product packaging designs and brand refresh concepts for Pearlie White, focusing on clean and modern aesthetics that reflect the brand's commitment to dental health and wellness.",
+      "about2": "The project included billboard designs, catalogue layouts, and comprehensive packaging solutions that maintain brand consistency while appealing to modern consumers."
     },
     "rimbrew": {
       "title": "Rimbrew Coffee Shop - Shazzreen Elyana",
       "metaDescription": "Rimbrew Coffee Shop Design Work - Shazzreen Elyana",
       "heading": "Rimbrew Coffee Shop",
-      "tagline": "Cafe Branding & Menu Design"
+      "tagline": "Cafe Branding & Menu Design",
+      "context": "Complete branding package for a modern coffee shop concept, including menu design, signage, and promotional materials that create a cohesive cafe experience.",
+      "about1": "Designed a full cafe branding package including menu layouts, signage systems, takeaway cup designs, and loyalty cards. Each element was crafted to create a cohesive and inviting atmosphere.",
+      "about2": "The branding focused on creating a warm and modern aesthetic that reflects the cafe's commitment to quality coffee and customer experience."
     },
     "careerbuddy": {
       "title": "Career Buddy - Shazzreen Elyana",
       "metaDescription": "Career Buddy App Design - Shazzreen Elyana",
       "heading": "Career Buddy",
-      "tagline": "UI/UX Mobile App Design"
+      "tagline": "UI/UX Mobile App Design",
+      "context": "UI/UX design project for a mobile career guidance application, focusing on user-centered design principles to help users navigate their career paths.",
+      "about1": "Designed the user interface and experience for Career Buddy, a mobile app aimed at helping users explore career options, build resumes, and prepare for interviews.",
+      "about2": "The project involved extensive user research, wireframing, and high-fidelity mockup creation to ensure an intuitive and helpful user experience throughout the career exploration journey."
     },
     "advertising": {
       "title": "Advertising - Shazzreen Elyana",
       "metaDescription": "Advertising Design Work - Shazzreen Elyana",
       "heading": "Advertising",
-      "tagline": "Visual Advertising & Campaign Design"
+      "tagline": "Visual Advertising & Campaign Design",
+      "context": "Collection of advertising projects showcasing high-impact visual communication for various campaigns and promotional materials.",
+      "about1": "Developed high-impact advertising visuals for various clients and academic projects, focusing on clear messaging, strong visual hierarchy, and audience-driven design approaches.",
+      "about2": "Each advertising piece was crafted to communicate brand messages effectively while capturing attention and driving engagement across different media formats."
     },
     "threeD": {
       "title": "3D Design - Shazzreen Elyana",
       "metaDescription": "3D Design Work - Shazzreen Elyana",
       "heading": "3D Design",
-      "tagline": "Spatial Visualization & Form Development"
+      "tagline": "Spatial Visualization & Form Development",
+      "context": "Selected 3D design works showcasing spatial visualization and form development, including kiosk designs and architectural visualizations.",
+      "about1": "Created 3D visualizations for various projects including kiosk designs, booth layouts, and product presentations. Each design focused on spatial arrangement and branding integration.",
+      "about2": "The work demonstrates proficiency in translating 2D concepts into three-dimensional environments while maintaining design principles and brand consistency."
     },
     "illustration": {
       "title": "Illustration - Shazzreen Elyana",
       "metaDescription": "Illustration Work - Shazzreen Elyana",
       "heading": "Illustration",
-      "tagline": "Digital Illustration & Visual Storytelling"
+      "tagline": "Digital Illustration & Visual Storytelling",
+      "context": "Digital illustrations created for academic and creative projects, focusing on visual storytelling and expressive design techniques.",
+      "about1": "Produced digital illustrations for various projects, emphasizing visual storytelling, composition, and expressive style to communicate ideas and concepts effectively.",
+      "about2": "Each illustration demonstrates attention to detail, color theory application, and the ability to convey complex ideas through visual narratives."
     },
     "branding": {
       "title": "Branding - Shazzreen Elyana",
       "metaDescription": "Branding Design Work - Shazzreen Elyana",
       "heading": "Branding",
-      "tagline": "Logo & Visual Identity Systems"
+      "tagline": "Logo & Visual Identity Systems",
+      "context": "Branding projects exploring logo design, typography, and visual identity systems for various clients and academic assignments.",
+      "about1": "Developed comprehensive branding solutions including logos, typography systems, brand guidelines, and visual identity elements that communicate brand values effectively."
     },
-    "socialmedia": {
+    "socialMedia": {
       "title": "Social Media Design - Shazzreen Elyana",
       "metaDescription": "Social Media Design Work - Shazzreen Elyana",
       "heading": "Social Media Design",
-      "tagline": "Platform-Aware Visual Content"
+      "tagline": "Platform-Aware Visual Content",
+      "context": "Social media visual content designed for various platforms, focusing on engagement and platform-specific design requirements.",
+      "about1": "Created engaging social media content for multiple platforms including Instagram, Facebook, and LinkedIn. Each design was optimized for platform-specific requirements and audience engagement.",
+      "about2": "The work demonstrates understanding of social media design best practices, including visual hierarchy, brand consistency, and call-to-action integration."
     },
     "packaging": {
       "title": "Packaging - Shazzreen Elyana",
       "metaDescription": "Packaging Design Work - Shazzreen Elyana",
       "heading": "Packaging",
-      "tagline": "Product Packaging & Label Design"
+      "tagline": "Product Packaging & Label Design",
+      "context": "Packaging design works showcasing product presentation, label design, and brand-focused visual solutions for various products.",
+      "about1": "Designed product packaging solutions that combine aesthetic appeal with functional requirements, ensuring products stand out on shelves while maintaining brand identity.",
+      "about2": "Each packaging project involved careful consideration of structure, materials, and visual design to create cohesive and effective product presentations."
     }
   }
 }

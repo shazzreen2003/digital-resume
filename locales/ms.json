@@ -312,6 +312,55 @@
     "toolsUsed": "Alatan Digunakan",
     "aboutProject": "Tentang Projek Ini",
     "printMaterials": "Bahan Cetak",
+    "socialMediaGraphics": "Grafik Media Sosial",
+    "brochureDesign": "Reka Bentuk Brosur",
+    "promotionalPosters": "Poster Promosi",
+    "travelPackageDesign": "Reka Bentuk Pakej Pelancongan",
+    "billboardDesign": "Reka Bentuk Papan Iklan",
+    "catalogueDesign": "Reka Bentuk Katalog",
+    "packagingDesign": "Reka Bentuk Pembungkusan",
+    "menuDesign": "Reka Bentuk Menu",
+    "signageDesign": "Reka Bentuk Papan Tanda",
+    "takeawayCups": "Cawan Bawa Pulang",
+    "loyaltyCards": "Kad Kesetiaan",
+    "userResearch": "Penyelidikan Pengguna",
+    "wireframing": "Kerangka Wayar",
+    "highFidelityMockups": "Mockup Ketepatan Tinggi",
+    "prototyping": "Prototaip",
+    "printAdvertisements": "Iklan Cetak",
+    "digitalAds": "Iklan Digital",
+    "campaignDesign": "Reka Bentuk Kempen",
+    "visualMessaging": "Pemesejan Visual",
+    "kioskDesign": "Reka Bentuk Kiosk",
+    "spatialLayout": "Susun Atur Spatial",
+    "threeDVisualization": "Visualisasi 3D",
+    "brandingPlacement": "Penempatan Penjenamaan",
+    "digitalIllustration": "Ilustrasi Digital",
+    "characterDesign": "Reka Bentuk Watak",
+    "visualStorytelling": "Penceritaan Visual",
+    "conceptDevelopment": "Pembangunan Konsep",
+    "logoDesign": "Reka Bentuk Logo",
+    "typographySystems": "Sistem Tipografi",
+    "brandGuidelines": "Garis Panduan Jenama",
+    "visualIdentity": "Identiti Visual",
+    "instagramPosts": "Siaran Instagram",
+    "facebookGraphics": "Grafik Facebook",
+    "linkedInContent": "Kandungan LinkedIn",
+    "socialMediaCampaigns": "Kempen Media Sosial",
+    "packageStructure": "Struktur Pembungkusan",
+    "labelDesign": "Reka Bentuk Label",
+    "productBranding": "Penjenamaan Produk",
+    "visualCommunication": "Komunikasi Visual",
+    "businessCards": "Kad Perniagaan",
+    "posterVisuals": "Visual Poster",
+    "brandCommunication": "Komunikasi Jenama",
+    "businessCardDesign": "Reka Bentuk Kad Perniagaan",
+    "vehicleWrapDesign": "Reka Bentuk Balutan Kenderaan",
+    "banner": "Sepanduk",
+    "brandIdentity": "Identiti Jenama",
+    "websiteAppInterface": "Antara Muka Laman Web & Aplikasi",
+    "userFlowDesign": "Reka Bentuk Aliran Pengguna",
+    "campaignVisuals": "Visual Kempen",
     "freelance": {
       "title": "Kerja Bebas - Shazzreen Elyana",
       "metaDescription": "Kerja Reka Bentuk Bebas - Shazzreen Elyana",
@@ -325,61 +374,90 @@
       "title": "JX Travel & Tours - Shazzreen Elyana",
       "metaDescription": "Kerja Reka Bentuk JX Travel & Tours - Shazzreen Elyana",
       "heading": "JX Travel & Tours",
-      "tagline": "Reka Bentuk Pemasaran & Promosi"
+      "tagline": "Reka Bentuk Pemasaran & Promosi",
+      "context": "Semasa bekerja di JX Travel & Tours sebagai Admin Merangkap Pereka Grafik, saya mereka bentuk bahan pemasaran untuk mempromosikan pakej pelancongan dan meningkatkan keterlihatan jenama merentasi platform digital dan cetak.",
+      "about1": "Mencipta bahan kempen pemasaran yang komprehensif termasuk grafik media sosial, brosur, dan poster promosi untuk pelbagai pakej pelancongan. Setiap reka bentuk dicipta untuk menangkap keseronokan perjalanan sambil mengekalkan konsistensi jenama.",
+      "about2": "Projek ini melibatkan kerjasama rapat dengan pasukan pemasaran untuk memastikan semua bahan visual sejajar dengan objektif kempen dan menyampaikan nilai pakej pelancongan dengan berkesan kepada bakal pelanggan."
     },
     "pearliewhite": {
       "title": "Pearlie White - Shazzreen Elyana",
       "metaDescription": "Kerja Reka Bentuk Pearlie White - Shazzreen Elyana",
       "heading": "Pearlie White",
-      "tagline": "Reka Bentuk Pembungkusan & Jenama"
+      "tagline": "Reka Bentuk Pembungkusan & Jenama",
+      "context": "Projek akademik yang memfokuskan pada mereka bentuk semula pembungkusan dan bahan visual untuk Pearlie White, jenama penjagaan pergigian, menekankan estetika yang bersih dan prinsip reka bentuk moden.",
+      "about1": "Membangunkan reka bentuk pembungkusan produk dan konsep pembaharuan jenama untuk Pearlie White, memfokuskan pada estetika yang bersih dan moden yang mencerminkan komitmen jenama terhadap kesihatan dan kesejahteraan pergigian.",
+      "about2": "Projek ini termasuk reka bentuk papan iklan, susun atur katalog, dan penyelesaian pembungkusan komprehensif yang mengekalkan konsistensi jenama sambil menarik pengguna moden."
     },
     "rimbrew": {
       "title": "Rimbrew Coffee Shop - Shazzreen Elyana",
       "metaDescription": "Kerja Reka Bentuk Rimbrew Coffee Shop - Shazzreen Elyana",
       "heading": "Rimbrew Coffee Shop",
-      "tagline": "Penjenamaan Kafe & Reka Bentuk Menu"
+      "tagline": "Penjenamaan Kafe & Reka Bentuk Menu",
+      "context": "Pakej penjenamaan lengkap untuk konsep kedai kopi moden, termasuk reka bentuk menu, papan tanda, dan bahan promosi yang mencipta pengalaman kafe yang padu.",
+      "about1": "Mereka bentuk pakej penjenamaan kafe lengkap termasuk susun atur menu, sistem papan tanda, reka bentuk cawan bawa pulang, dan kad kesetiaan. Setiap elemen dicipta untuk mewujudkan suasana yang padu dan menarik.",
+      "about2": "Penjenamaan ini memfokuskan pada mencipta estetika yang hangat dan moden yang mencerminkan komitmen kafe terhadap kopi berkualiti dan pengalaman pelanggan."
     },
     "careerbuddy": {
       "title": "Career Buddy - Shazzreen Elyana",
       "metaDescription": "Reka Bentuk Aplikasi Career Buddy - Shazzreen Elyana",
       "heading": "Career Buddy",
-      "tagline": "Reka Bentuk UI/UX Aplikasi Mudah Alih"
+      "tagline": "Reka Bentuk UI/UX Aplikasi Mudah Alih",
+      "context": "Projek reka bentuk UI/UX untuk aplikasi bimbingan kerjaya mudah alih, memfokuskan pada prinsip reka bentuk berpusatkan pengguna untuk membantu pengguna menavigasi laluan kerjaya mereka.",
+      "about1": "Mereka bentuk antara muka pengguna dan pengalaman untuk Career Buddy, aplikasi mudah alih yang bertujuan membantu pengguna meneroka pilihan kerjaya, membina resume, dan bersedia untuk temu duga.",
+      "about2": "Projek ini melibatkan penyelidikan pengguna yang meluas, kerangka wayar, dan penciptaan mockup ketepatan tinggi untuk memastikan pengalaman pengguna yang intuitif dan membantu sepanjang perjalanan penerokaan kerjaya."
     },
     "advertising": {
       "title": "Pengiklanan - Shazzreen Elyana",
       "metaDescription": "Kerja Reka Bentuk Pengiklanan - Shazzreen Elyana",
       "heading": "Pengiklanan",
-      "tagline": "Pengiklanan Visual & Reka Bentuk Kempen"
+      "tagline": "Pengiklanan Visual & Reka Bentuk Kempen",
+      "context": "Koleksi projek pengiklanan yang mempamerkan komunikasi visual berimpak tinggi untuk pelbagai kempen dan bahan promosi.",
+      "about1": "Membangunkan visual pengiklanan berimpak tinggi untuk pelbagai pelanggan dan projek akademik, memfokuskan pada pemesejan yang jelas, hierarki visual yang kuat, dan pendekatan reka bentuk yang didorong audiens.",
+      "about2": "Setiap karya pengiklanan dicipta untuk menyampaikan mesej jenama dengan berkesan sambil menarik perhatian dan mendorong penglibatan merentasi format media yang berbeza."
     },
     "threeD": {
       "title": "Reka Bentuk 3D - Shazzreen Elyana",
       "metaDescription": "Kerja Reka Bentuk 3D - Shazzreen Elyana",
       "heading": "Reka Bentuk 3D",
-      "tagline": "Visualisasi Spatial & Pembangunan Bentuk"
+      "tagline": "Visualisasi Spatial & Pembangunan Bentuk",
+      "context": "Karya reka bentuk 3D terpilih yang mempamerkan visualisasi spatial dan pembangunan bentuk, termasuk reka bentuk kiosk dan visualisasi seni bina.",
+      "about1": "Mencipta visualisasi 3D untuk pelbagai projek termasuk reka bentuk kiosk, susun atur gerai, dan persembahan produk. Setiap reka bentuk memfokuskan pada susunan spatial dan integrasi penjenamaan.",
+      "about2": "Kerja ini menunjukkan kecekapan dalam menterjemahkan konsep 2D ke persekitaran tiga dimensi sambil mengekalkan prinsip reka bentuk dan konsistensi jenama."
     },
     "illustration": {
       "title": "Ilustrasi - Shazzreen Elyana",
       "metaDescription": "Kerja Ilustrasi - Shazzreen Elyana",
       "heading": "Ilustrasi",
-      "tagline": "Ilustrasi Digital & Penceritaan Visual"
+      "tagline": "Ilustrasi Digital & Penceritaan Visual",
+      "context": "Ilustrasi digital yang dicipta untuk projek akademik dan kreatif, memfokuskan pada penceritaan visual dan teknik reka bentuk ekspresif.",
+      "about1": "Menghasilkan ilustrasi digital untuk pelbagai projek, menekankan penceritaan visual, komposisi, dan gaya ekspresif untuk menyampaikan idea dan konsep dengan berkesan.",
+      "about2": "Setiap ilustrasi menunjukkan perhatian terhadap perincian, aplikasi teori warna, dan keupayaan untuk menyampaikan idea kompleks melalui naratif visual."
     },
     "branding": {
       "title": "Penjenamaan - Shazzreen Elyana",
       "metaDescription": "Kerja Reka Bentuk Penjenamaan - Shazzreen Elyana",
       "heading": "Penjenamaan",
-      "tagline": "Logo & Sistem Identiti Visual"
+      "tagline": "Logo & Sistem Identiti Visual",
+      "context": "Projek penjenamaan yang meneroka reka bentuk logo, tipografi, dan sistem identiti visual untuk pelbagai pelanggan dan tugasan akademik.",
+      "about1": "Membangunkan penyelesaian penjenamaan komprehensif termasuk logo, sistem tipografi, garis panduan jenama, dan elemen identiti visual yang menyampaikan nilai jenama dengan berkesan."
     },
-    "socialmedia": {
+    "socialMedia": {
       "title": "Reka Bentuk Media Sosial - Shazzreen Elyana",
       "metaDescription": "Kerja Reka Bentuk Media Sosial - Shazzreen Elyana",
       "heading": "Reka Bentuk Media Sosial",
-      "tagline": "Kandungan Visual Sesuai Platform"
+      "tagline": "Kandungan Visual Sesuai Platform",
+      "context": "Kandungan visual media sosial yang direka untuk pelbagai platform, memfokuskan pada penglibatan dan keperluan reka bentuk khusus platform.",
+      "about1": "Mencipta kandungan media sosial yang menarik untuk pelbagai platform termasuk Instagram, Facebook, dan LinkedIn. Setiap reka bentuk dioptimumkan untuk keperluan khusus platform dan penglibatan audiens.",
+      "about2": "Kerja ini menunjukkan pemahaman tentang amalan terbaik reka bentuk media sosial, termasuk hierarki visual, konsistensi jenama, dan integrasi seruan tindakan."
     },
     "packaging": {
       "title": "Pembungkusan - Shazzreen Elyana",
       "metaDescription": "Kerja Reka Bentuk Pembungkusan - Shazzreen Elyana",
       "heading": "Pembungkusan",
-      "tagline": "Reka Bentuk Pembungkusan Produk & Label"
+      "tagline": "Reka Bentuk Pembungkusan Produk & Label",
+      "context": "Karya reka bentuk pembungkusan yang mempamerkan persembahan produk, reka bentuk label, dan penyelesaian visual yang berfokuskan jenama untuk pelbagai produk.",
+      "about1": "Mereka bentuk penyelesaian pembungkusan produk yang menggabungkan tarikan estetik dengan keperluan fungsional, memastikan produk menonjol di rak sambil mengekalkan identiti jenama.",
+      "about2": "Setiap projek pembungkusan melibatkan pertimbangan teliti terhadap struktur, bahan, dan reka bentuk visual untuk mencipta persembahan produk yang padu dan berkesan."
     }
   }
 }

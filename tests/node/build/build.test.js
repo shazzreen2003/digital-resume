@@ -94,9 +94,20 @@ describe('Build System', () => {
     });
 
     test('should include required asset folders', () => {
-      expect(CONFIG.assetsToCopy).toContain('assets/css');
+      // Note: assets/css is not copied directly - CSS files are concatenated by build.js
       expect(CONFIG.assetsToCopy).toContain('assets/images');
       expect(CONFIG.assetsToCopy).toContain('assets/js');
+    });
+
+    test('should have CSS concatenation order defined', () => {
+      expect(CONFIG.cssOrder).toBeDefined();
+      expect(Array.isArray(CONFIG.cssOrder)).toBe(true);
+      expect(CONFIG.cssOrder).toContain('variables.css');
+      expect(CONFIG.cssOrder).toContain('base.css');
+      expect(CONFIG.cssOrder).toContain('components.css');
+      expect(CONFIG.cssOrder).toContain('layouts.css');
+      expect(CONFIG.cssOrder).toContain('responsive.css');
+      expect(CONFIG.cssOrder).toContain('dark-mode.css');
     });
   });
 

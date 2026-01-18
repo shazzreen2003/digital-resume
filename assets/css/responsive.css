@@ -1,0 +1,674 @@
+/* ============================================
+   10. RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* Large tablets and below */
+@media (max-width: 992px) {
+  /* Adjust navigation for tablets */
+  .navbar-collapse {
+    background-color: var(--white);
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .nav-link {
+    padding: 0.75rem 1rem !important;
+    margin: 0.25rem 0;
+    border-radius: var(--radius-sm);
+  }
+
+  /* Adjust hero for tablets */
+  .hero {
+    min-height: 70vh;
+    padding: var(--spacing-lg) 0;
+  }
+
+  /* Card adjustments */
+  .card-img-top {
+    height: 220px;
+  }
+}
+
+/* Tablet and below */
+@media (max-width: 768px) {
+  /* Typography adjustments */
+  h1, .display-4 {
+    font-size: 2rem !important;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero .lead, .page-hero .lead {
+    font-size: 1.1rem;
+  }
+
+  .lead {
+    font-size: 1.1rem;
+  }
+
+  .page-hero h1, .page-hero .display-4 {
+    font-size: 2rem !important;
+  }
+
+  /* Spacing adjustments */
+  section {
+    padding: var(--spacing-md) 0;
+  }
+
+  /* Stats adjustments */
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+  }
+
+  /* Navigation adjustments */
+  .nav-link {
+    margin: 0.25rem 0;
+    text-align: center;
+  }
+
+  /* Card adjustments */
+  .card-img-top {
+    height: 200px;
+  }
+
+  .card-body {
+    padding: 1.25rem;
+  }
+
+  /* Timeline adjustments */
+  .timeline-item {
+    padding-left: 2rem;
+  }
+
+  /* Form adjustments for better touch targets */
+  .form-control,
+  .form-select {
+    padding: 0.875rem 1rem;
+    font-size: 1rem;
+  }
+
+  /* Button adjustments - larger touch targets */
+  .btn {
+    padding: 0.75rem 1.75rem;
+    font-size: 1rem;
+    min-height: 48px; /* Minimum touch target size */
+  }
+
+  .btn-lg {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+
+  /* Footer adjustments */
+  .footer {
+    text-align: center;
+  }
+
+  .footer .social-links {
+    justify-content: center;
+    margin-top: var(--spacing-md);
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  /* Reset base font size for better readability */
+  html {
+    font-size: 16px;
+  }
+
+  /* Typography for mobile */
+  h1, .display-4 {
+    font-size: 1.75rem !important;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.35rem;
+  }
+
+  h4 {
+    font-size: 1.15rem;
+  }
+
+  h5 {
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .lead {
+    font-size: 1.05rem;
+  }
+
+  /* Hero section mobile */
+  .hero {
+    min-height: auto;
+    padding: var(--spacing-lg) 0;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem !important;
+    line-height: 1.2;
+  }
+
+  .hero .lead {
+    font-size: 1.05rem;
+  }
+
+  .page-hero {
+    padding: var(--spacing-md) 0;
+  }
+
+  .page-hero h1, .page-hero .display-4 {
+    font-size: 1.75rem !important;
+  }
+
+  .page-hero .lead {
+    font-size: 1.05rem;
+  }
+
+  /* Buttons - full width on mobile for better UX */
+  .btn {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 0.75rem;
+    min-height: 48px; /* Touch target accessibility */
+  }
+
+  .btn-lg {
+    padding: 1rem 1.5rem;
+    font-size: 1.05rem;
+  }
+
+  /* Exception: inline buttons */
+  .btn-sm {
+    width: auto;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0;
+  }
+
+  /* Stats mobile layout */
+  .stat-number {
+    font-size: 1.875rem;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+  }
+
+  .stat-item {
+    padding: var(--spacing-sm);
+  }
+
+  /* Cards mobile optimization */
+  .card {
+    margin-bottom: 1.5rem;
+  }
+
+  .card-img-top {
+    height: 180px;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .card-title {
+    font-size: 1.15rem;
+  }
+
+  .card-text {
+    font-size: 0.95rem;
+  }
+
+  /* Navigation mobile */
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+
+  .navbar-toggler {
+    padding: 0.5rem 0.75rem;
+    font-size: 1.25rem;
+  }
+
+  /* Section spacing mobile */
+  section {
+    padding: var(--spacing-sm) 0;
+  }
+
+  .section-title {
+    margin-bottom: var(--spacing-md);
+  }
+
+  /* Timeline mobile */
+  .timeline-item {
+    padding-left: 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .timeline-dot {
+    width: 12px;
+    height: 12px;
+    left: -7px;
+  }
+
+  /* Skills mobile */
+  .skill-name {
+    font-size: 0.9rem;
+  }
+
+  .progress {
+    height: 8px;
+  }
+
+  /* Form mobile optimization */
+  .form-control,
+  .form-select,
+  textarea.form-control {
+    padding: 1rem;
+    font-size: 16px; /* Prevents zoom on iOS */
+    border-radius: var(--radius-md);
+    min-height: 48px;
+  }
+
+  textarea.form-control {
+    min-height: 120px;
+  }
+
+  .form-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  /* Social links mobile */
+  .social-links {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .social-link {
+    width: 44px;
+    height: 44px;
+    margin: 0.25rem;
+  }
+
+  /* Contact info mobile */
+  .contact-info {
+    padding: var(--spacing-sm);
+  }
+
+  .contact-info-item {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .contact-info-item i {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Footer mobile */
+  .footer {
+    padding: var(--spacing-md) 0 var(--spacing-sm);
+  }
+
+  .footer h5 {
+    font-size: 1.1rem;
+    margin-top: var(--spacing-sm);
+  }
+
+  .footer p,
+  .footer a {
+    font-size: 0.9rem;
+  }
+
+  /* Spacing utilities mobile */
+  .mb-section {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .mt-section {
+    margin-top: var(--spacing-md);
+  }
+}
+
+/* Very small mobile devices */
+@media (max-width: 375px) {
+  html {
+    font-size: 15px;
+  }
+
+  h1, .display-4 {
+    font-size: 1.5rem !important;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .page-hero h1, .page-hero .display-4 {
+    font-size: 1.5rem !important;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  .card-img-top {
+    height: 160px;
+  }
+}
+
+/* Landscape mobile optimization */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    min-height: auto;
+    padding: var(--spacing-md) 0;
+  }
+
+  .page-hero {
+    padding: var(--spacing-sm) 0;
+  }
+
+  section {
+    padding: var(--spacing-sm) 0;
+  }
+}
+
+/* ============================================
+   11. MOBILE-SPECIFIC ENHANCEMENTS
+   ============================================ */
+
+/* Prevent text size adjustment on orientation change */
+html {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Improve touch scrolling on iOS */
+body {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Remove tap highlight on mobile */
+a,
+button,
+.btn,
+.card,
+.nav-link {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Add active state for better touch feedback */
+.btn:active,
+.card:active,
+.nav-link:active {
+  opacity: 0.8;
+  transform: scale(0.98);
+}
+
+/* Improve card touch interaction */
+.card {
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Better mobile navigation */
+@media (max-width: 992px) {
+  .navbar-nav {
+    width: 100%;
+  }
+
+  .nav-link {
+    border: 1px solid transparent;
+  }
+
+  .nav-link:hover,
+  .nav-link:active {
+    background-color: var(--light-gray);
+    border-color: var(--accent-color);
+  }
+
+  .nav-link.active {
+    background-color: rgba(255, 118, 117, 0.1);
+    border-color: var(--accent-color);
+  }
+}
+
+/* Improve form usability on mobile */
+@media (max-width: 576px) {
+  /* Prevent zoom on input focus in iOS */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+
+  /* Better spacing for form elements */
+  .form-control,
+  .form-select {
+    margin-bottom: 1rem;
+  }
+
+  /* Full-width submit buttons */
+  button[type="submit"],
+  input[type="submit"] {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+
+/* Improve image loading on mobile */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-img-top {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Better spacing for mobile grids */
+@media (max-width: 576px) {
+  .row {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+
+  .row > * {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  /* Container padding adjustment */
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Sticky navigation enhancement for mobile */
+.navbar.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+/* Safe area for notched devices (iPhone X+) */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+  }
+
+  .navbar,
+  .footer {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+}
+
+/* Loading optimization for images */
+.card-img-top,
+img {
+  loading: lazy;
+}
+
+/* ============================================
+   12. OVERLAP PREVENTION
+   ============================================ */
+
+/* Prevent overlapping sections */
+section {
+  clear: both;
+  overflow: hidden;
+}
+
+/* Ensure rows don't overlap */
+.row {
+  margin-bottom: var(--spacing-md);
+}
+
+.row:last-child {
+  margin-bottom: 0;
+}
+
+/* Prevent column content overflow */
+.col,
+[class*="col-"] {
+  position: relative;
+}
+
+/* Add consistent bottom margin to common elements */
+.card,
+.timeline,
+.contact-info,
+.skill-item:last-child,
+form {
+  margin-bottom: var(--spacing-md);
+}
+
+/* Remove bottom margin from last elements in containers */
+.container > *:last-child,
+.row > *:last-child > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Ensure proper spacing around alert boxes */
+.alert {
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  clear: both;
+  position: relative;
+  z-index: 100;
+}
+
+/* Add buffer space between major sections */
+section.bg-light-gray {
+  padding-top: calc(var(--spacing-lg) + 1rem);
+  padding-bottom: calc(var(--spacing-lg) + 1rem);
+}
+
+/* Mobile-specific overlap prevention */
+@media (max-width: 768px) {
+  /* Add more spacing between sections on mobile */
+  section {
+    padding: var(--spacing-md) 0;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  /* Ensure alert boxes have space on mobile */
+  .alert {
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+  }
+
+  /* Add spacing after rows on mobile */
+  .row {
+    margin-bottom: var(--spacing-md);
+  }
+
+  /* Ensure card grids don't overlap */
+  .col-md-6,
+  .col-lg-4,
+  .col-lg-3 {
+    margin-bottom: var(--spacing-sm);
+  }
+}
+
+@media (max-width: 576px) {
+  /* Extra spacing for very small screens */
+  section {
+    padding: calc(var(--spacing-sm) + 0.5rem) 0;
+  }
+
+  section.bg-light-gray {
+    padding-top: calc(var(--spacing-md) + 0.5rem);
+    padding-bottom: calc(var(--spacing-md) + 0.5rem);
+  }
+
+  /* Ensure no overlap in timeline */
+  .timeline-item {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  /* Add space after form elements */
+  .card,
+  form,
+  .alert {
+    margin-bottom: var(--spacing-md);
+  }
+}
