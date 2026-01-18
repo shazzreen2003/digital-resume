@@ -1,0 +1,385 @@
+{
+  "meta": {
+    "langCode": "en",
+    "langName": "English",
+    "otherLangCode": "ms",
+    "otherLangName": "Bahasa Melayu"
+  },
+  "nav": {
+    "aboutMe": "About Me",
+    "skills": "Skills",
+    "bestWork": "Best Work",
+    "projects": "Projects",
+    "contact": "Contact",
+    "viewAll": "View All",
+    "toggleNavigation": "Toggle navigation",
+    "toggleDarkMode": "Toggle dark mode"
+  },
+  "common": {
+    "breadcrumbs": {
+      "home": "Home",
+      "skills": "Skills",
+      "contact": "Contact",
+      "bestWork": "Best Work",
+      "projects": "Projects"
+    },
+    "buttons": {
+      "viewArtwork": "View Artwork",
+      "backToBestWork": "Back to Best Work",
+      "backToProjects": "Back to Projects",
+      "downloadCreativeResume": "Download Creative Resume",
+      "downloadFormalResume": "Download Formal Resume",
+      "downloadResume": "Download My Resume",
+      "sendMessage": "Send Message"
+    },
+    "carousel": {
+      "previous": "Previous",
+      "next": "Next",
+      "slide": "Slide"
+    },
+    "footer": {
+      "tagline": "Graphic designer passionate about creating beautiful and functional designs that make a difference.",
+      "quickLinks": "Quick Links",
+      "connectWithMe": "Connect With Me",
+      "copyright": "2025 Shazzreen Elyana. All rights reserved."
+    }
+  },
+  "pages": {
+    "index": {
+      "title": "Redirecting... - Shazzreen Elyana",
+      "redirecting": "Redirecting to portfolio..."
+    },
+    "about": {
+      "title": "About Me - Shazzreen Elyana",
+      "metaDescription": "About Shazzreen Elyana - Graphic designer passionate about creating meaningful visual experiences.",
+      "metaKeywords": "graphic designer, about me, biography, creative designer",
+      "hero": {
+        "heading": "About Me",
+        "tagline": "Designing with Purpose, Creating with Passion"
+      },
+      "bio": {
+        "greeting": "I'm Shazzreen Elyana",
+        "paragraph1": "A passionate graphic designer with a love for creating meaningful and impactful designs.",
+        "paragraph2": "I'm currently pursuing my Bachelor's degree in Graphic Design at Universiti Teknologi MARA (UiTM), where I'm honing my skills and expanding my creative horizons. My journey in design started with a simple fascination for visual storytelling, and it has evolved into a full-fledged passion.",
+        "paragraph3": "I believe that good design is more than just aesthetics - it's about solving problems, communicating ideas, and creating experiences that resonate with people. Whether I'm working on branding, print materials, or digital graphics, I approach each project with dedication and attention to detail.",
+        "paragraph4": "When I'm not designing, you can find me exploring new design trends, experimenting with different creative techniques, or seeking inspiration from the world around me. I'm always excited to take on new challenges and collaborate with clients who value quality design."
+      },
+      "stats": {
+        "projects": "Projects",
+        "yearsExp": "Years Exp.",
+        "clients": "Clients",
+        "dedication": "Dedication"
+      },
+      "education": {
+        "heading": "Education",
+        "bachelor": {
+          "title": "Bachelor of Graphic Design",
+          "institution": "Universiti Teknologi MARA (UiTM)",
+          "description": "Currently pursuing a comprehensive degree in graphic design, learning advanced techniques in visual communication, branding, and digital media.",
+          "date": "2023 - Present"
+        },
+        "stpm": {
+          "title": "Sijil Pelajaran Tinggi Malaysia (STPM)",
+          "institution": "SMK Bandar Kota Tinggi",
+          "description": "Completed pre-university studies with strong emphasis on analytical thinking, communication skills, and academic discipline, forming a solid foundation for further studies in design.",
+          "date": "2020 - 2022"
+        },
+        "spm": {
+          "title": "Sijil Pelajaran Malaysia (SPM)",
+          "institution": "SMK Taman Kota Jaya",
+          "description": "Completed secondary education and developed early interest in art and visual creativity, which later influenced the decision to pursue graphic design as a professional field.",
+          "date": "2015 - 2019"
+        }
+      },
+      "experience": {
+        "heading": "Work Experience",
+        "freelance": {
+          "title": "Freelance Graphic Designer",
+          "company": "Self-Employed | Selangor",
+          "description": "Working with diverse clients on branding projects, social media graphics, print materials, and digital content. Successfully completed 10+ projects across various industries.",
+          "date": "April 2024 – Present"
+        },
+        "jxtravel": {
+          "title": "Admin Cum Graphic Designer",
+          "company": "JX Travel & Tours | Puncak Alam, Selangor",
+          "description": "Managed customer data and administrative tasks while designing business materials such as business cards, itinerary booklets, and promotional visuals. Created social media content to enhance brand presence and contributed to increased customer engagement and inquiries.",
+          "date": "Aug 2024 – Feb 2025"
+        },
+        "aryshad": {
+          "title": "Graphic Designer",
+          "company": "Aryshad Printing | Kota Tinggi, Johor",
+          "description": "Maintained consistency across all visual materials.",
+          "date": "Jan 2024 – Feb 2024"
+        }
+      }
+    },
+    "skills": {
+      "title": "My Skills - Shazzreen Elyana",
+      "metaDescription": "Shazzreen Elyana's design skills - Adobe Creative Suite, Figma, branding, and more.",
+      "metaKeywords": "graphic design skills, adobe illustrator, photoshop, indesign, figma, branding",
+      "hero": {
+        "heading": "My Skills",
+        "tagline": "Tools, technologies, and expertise I bring to every project"
+      },
+      "sections": {
+        "designSoftware": "Design Software",
+        "designExpertise": "Design Expertise",
+        "coreCompetencies": "Core Competencies",
+        "coreCompetenciesTagline": "Professional skills that set me apart",
+        "specializations": "My Specializations",
+        "specializationsTagline": "Areas where I excel"
+      },
+      "expertise": {
+        "brandIdentity": "Brand Identity Design",
+        "printDesign": "Print Design",
+        "socialMediaGraphics": "Social Media Graphics",
+        "typography": "Typography",
+        "logoDesign": "Logo Design"
+      },
+      "competencies": {
+        "creativeThinking": {
+          "title": "Creative Thinking",
+          "description": "Innovative solutions for unique design challenges"
+        },
+        "clientCommunication": {
+          "title": "Client Communication",
+          "description": "Clear and effective collaboration"
+        },
+        "timeManagement": {
+          "title": "Time Management",
+          "description": "Meeting deadlines without compromising quality"
+        },
+        "attentionToDetail": {
+          "title": "Attention to Detail",
+          "description": "Precision in every pixel and element"
+        },
+        "problemSolving": {
+          "title": "Problem Solving",
+          "description": "Finding creative design solutions"
+        },
+        "feedbackIntegration": {
+          "title": "Feedback Integration",
+          "description": "Adapting designs based on client input"
+        },
+        "trendAwareness": {
+          "title": "Trend Awareness",
+          "description": "Staying current with design trends"
+        },
+        "qualityFocus": {
+          "title": "Quality Focus",
+          "description": "Commitment to excellence in every project"
+        }
+      },
+      "specializations": {
+        "branding": {
+          "title": "Branding & Identity",
+          "description": "Creating cohesive brand identities including logos, color schemes, typography systems, and comprehensive brand guidelines that tell your story.",
+          "items": ["Logo Design", "Brand Guidelines", "Visual Identity Systems", "Brand Refresh"]
+        },
+        "print": {
+          "title": "Print Design",
+          "description": "Designing compelling print materials that capture attention and communicate effectively, from business cards to large-format posters.",
+          "items": ["Business Cards", "Brochures & Flyers", "Packaging Design", "Posters & Banners"]
+        },
+        "digital": {
+          "title": "Digital Graphics",
+          "description": "Creating engaging digital content for social media, websites, and digital marketing campaigns that drive engagement and results.",
+          "items": ["Social Media Graphics", "Web Graphics", "Digital Ads", "Email Templates"]
+        }
+      }
+    },
+    "contact": {
+      "title": "Contact Me - Shazzreen Elyana",
+      "metaDescription": "Contact Shazzreen Elyana for graphic design services. Get in touch for your next project.",
+      "metaKeywords": "contact, hire graphic designer, design services, get in touch",
+      "hero": {
+        "heading": "Get In Touch",
+        "tagline": "Let's create something amazing together"
+      },
+      "info": {
+        "heading": "Contact Information",
+        "description": "Feel free to reach out to me for design projects, collaborations, or job opportunities. I'm always excited to work on new and challenging projects!",
+        "email": "Email",
+        "phone": "Phone",
+        "location": "Location",
+        "locationValue": "Kajang, Malaysia",
+        "quickResponse": "Quick Response:",
+        "quickResponseText": "I typically respond to all inquiries within 24-48 hours. For urgent matters, please contact me directly via WhatsApp or phone."
+      },
+      "form": {
+        "heading": "Send Me a Message",
+        "fullName": "Full Name",
+        "fullNamePlaceholder": "Enter your full name",
+        "emailAddress": "Email Address",
+        "emailPlaceholder": "your.email@example.com",
+        "subject": "Subject",
+        "subjectPlaceholder": "What is this about?",
+        "message": "Message",
+        "messagePlaceholder": "Tell me about your project or inquiry...",
+        "required": "All fields marked with * are required."
+      },
+      "whyWorkWithMe": {
+        "heading": "Why Work With Me?",
+        "qualityWork": {
+          "title": "Quality Work",
+          "description": "Committed to delivering high-quality designs"
+        },
+        "fastTurnaround": {
+          "title": "Fast Turnaround",
+          "description": "Efficient workflow ensures timely delivery without compromising quality"
+        },
+        "clearCommunication": {
+          "title": "Clear Communication",
+          "description": "Regular updates and open communication throughout the project"
+        },
+        "unlimitedRevisions": {
+          "title": "Unlimited Revisions",
+          "description": "Work together until you're 100% satisfied with the final result"
+        }
+      }
+    },
+    "bestwork": {
+      "title": "Best Work - Shazzreen Elyana",
+      "metaDescription": "Shazzreen Elyana's best graphic design work - featured projects and highlights.",
+      "metaKeywords": "best work, featured projects, portfolio highlights, graphic design",
+      "hero": {
+        "heading": "Best Work",
+        "tagline": "A curated selection of my most impactful projects"
+      },
+      "items": {
+        "freelance": {
+          "title": "Freelance",
+          "description": "Social media graphics, posters, digital advertisements, and print materials for multiple clients."
+        },
+        "jxtravel": {
+          "title": "JX Travel & Tours",
+          "description": "Marketing campaign materials including social media graphics, brochures, and promotional posters for travel packages."
+        },
+        "pearliewhite": {
+          "title": "Pearlie White",
+          "description": "Product packaging design and brand refresh for a dental care brand, focusing on clean and modern aesthetics."
+        },
+        "rimbrew": {
+          "title": "Rimbrew Coffee Shop",
+          "description": "Full cafe branding package with menu design, signage, and promotional materials for a modern coffee shop."
+        },
+        "careerbuddy": {
+          "title": "Career Buddy",
+          "description": "UI/UX design for a mobile career guidance app, featuring user flows, wireframes, and high-fidelity mockups."
+        }
+      }
+    },
+    "projects": {
+      "title": "Projects - Shazzreen Elyana",
+      "metaDescription": "View Shazzreen Elyana's portfolio of graphic design work including branding, print design, and digital graphics.",
+      "metaKeywords": "graphic design portfolio, projects, branding, print design, digital design",
+      "hero": {
+        "heading": "Projects",
+        "tagline": "Complete portfolio of my graphic design work"
+      },
+      "items": {
+        "advertising": {
+          "title": "Advertising",
+          "description": "High-impact advertising visuals were developed. Focused on clear messaging, strong visual hierarchy, and audience-driven design to communicate brand messages effectively."
+        },
+        "threeD": {
+          "title": "3D Design",
+          "description": "Selected 3D design works showcasing spatial visualization and form development, including kiosk. Focused on layout, structure, and branding placement to communicate ideas clearly in a three-dimensional environment."
+        },
+        "illustration": {
+          "title": "Illustration",
+          "description": "A digital illustrations created for academic and creative projects, focusing on visual storytelling, composition, and expressive style to support communication and concept development."
+        },
+        "branding": {
+          "title": "Branding",
+          "description": "Selected branding works exploring logo usage, typography, and visual identity systems across academic and professional projects."
+        },
+        "socialMedia": {
+          "title": "Social Media Design",
+          "description": "A selection of social media visuals designed to communicate messages clearly through layout, typography, and platform-aware design."
+        },
+        "packaging": {
+          "title": "Packaging",
+          "description": "Packaging design works showcasing product presentation, label design, and brand-focused visual solutions for various products."
+        }
+      }
+    }
+  },
+  "portfolio": {
+    "projectDetails": "Project Details",
+    "projectContext": "Project Context",
+    "designFocus": "Design Focus",
+    "toolsUsed": "Tools Used",
+    "aboutProject": "About This Project",
+    "printMaterials": "Print Materials",
+    "freelance": {
+      "title": "Freelance Work - Shazzreen Elyana",
+      "metaDescription": "Freelance Design Work - Shazzreen Elyana",
+      "heading": "Freelance Work",
+      "tagline": "Social Media Graphics & Print Design",
+      "context": "As part of freelance design work, this project focused on producing print and promotional materials including posters, business cards, and banners. The aim was to translate client requirements into clear and effective visual designs while maintaining brand consistency and practical usability.",
+      "about1": "Worked with multiple clients to design social media graphics, posters, digital advertisements, and print materials. Focused on delivering visually engaging designs while maintaining brand consistency and meeting client objectives.",
+      "about2": "Each project required careful attention to the client's brand guidelines, target audience, and marketing goals. From concept to final delivery, the designs were crafted to capture attention and communicate effectively across various platforms."
+    },
+    "jxtravel": {
+      "title": "JX Travel & Tours - Shazzreen Elyana",
+      "metaDescription": "JX Travel & Tours Design Work - Shazzreen Elyana",
+      "heading": "JX Travel & Tours",
+      "tagline": "Marketing & Promotional Design"
+    },
+    "pearliewhite": {
+      "title": "Pearlie White - Shazzreen Elyana",
+      "metaDescription": "Pearlie White Design Work - Shazzreen Elyana",
+      "heading": "Pearlie White",
+      "tagline": "Packaging & Brand Design"
+    },
+    "rimbrew": {
+      "title": "Rimbrew Coffee Shop - Shazzreen Elyana",
+      "metaDescription": "Rimbrew Coffee Shop Design Work - Shazzreen Elyana",
+      "heading": "Rimbrew Coffee Shop",
+      "tagline": "Cafe Branding & Menu Design"
+    },
+    "careerbuddy": {
+      "title": "Career Buddy - Shazzreen Elyana",
+      "metaDescription": "Career Buddy App Design - Shazzreen Elyana",
+      "heading": "Career Buddy",
+      "tagline": "UI/UX Mobile App Design"
+    },
+    "advertising": {
+      "title": "Advertising - Shazzreen Elyana",
+      "metaDescription": "Advertising Design Work - Shazzreen Elyana",
+      "heading": "Advertising",
+      "tagline": "Visual Advertising & Campaign Design"
+    },
+    "threeD": {
+      "title": "3D Design - Shazzreen Elyana",
+      "metaDescription": "3D Design Work - Shazzreen Elyana",
+      "heading": "3D Design",
+      "tagline": "Spatial Visualization & Form Development"
+    },
+    "illustration": {
+      "title": "Illustration - Shazzreen Elyana",
+      "metaDescription": "Illustration Work - Shazzreen Elyana",
+      "heading": "Illustration",
+      "tagline": "Digital Illustration & Visual Storytelling"
+    },
+    "branding": {
+      "title": "Branding - Shazzreen Elyana",
+      "metaDescription": "Branding Design Work - Shazzreen Elyana",
+      "heading": "Branding",
+      "tagline": "Logo & Visual Identity Systems"
+    },
+    "socialmedia": {
+      "title": "Social Media Design - Shazzreen Elyana",
+      "metaDescription": "Social Media Design Work - Shazzreen Elyana",
+      "heading": "Social Media Design",
+      "tagline": "Platform-Aware Visual Content"
+    },
+    "packaging": {
+      "title": "Packaging - Shazzreen Elyana",
+      "metaDescription": "Packaging Design Work - Shazzreen Elyana",
+      "heading": "Packaging",
+      "tagline": "Product Packaging & Label Design"
+    }
+  }
+}

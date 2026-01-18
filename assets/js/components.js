@@ -3,7 +3,7 @@
  * Dynamically loads navigation and footer components with correct path resolution
  */
 
-(function() {
+(function(exports) {
   'use strict';
 
   // Get the base path by finding this script's location
@@ -123,10 +123,21 @@
     document.dispatchEvent(new CustomEvent('componentsLoaded'));
   }
 
-  // Run when DOM is ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
+  // Run when DOM is ready (only in browser)
+  if (typeof document !== 'undefined') {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
   }
-})();
+
+  // Export functions for testing
+  if (exports) {
+    exports.getBasePath = getBasePath;
+    exports.getPathPrefixFromLocation = getPathPrefixFromLocation;
+    exports.loadComponent = loadComponent;
+    exports.setActiveNav = setActiveNav;
+    exports.init = init;
+  }
+})(typeof module !== 'undefined' && module.exports ? module.exports : null);

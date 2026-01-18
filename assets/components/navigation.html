@@ -2,23 +2,23 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
   <div class="container">
     <a class="navbar-brand" href="{{PATH}}index.html"><img src="{{PATH}}assets/images/common/logo-yana.png" alt="Yana Logo"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="{{t:nav.toggleNavigation}}">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" href="{{PATH}}pages/about.html" data-nav="index">About Me</a>
+          <a class="nav-link" href="{{PATH}}pages/about.html" data-nav="index">{{t:nav.aboutMe}}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{PATH}}pages/skills.html" data-nav="skills">Skills</a>
+          <a class="nav-link" href="{{PATH}}pages/skills.html" data-nav="skills">{{t:nav.skills}}</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link" href="{{PATH}}pages/portfolio/bestwork.html" data-nav="bestwork">
-            Best Work <i class="bi bi-chevron-down dropdown-arrow"></i>
+            {{t:nav.bestWork}} <i class="bi bi-chevron-down dropdown-arrow"></i>
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{PATH}}pages/portfolio/bestwork.html"><i class="bi bi-grid me-2"></i>View All</a></li>
+            <li><a class="dropdown-item" href="{{PATH}}pages/portfolio/bestwork.html"><i class="bi bi-grid me-2"></i>{{t:nav.viewAll}}</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="{{PATH}}pages/portfolio/bestwork/freelance.html">Freelance</a></li>
             <li><a class="dropdown-item" href="{{PATH}}pages/portfolio/bestwork/jxtravel.html">JX Travel & Tours</a></li>
@@ -29,23 +29,27 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link" href="{{PATH}}pages/portfolio/projects.html" data-nav="projects">
-            Projects <i class="bi bi-chevron-down dropdown-arrow"></i>
+            {{t:nav.projects}} <i class="bi bi-chevron-down dropdown-arrow"></i>
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{PATH}}pages/portfolio/projects.html"><i class="bi bi-grid me-2"></i>View All</a></li>
+            <li><a class="dropdown-item" href="{{PATH}}pages/portfolio/projects.html"><i class="bi bi-grid me-2"></i>{{t:nav.viewAll}}</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="{{PATH}}pages/portfolio/projects/advertising.html">Advertising</a></li>
-            <li><a class="dropdown-item" href="{{PATH}}pages/portfolio/projects/3d.html">3D Design</a></li>
-            <li><a class="dropdown-item" href="{{PATH}}pages/portfolio/projects/illustration.html">Illustration</a></li>
-            <li><a class="dropdown-item" href="{{PATH}}pages/portfolio/projects/branding.html">Branding</a></li>
-            <li><a class="dropdown-item" href="{{PATH}}pages/portfolio/projects/socialmedia.html">Social Media Design</a></li>
-            <li><a class="dropdown-item" href="{{PATH}}pages/portfolio/projects/packaging.html">Packaging</a></li>
+            <li><a class="dropdown-item" href="{{PATH}}pages/portfolio/projects/advertising.html">{{t:pages.projects.items.advertising.title}}</a></li>
+            <li><a class="dropdown-item" href="{{PATH}}pages/portfolio/projects/3d.html">{{t:pages.projects.items.threeD.title}}</a></li>
+            <li><a class="dropdown-item" href="{{PATH}}pages/portfolio/projects/illustration.html">{{t:pages.projects.items.illustration.title}}</a></li>
+            <li><a class="dropdown-item" href="{{PATH}}pages/portfolio/projects/branding.html">{{t:pages.projects.items.branding.title}}</a></li>
+            <li><a class="dropdown-item" href="{{PATH}}pages/portfolio/projects/socialmedia.html">{{t:pages.projects.items.socialMedia.title}}</a></li>
+            <li><a class="dropdown-item" href="{{PATH}}pages/portfolio/projects/packaging.html">{{t:pages.projects.items.packaging.title}}</a></li>
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{PATH}}pages/contact.html" data-nav="contact">Contact</a>
+          <a class="nav-link" href="{{PATH}}pages/contact.html" data-nav="contact">{{t:nav.contact}}</a>
         </li>
+        {{LANG_SWITCHER}}
       </ul>
+      <button class="theme-toggle" id="theme-toggle" aria-label="{{t:nav.toggleDarkMode}}">
+        <i class="bi bi-sun-fill" id="theme-icon"></i>
+      </button>
     </div>
   </div>
 </nav>

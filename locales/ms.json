@@ -1,0 +1,385 @@
+{
+  "meta": {
+    "langCode": "ms",
+    "langName": "Bahasa Melayu",
+    "otherLangCode": "en",
+    "otherLangName": "English"
+  },
+  "nav": {
+    "aboutMe": "Tentang Saya",
+    "skills": "Kemahiran",
+    "bestWork": "Karya Terbaik",
+    "projects": "Projek",
+    "contact": "Hubungi",
+    "viewAll": "Lihat Semua",
+    "toggleNavigation": "Togol navigasi",
+    "toggleDarkMode": "Togol mod gelap"
+  },
+  "common": {
+    "breadcrumbs": {
+      "home": "Utama",
+      "skills": "Kemahiran",
+      "contact": "Hubungi",
+      "bestWork": "Karya Terbaik",
+      "projects": "Projek"
+    },
+    "buttons": {
+      "viewArtwork": "Lihat Karya",
+      "backToBestWork": "Kembali ke Karya Terbaik",
+      "backToProjects": "Kembali ke Projek",
+      "downloadCreativeResume": "Muat Turun Resume Kreatif",
+      "downloadFormalResume": "Muat Turun Resume Formal",
+      "downloadResume": "Muat Turun Resume Saya",
+      "sendMessage": "Hantar Mesej"
+    },
+    "carousel": {
+      "previous": "Sebelumnya",
+      "next": "Seterusnya",
+      "slide": "Slaid"
+    },
+    "footer": {
+      "tagline": "Pereka grafik yang bersemangat untuk mencipta reka bentuk yang cantik dan berfungsi yang membuat perbezaan.",
+      "quickLinks": "Pautan Pantas",
+      "connectWithMe": "Hubungi Saya",
+      "copyright": "2025 Shazzreen Elyana. Hak cipta terpelihara."
+    }
+  },
+  "pages": {
+    "index": {
+      "title": "Mengalih... - Shazzreen Elyana",
+      "redirecting": "Mengalih ke portfolio..."
+    },
+    "about": {
+      "title": "Tentang Saya - Shazzreen Elyana",
+      "metaDescription": "Tentang Shazzreen Elyana - Pereka grafik yang bersemangat untuk mencipta pengalaman visual yang bermakna.",
+      "metaKeywords": "pereka grafik, tentang saya, biografi, pereka kreatif",
+      "hero": {
+        "heading": "Tentang Saya",
+        "tagline": "Mereka Bentuk dengan Tujuan, Mencipta dengan Semangat"
+      },
+      "bio": {
+        "greeting": "Saya Shazzreen Elyana",
+        "paragraph1": "Seorang pereka grafik yang bersemangat dengan minat untuk mencipta reka bentuk yang bermakna dan berimpak.",
+        "paragraph2": "Saya sedang melanjutkan pengajian Ijazah Sarjana Muda dalam Reka Bentuk Grafik di Universiti Teknologi MARA (UiTM), di mana saya mengasah kemahiran dan mengembangkan kreativiti saya. Perjalanan saya dalam reka bentuk bermula dengan minat terhadap penceritaan visual, dan ia telah berkembang menjadi satu kecintaan yang mendalam.",
+        "paragraph3": "Saya percaya bahawa reka bentuk yang baik lebih daripada sekadar estetika - ia tentang menyelesaikan masalah, menyampaikan idea, dan mencipta pengalaman yang bergema dengan orang ramai. Sama ada saya sedang mengerjakan penjenamaan, bahan cetak, atau grafik digital, saya mendekati setiap projek dengan dedikasi dan perhatian terhadap perincian.",
+        "paragraph4": "Apabila saya tidak mereka bentuk, anda boleh mendapati saya meneroka trend reka bentuk baharu, bereksperimen dengan teknik kreatif yang berbeza, atau mencari inspirasi dari dunia sekeliling saya. Saya sentiasa teruja untuk menghadapi cabaran baharu dan bekerjasama dengan pelanggan yang menghargai reka bentuk berkualiti."
+      },
+      "stats": {
+        "projects": "Projek",
+        "yearsExp": "Tahun Peng.",
+        "clients": "Pelanggan",
+        "dedication": "Dedikasi"
+      },
+      "education": {
+        "heading": "Pendidikan",
+        "bachelor": {
+          "title": "Ijazah Sarjana Muda Reka Bentuk Grafik",
+          "institution": "Universiti Teknologi MARA (UiTM)",
+          "description": "Sedang melanjutkan ijazah komprehensif dalam reka bentuk grafik, mempelajari teknik lanjutan dalam komunikasi visual, penjenamaan, dan media digital.",
+          "date": "2023 - Kini"
+        },
+        "stpm": {
+          "title": "Sijil Pelajaran Tinggi Malaysia (STPM)",
+          "institution": "SMK Bandar Kota Tinggi",
+          "description": "Menamatkan pengajian pra-universiti dengan penekanan kuat pada pemikiran analitikal, kemahiran komunikasi, dan disiplin akademik, membentuk asas kukuh untuk pengajian lanjut dalam reka bentuk.",
+          "date": "2020 - 2022"
+        },
+        "spm": {
+          "title": "Sijil Pelajaran Malaysia (SPM)",
+          "institution": "SMK Taman Kota Jaya",
+          "description": "Menamatkan pendidikan menengah dan mengembangkan minat awal dalam seni dan kreativiti visual, yang kemudiannya mempengaruhi keputusan untuk melanjutkan reka bentuk grafik sebagai bidang profesional.",
+          "date": "2015 - 2019"
+        }
+      },
+      "experience": {
+        "heading": "Pengalaman Kerja",
+        "freelance": {
+          "title": "Pereka Grafik Bebas",
+          "company": "Bekerja Sendiri | Selangor",
+          "description": "Bekerja dengan pelbagai pelanggan dalam projek penjenamaan, grafik media sosial, bahan cetak, dan kandungan digital. Berjaya menyiapkan 10+ projek merentasi pelbagai industri.",
+          "date": "April 2024 – Kini"
+        },
+        "jxtravel": {
+          "title": "Admin Merangkap Pereka Grafik",
+          "company": "JX Travel & Tours | Puncak Alam, Selangor",
+          "description": "Menguruskan data pelanggan dan tugas pentadbiran sambil mereka bentuk bahan perniagaan seperti kad perniagaan, buku itinerari, dan visual promosi. Mencipta kandungan media sosial untuk meningkatkan kehadiran jenama dan menyumbang kepada peningkatan penglibatan dan pertanyaan pelanggan.",
+          "date": "Ogos 2024 – Feb 2025"
+        },
+        "aryshad": {
+          "title": "Pereka Grafik",
+          "company": "Aryshad Printing | Kota Tinggi, Johor",
+          "description": "Mengekalkan konsistensi merentasi semua bahan visual.",
+          "date": "Jan 2024 – Feb 2024"
+        }
+      }
+    },
+    "skills": {
+      "title": "Kemahiran Saya - Shazzreen Elyana",
+      "metaDescription": "Kemahiran reka bentuk Shazzreen Elyana - Adobe Creative Suite, Figma, penjenamaan, dan banyak lagi.",
+      "metaKeywords": "kemahiran reka bentuk grafik, adobe illustrator, photoshop, indesign, figma, penjenamaan",
+      "hero": {
+        "heading": "Kemahiran Saya",
+        "tagline": "Alatan, teknologi, dan kepakaran yang saya bawa ke setiap projek"
+      },
+      "sections": {
+        "designSoftware": "Perisian Reka Bentuk",
+        "designExpertise": "Kepakaran Reka Bentuk",
+        "coreCompetencies": "Kecekapan Teras",
+        "coreCompetenciesTagline": "Kemahiran profesional yang membezakan saya",
+        "specializations": "Pengkhususan Saya",
+        "specializationsTagline": "Bidang di mana saya cemerlang"
+      },
+      "expertise": {
+        "brandIdentity": "Reka Bentuk Identiti Jenama",
+        "printDesign": "Reka Bentuk Cetak",
+        "socialMediaGraphics": "Grafik Media Sosial",
+        "typography": "Tipografi",
+        "logoDesign": "Reka Bentuk Logo"
+      },
+      "competencies": {
+        "creativeThinking": {
+          "title": "Pemikiran Kreatif",
+          "description": "Penyelesaian inovatif untuk cabaran reka bentuk yang unik"
+        },
+        "clientCommunication": {
+          "title": "Komunikasi Pelanggan",
+          "description": "Kerjasama yang jelas dan berkesan"
+        },
+        "timeManagement": {
+          "title": "Pengurusan Masa",
+          "description": "Memenuhi tarikh akhir tanpa menjejaskan kualiti"
+        },
+        "attentionToDetail": {
+          "title": "Perhatian Terhadap Perincian",
+          "description": "Ketepatan dalam setiap piksel dan elemen"
+        },
+        "problemSolving": {
+          "title": "Penyelesaian Masalah",
+          "description": "Mencari penyelesaian reka bentuk yang kreatif"
+        },
+        "feedbackIntegration": {
+          "title": "Integrasi Maklum Balas",
+          "description": "Menyesuaikan reka bentuk berdasarkan input pelanggan"
+        },
+        "trendAwareness": {
+          "title": "Kesedaran Trend",
+          "description": "Mengikuti trend reka bentuk semasa"
+        },
+        "qualityFocus": {
+          "title": "Fokus Kualiti",
+          "description": "Komitmen terhadap kecemerlangan dalam setiap projek"
+        }
+      },
+      "specializations": {
+        "branding": {
+          "title": "Penjenamaan & Identiti",
+          "description": "Mencipta identiti jenama yang kohesif termasuk logo, skema warna, sistem tipografi, dan garis panduan jenama komprehensif yang menceritakan kisah anda.",
+          "items": ["Reka Bentuk Logo", "Garis Panduan Jenama", "Sistem Identiti Visual", "Pembaharuan Jenama"]
+        },
+        "print": {
+          "title": "Reka Bentuk Cetak",
+          "description": "Mereka bentuk bahan cetak yang menarik perhatian dan berkomunikasi dengan berkesan, dari kad perniagaan hingga poster format besar.",
+          "items": ["Kad Perniagaan", "Brosur & Risalah", "Reka Bentuk Pembungkusan", "Poster & Sepanduk"]
+        },
+        "digital": {
+          "title": "Grafik Digital",
+          "description": "Mencipta kandungan digital yang menarik untuk media sosial, laman web, dan kempen pemasaran digital yang mendorong penglibatan dan hasil.",
+          "items": ["Grafik Media Sosial", "Grafik Web", "Iklan Digital", "Templat E-mel"]
+        }
+      }
+    },
+    "contact": {
+      "title": "Hubungi Saya - Shazzreen Elyana",
+      "metaDescription": "Hubungi Shazzreen Elyana untuk perkhidmatan reka bentuk grafik. Berhubung untuk projek anda yang seterusnya.",
+      "metaKeywords": "hubungi, upah pereka grafik, perkhidmatan reka bentuk, berhubung",
+      "hero": {
+        "heading": "Berhubung",
+        "tagline": "Mari mencipta sesuatu yang menakjubkan bersama"
+      },
+      "info": {
+        "heading": "Maklumat Hubungan",
+        "description": "Jangan segan untuk menghubungi saya untuk projek reka bentuk, kerjasama, atau peluang pekerjaan. Saya sentiasa teruja untuk mengerjakan projek baharu dan mencabar!",
+        "email": "E-mel",
+        "phone": "Telefon",
+        "location": "Lokasi",
+        "locationValue": "Kajang, Malaysia",
+        "quickResponse": "Respons Pantas:",
+        "quickResponseText": "Saya biasanya membalas semua pertanyaan dalam masa 24-48 jam. Untuk perkara segera, sila hubungi saya terus melalui WhatsApp atau telefon."
+      },
+      "form": {
+        "heading": "Hantar Mesej Kepada Saya",
+        "fullName": "Nama Penuh",
+        "fullNamePlaceholder": "Masukkan nama penuh anda",
+        "emailAddress": "Alamat E-mel",
+        "emailPlaceholder": "emel.anda@contoh.com",
+        "subject": "Subjek",
+        "subjectPlaceholder": "Apakah perkara ini?",
+        "message": "Mesej",
+        "messagePlaceholder": "Ceritakan tentang projek atau pertanyaan anda...",
+        "required": "Semua medan bertanda * adalah wajib."
+      },
+      "whyWorkWithMe": {
+        "heading": "Mengapa Bekerja Dengan Saya?",
+        "qualityWork": {
+          "title": "Kerja Berkualiti",
+          "description": "Komited untuk menyampaikan reka bentuk berkualiti tinggi"
+        },
+        "fastTurnaround": {
+          "title": "Penghantaran Pantas",
+          "description": "Aliran kerja yang cekap memastikan penghantaran tepat pada masanya tanpa menjejaskan kualiti"
+        },
+        "clearCommunication": {
+          "title": "Komunikasi Jelas",
+          "description": "Kemas kini berkala dan komunikasi terbuka sepanjang projek"
+        },
+        "unlimitedRevisions": {
+          "title": "Semakan Tanpa Had",
+          "description": "Bekerja bersama sehingga anda 100% berpuas hati dengan hasil akhir"
+        }
+      }
+    },
+    "bestwork": {
+      "title": "Karya Terbaik - Shazzreen Elyana",
+      "metaDescription": "Karya reka bentuk grafik terbaik Shazzreen Elyana - projek pilihan dan sorotan.",
+      "metaKeywords": "karya terbaik, projek pilihan, sorotan portfolio, reka bentuk grafik",
+      "hero": {
+        "heading": "Karya Terbaik",
+        "tagline": "Pilihan projek saya yang paling berimpak"
+      },
+      "items": {
+        "freelance": {
+          "title": "Bebas",
+          "description": "Grafik media sosial, poster, iklan digital, dan bahan cetak untuk pelbagai pelanggan."
+        },
+        "jxtravel": {
+          "title": "JX Travel & Tours",
+          "description": "Bahan kempen pemasaran termasuk grafik media sosial, brosur, dan poster promosi untuk pakej pelancongan."
+        },
+        "pearliewhite": {
+          "title": "Pearlie White",
+          "description": "Reka bentuk pembungkusan produk dan pembaharuan jenama untuk jenama penjagaan pergigian, memfokuskan pada estetika yang bersih dan moden."
+        },
+        "rimbrew": {
+          "title": "Rimbrew Coffee Shop",
+          "description": "Pakej penjenamaan kafe lengkap dengan reka bentuk menu, papan tanda, dan bahan promosi untuk kedai kopi moden."
+        },
+        "careerbuddy": {
+          "title": "Career Buddy",
+          "description": "Reka bentuk UI/UX untuk aplikasi bimbingan kerjaya mudah alih, menampilkan aliran pengguna, wireframe, dan mockup ketepatan tinggi."
+        }
+      }
+    },
+    "projects": {
+      "title": "Projek - Shazzreen Elyana",
+      "metaDescription": "Lihat portfolio karya reka bentuk grafik Shazzreen Elyana termasuk penjenamaan, reka bentuk cetak, dan grafik digital.",
+      "metaKeywords": "portfolio reka bentuk grafik, projek, penjenamaan, reka bentuk cetak, reka bentuk digital",
+      "hero": {
+        "heading": "Projek",
+        "tagline": "Portfolio lengkap karya reka bentuk grafik saya"
+      },
+      "items": {
+        "advertising": {
+          "title": "Pengiklanan",
+          "description": "Visual pengiklanan berimpak tinggi telah dibangunkan. Memfokuskan pada pemesejan yang jelas, hierarki visual yang kuat, dan reka bentuk yang didorong audiens untuk menyampaikan mesej jenama dengan berkesan."
+        },
+        "threeD": {
+          "title": "Reka Bentuk 3D",
+          "description": "Karya reka bentuk 3D terpilih yang mempamerkan visualisasi spatial dan pembangunan bentuk, termasuk kiosk. Memfokuskan pada susun atur, struktur, dan penempatan penjenamaan untuk menyampaikan idea dengan jelas dalam persekitaran tiga dimensi."
+        },
+        "illustration": {
+          "title": "Ilustrasi",
+          "description": "Ilustrasi digital yang dicipta untuk projek akademik dan kreatif, memfokuskan pada penceritaan visual, komposisi, dan gaya ekspresif untuk menyokong komunikasi dan pembangunan konsep."
+        },
+        "branding": {
+          "title": "Penjenamaan",
+          "description": "Karya penjenamaan terpilih yang meneroka penggunaan logo, tipografi, dan sistem identiti visual merentasi projek akademik dan profesional."
+        },
+        "socialMedia": {
+          "title": "Reka Bentuk Media Sosial",
+          "description": "Pilihan visual media sosial yang direka untuk menyampaikan mesej dengan jelas melalui susun atur, tipografi, dan reka bentuk yang sesuai dengan platform."
+        },
+        "packaging": {
+          "title": "Pembungkusan",
+          "description": "Karya reka bentuk pembungkusan yang mempamerkan persembahan produk, reka bentuk label, dan penyelesaian visual yang berfokuskan jenama untuk pelbagai produk."
+        }
+      }
+    }
+  },
+  "portfolio": {
+    "projectDetails": "Butiran Projek",
+    "projectContext": "Konteks Projek",
+    "designFocus": "Fokus Reka Bentuk",
+    "toolsUsed": "Alatan Digunakan",
+    "aboutProject": "Tentang Projek Ini",
+    "printMaterials": "Bahan Cetak",
+    "freelance": {
+      "title": "Kerja Bebas - Shazzreen Elyana",
+      "metaDescription": "Kerja Reka Bentuk Bebas - Shazzreen Elyana",
+      "heading": "Kerja Bebas",
+      "tagline": "Grafik Media Sosial & Reka Bentuk Cetak",
+      "context": "Sebagai sebahagian daripada kerja reka bentuk bebas, projek ini memfokuskan pada penghasilan bahan cetak dan promosi termasuk poster, kad perniagaan, dan sepanduk. Tujuannya adalah untuk menterjemahkan keperluan pelanggan kepada reka bentuk visual yang jelas dan berkesan sambil mengekalkan konsistensi jenama dan kebolehgunaan praktikal.",
+      "about1": "Bekerja dengan pelbagai pelanggan untuk mereka bentuk grafik media sosial, poster, iklan digital, dan bahan cetak. Memfokuskan pada menyampaikan reka bentuk yang menarik secara visual sambil mengekalkan konsistensi jenama dan memenuhi objektif pelanggan.",
+      "about2": "Setiap projek memerlukan perhatian teliti terhadap garis panduan jenama pelanggan, audiens sasaran, dan matlamat pemasaran. Dari konsep hingga penghantaran akhir, reka bentuk dicipta untuk menarik perhatian dan berkomunikasi dengan berkesan merentasi pelbagai platform."
+    },
+    "jxtravel": {
+      "title": "JX Travel & Tours - Shazzreen Elyana",
+      "metaDescription": "Kerja Reka Bentuk JX Travel & Tours - Shazzreen Elyana",
+      "heading": "JX Travel & Tours",
+      "tagline": "Reka Bentuk Pemasaran & Promosi"
+    },
+    "pearliewhite": {
+      "title": "Pearlie White - Shazzreen Elyana",
+      "metaDescription": "Kerja Reka Bentuk Pearlie White - Shazzreen Elyana",
+      "heading": "Pearlie White",
+      "tagline": "Reka Bentuk Pembungkusan & Jenama"
+    },
+    "rimbrew": {
+      "title": "Rimbrew Coffee Shop - Shazzreen Elyana",
+      "metaDescription": "Kerja Reka Bentuk Rimbrew Coffee Shop - Shazzreen Elyana",
+      "heading": "Rimbrew Coffee Shop",
+      "tagline": "Penjenamaan Kafe & Reka Bentuk Menu"
+    },
+    "careerbuddy": {
+      "title": "Career Buddy - Shazzreen Elyana",
+      "metaDescription": "Reka Bentuk Aplikasi Career Buddy - Shazzreen Elyana",
+      "heading": "Career Buddy",
+      "tagline": "Reka Bentuk UI/UX Aplikasi Mudah Alih"
+    },
+    "advertising": {
+      "title": "Pengiklanan - Shazzreen Elyana",
+      "metaDescription": "Kerja Reka Bentuk Pengiklanan - Shazzreen Elyana",
+      "heading": "Pengiklanan",
+      "tagline": "Pengiklanan Visual & Reka Bentuk Kempen"
+    },
+    "threeD": {
+      "title": "Reka Bentuk 3D - Shazzreen Elyana",
+      "metaDescription": "Kerja Reka Bentuk 3D - Shazzreen Elyana",
+      "heading": "Reka Bentuk 3D",
+      "tagline": "Visualisasi Spatial & Pembangunan Bentuk"
+    },
+    "illustration": {
+      "title": "Ilustrasi - Shazzreen Elyana",
+      "metaDescription": "Kerja Ilustrasi - Shazzreen Elyana",
+      "heading": "Ilustrasi",
+      "tagline": "Ilustrasi Digital & Penceritaan Visual"
+    },
+    "branding": {
+      "title": "Penjenamaan - Shazzreen Elyana",
+      "metaDescription": "Kerja Reka Bentuk Penjenamaan - Shazzreen Elyana",
+      "heading": "Penjenamaan",
+      "tagline": "Logo & Sistem Identiti Visual"
+    },
+    "socialmedia": {
+      "title": "Reka Bentuk Media Sosial - Shazzreen Elyana",
+      "metaDescription": "Kerja Reka Bentuk Media Sosial - Shazzreen Elyana",
+      "heading": "Reka Bentuk Media Sosial",
+      "tagline": "Kandungan Visual Sesuai Platform"
+    },
+    "packaging": {
+      "title": "Pembungkusan - Shazzreen Elyana",
+      "metaDescription": "Kerja Reka Bentuk Pembungkusan - Shazzreen Elyana",
+      "heading": "Pembungkusan",
+      "tagline": "Reka Bentuk Pembungkusan Produk & Label"
+    }
+  }
+}

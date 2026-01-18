@@ -4,6 +4,68 @@
    Description: Form validation and interactive features
    ============================================ */
 
+/* ============================================
+   THEME MANAGEMENT
+   ============================================ */
+const ThemeManager = {
+  STORAGE_KEY: 'theme-preference',
+
+  init() {
+    // Get stored preference or detect system preference
+    const stored = localStorage.getItem(this.STORAGE_KEY);
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    // Apply theme: stored preference > system preference > light
+    const theme = stored || (systemPrefersDark ? 'dark' : 'light');
+    this.setTheme(theme);
+
+    // Listen for system preference changes
+    window.matchMedia('(prefers-color-scheme: dark)')
+      .addEventListener('change', (e) => {
+        if (!localStorage.getItem(this.STORAGE_KEY)) {
+          this.setTheme(e.matches ? 'dark' : 'light');
+        }
+      });
+
+    // Set up toggle button after components load
+    document.addEventListener('componentsLoaded', () => this.setupToggle());
+    // Fallback for production (components already inlined)
+    if (document.getElementById('theme-toggle')) {
+      this.setupToggle();
+    }
+  },
+
+  setTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    this.updateIcon(theme);
+  },
+
+  updateIcon(theme) {
+    const icon = document.getElementById('theme-icon');
+    if (icon) {
+      icon.className = theme === 'dark' ? 'bi bi-moon-fill' : 'bi bi-sun-fill';
+    }
+  },
+
+  setupToggle() {
+    const toggle = document.getElementById('theme-toggle');
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme') || 'light';
+        const next = current === 'dark' ? 'light' : 'dark';
+        this.setTheme(next);
+        localStorage.setItem(this.STORAGE_KEY, next);
+      });
+      // Update icon to match current theme
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      this.updateIcon(current);
+    }
+  }
+};
+
+// Initialize theme immediately to prevent flash
+ThemeManager.init();
+
 // Wait for DOM to fully load
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -12,6 +74,8 @@ document.addEventListener('DOMContentLoaded', function() {
   initFormValidation();
   initScrollAnimations();
 
+  // Re-setup theme toggle in case it wasn't ready before
+  ThemeManager.setupToggle();
 });
 
 /* ============================================
@@ -26,13 +90,15 @@ function initNavigation() {
   const navbarToggler = document.querySelector('.navbar-toggler');
   const navbarCollapse = document.querySelector('.navbar-collapse');
 
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      if (navbarCollapse.classList.contains('show')) {
-        navbarToggler.click();
-      }
+  if (navbarCollapse && navbarToggler) {
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (navbarCollapse.classList.contains('show')) {
+          navbarToggler.click();
+        }
+      });
     });
-  });
+  }
 
   // Mobile dropdown toggle
   initMobileDropdowns();
@@ -408,5 +474,31 @@ function debounce(func, wait) {
     };
     clearTimeout(timeout);
     timeout = setTimeout(later, wait);
+  };
+}
+
+/* ============================================
+   MODULE EXPORTS (for testing)
+   ============================================ */
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = {
+    ThemeManager,
+    initNavigation,
+    initMobileDropdowns,
+    highlightActivePage,
+    initFormValidation,
+    validateName,
+    validateEmail,
+    validateSubject,
+    validateMessage,
+    showError,
+    showSuccess,
+    clearFieldError,
+    handleFormSubmission,
+    showSuccessMessage,
+    showErrorMessage,
+    initScrollAnimations,
+    scrollToElement,
+    debounce
   };
 }

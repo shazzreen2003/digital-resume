@@ -6,8 +6,22 @@
     "build": "node build.js",
     "preview": "npx serve dist",
     "dev": "npx serve .",
-    "clean": "node -e \"const fs=require('fs'); fs.rmSync('dist',{recursive:true,force:true}); console.log('Cleaned dist folder');\""
+    "clean": "node -e \"const fs=require('fs'); fs.rmSync('dist',{recursive:true,force:true}); console.log('Cleaned dist folder');\"",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:browser": "jest --selectProjects browser",
+    "test:node": "jest --selectProjects node",
+    "test:ci": "jest --ci --coverage"
   },
   "author": "Shazzreen Elyana",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.28.6",
+    "@babel/preset-env": "^7.28.6",
+    "babel-jest": "^30.2.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^30.2.0",
+    "jest-environment-jsdom": "^30.2.0"
+  }
 }
