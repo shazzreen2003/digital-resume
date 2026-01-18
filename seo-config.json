@@ -1,0 +1,35 @@
+{
+  "baseUrl": "https://digital-resume-khaki-ten.vercel.app",
+  "siteName": "Shazzreen Elyana - Graphic Designer",
+  "author": {
+    "name": "Shazzreen Elyana",
+    "email": "nshazzreene@gmail.com",
+    "telephone": "+60135449715",
+    "jobTitle": "Graphic Designer",
+    "location": {
+      "city": "Kajang",
+      "country": "MY"
+    }
+  },
+  "social": {
+    "behance": "https://www.behance.net/yana03",
+    "linkedin": "https://www.linkedin.com/in/yana-sharif/"
+  },
+  "defaultImage": "/assets/images/common/profile-photo.png",
+  "defaultRobots": "index, follow",
+  "locale": "en_US",
+  "organization": {
+    "university": "Universiti Teknologi MARA (UiTM)"
+  },
+  "skills": [
+    "Graphic Design",
+    "Branding",
+    "UI/UX Design",
+    "Print Design",
+    "Adobe Illustrator",
+    "Adobe Photoshop",
+    "Adobe InDesign",
+    "Figma",
+    "Digital Graphics"
+  ]
+}
