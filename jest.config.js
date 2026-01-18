@@ -31,9 +31,10 @@ module.exports = {
   ],
   collectCoverageFrom: [
     'assets/js/**/*.js',
-    'build.js',
+    '!assets/js/theme-init.js', // Initialization script, tested via ThemeManager
     '!**/node_modules/**',
-    '!**/dist/**'
+    '!**/dist/**',
+    '!build.js' // Build-time script, not runtime code
   ],
   coverageThreshold: {
     global: {
