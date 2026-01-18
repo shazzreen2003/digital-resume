@@ -135,21 +135,23 @@ function initMobileDropdowns() {
 
 /**
  * Highlight the active page in navigation menu
+ * Note: In production, the build process already adds the active class.
+ * This function is a fallback for dev mode where nav is loaded dynamically.
  */
 function highlightActivePage() {
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  const navLinks = document.querySelectorAll('.nav-link');
+  // Skip if active class already exists (set by build process)
+  if (document.querySelector('.nav-link.active')) {
+    return;
+  }
 
+  // Fallback for dev mode: use data-page attribute
+  const currentPage = document.body.getAttribute('data-page');
+  if (!currentPage) return;
+
+  const navLinks = document.querySelectorAll('[data-nav]');
   navLinks.forEach(link => {
-    const linkPage = link.getAttribute('href');
-
-    // Check if current page matches link
-    if (linkPage === currentPage ||
-        (currentPage === '' && linkPage === 'index.html') ||
-        (currentPage === 'index.html' && linkPage === 'index.html')) {
+    if (link.getAttribute('data-nav') === currentPage) {
       link.classList.add('active');
-    } else {
-      link.classList.remove('active');
     }
   });
 }
