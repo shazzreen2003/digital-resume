@@ -15,26 +15,27 @@ const CONFIG = {
   componentsDir: path.join(__dirname, 'assets', 'components'),
 
   // Files/folders to copy as-is (not process)
-  assetsToCopy: ['assets/css', 'assets/images', 'assets/js'],
+  assetsToCopy: ['assets/css', 'assets/images', 'assets/js', 'assets/pdf'],
 
   // HTML files to process (relative to srcDir)
   htmlFiles: [
     'index.html',
-    'skills.html',
-    'contact.html',
-    'portfolio/bestwork.html',
-    'portfolio/projects.html',
-    'portfolio/branding/index.html',
-    'portfolio/branding/pearliewhite.html',
-    'portfolio/branding/rimbrew.html',
-    'portfolio/freelance/index.html',
-    'portfolio/uiux/careerbuddy.html',
-    'portfolio/uiux/jxtravel.html',
-    'portfolio/print/advertising.html',
-    'portfolio/print/packaging.html',
-    'portfolio/digital/3d.html',
-    'portfolio/digital/illustration.html',
-    'portfolio/digital/socialmedia.html'
+    'pages/about.html',
+    'pages/skills.html',
+    'pages/contact.html',
+    'pages/portfolio/bestwork.html',
+    'pages/portfolio/projects.html',
+    'pages/portfolio/branding/index.html',
+    'pages/portfolio/branding/pearliewhite.html',
+    'pages/portfolio/branding/rimbrew.html',
+    'pages/portfolio/freelance/index.html',
+    'pages/portfolio/uiux/careerbuddy.html',
+    'pages/portfolio/uiux/jxtravel.html',
+    'pages/portfolio/print/advertising.html',
+    'pages/portfolio/print/packaging.html',
+    'pages/portfolio/digital/3d.html',
+    'pages/portfolio/digital/illustration.html',
+    'pages/portfolio/digital/socialmedia.html'
   ]
 };
 

@@ -27,14 +27,19 @@
   function getPathPrefixFromLocation() {
     const path = window.location.pathname;
 
-    // Check if we're in a subdirectory
-    if (path.includes('/portfolio/')) {
-      // Check depth: /portfolio/branding/file.html = ../../
-      // /portfolio/file.html = ../
-      const afterPortfolio = path.split('/portfolio/')[1];
+    // Check if we're in pages/portfolio/ subdirectory
+    if (path.includes('/pages/portfolio/')) {
+      // Check depth: /pages/portfolio/branding/file.html = ../../../
+      // /pages/portfolio/file.html = ../../
+      const afterPortfolio = path.split('/pages/portfolio/')[1];
       if (afterPortfolio && afterPortfolio.includes('/')) {
-        return '../../';
+        return '../../../';
       }
+      return '../../';
+    }
+
+    // Check if we're in the pages/ subdirectory (but not portfolio)
+    if (path.includes('/pages/')) {
       return '../';
     }
 
@@ -82,11 +87,15 @@
   // Set active navigation state based on data-page attribute
   function setActiveNav() {
     const currentPage = document.body.getAttribute('data-page');
+    console.log('setActiveNav - currentPage:', currentPage);
     if (!currentPage) return;
 
     const navLinks = document.querySelectorAll('[data-nav]');
+    console.log('setActiveNav - found navLinks:', navLinks.length);
     navLinks.forEach(link => {
-      if (link.getAttribute('data-nav') === currentPage) {
+      const navValue = link.getAttribute('data-nav');
+      if (navValue === currentPage) {
+        console.log('setActiveNav - activating:', navValue);
         link.classList.add('active');
       } else {
         link.classList.remove('active');
