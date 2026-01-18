@@ -243,6 +243,68 @@ describe('Navigation', () => {
       expect(items[0].classList.contains('show')).toBe(true);
       expect(items[1].classList.contains('show')).toBe(true);
     });
+
+    it('should not add click listener when arrow element is missing', () => {
+      window.innerWidth = 991;
+
+      document.body.innerHTML = `
+        <nav>
+          <div class="nav-item dropdown">
+            <a class="nav-link">Portfolio</a>
+            <!-- No dropdown-arrow element -->
+          </div>
+        </nav>
+      `;
+
+      // Should not throw even without arrow element
+      expect(() => initMobileDropdowns()).not.toThrow();
+    });
+
+    it('should not add click listener on desktop (≥992px)', () => {
+      window.innerWidth = 1024;
+
+      document.body.innerHTML = `
+        <nav>
+          <div class="nav-item dropdown">
+            <a class="nav-link">Portfolio</a>
+            <span class="dropdown-arrow">▼</span>
+          </div>
+        </nav>
+      `;
+
+      const arrow = document.querySelector('.dropdown-arrow');
+      const addEventListenerSpy = jest.spyOn(arrow, 'addEventListener');
+
+      initMobileDropdowns();
+
+      // Should not add click listener on desktop
+      expect(addEventListenerSpy).not.toHaveBeenCalledWith('click', expect.any(Function));
+
+      addEventListenerSpy.mockRestore();
+    });
+
+    it('should not remove show class on resize when still mobile', () => {
+      window.innerWidth = 500;
+
+      document.body.innerHTML = `
+        <nav>
+          <div class="nav-item dropdown show">
+            <a class="nav-link">Portfolio</a>
+            <span class="dropdown-arrow">▼</span>
+          </div>
+        </nav>
+      `;
+
+      initMobileDropdowns();
+
+      // Simulate resize but still mobile
+      window.innerWidth = 768;
+      window.dispatchEvent(new Event('resize'));
+
+      const dropdown = document.querySelector('.nav-item.dropdown');
+      // Show class should remain since we're still in mobile range
+      expect(dropdown.classList.contains('show')).toBe(true);
+    });
   });
 
   describe('initNavigation()', () => {
@@ -281,6 +343,30 @@ describe('Navigation', () => {
 
       // Check if toggler was clicked (menu should close)
       expect(navbarToggler.click).toBeDefined();
+    });
+
+    it('should not click toggler when navbar is already collapsed', () => {
+      document.body.innerHTML = `
+        <div class="navbar-collapse">
+          <a class="nav-link">Home</a>
+          <a class="nav-link">About</a>
+        </div>
+        <button class="navbar-toggler"></button>
+      `;
+
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      const clickSpy = jest.spyOn(navbarToggler, 'click');
+      const navLinks = document.querySelectorAll('.nav-link');
+
+      initNavigation();
+
+      // Click a nav link when menu is not showing
+      navLinks[0].click();
+
+      // Toggler should not be clicked since navbar doesn't have 'show' class
+      expect(clickSpy).not.toHaveBeenCalled();
+
+      clickSpy.mockRestore();
     });
 
     it('should call initMobileDropdowns', () => {

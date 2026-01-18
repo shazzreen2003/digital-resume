@@ -37,3 +37,7 @@ node_modules/
 
 # Test coverage output
 coverage/
+
+# Playwright test artifacts
+playwright-report/
+test-results/
