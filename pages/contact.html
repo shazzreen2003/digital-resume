@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Theme Flash Prevention - must load before CSS -->
-  <script src="../assets/js/theme-init.js"></script>
-
   <!-- Meta Tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="{{t:pages.contact.metaDescription}}">
-  <meta name="keywords" content="{{t:pages.contact.metaKeywords}}">
+  <meta name="description" content="Contact Shazzreen Elyana for graphic design services. Get in touch for your next project.">
+  <meta name="keywords" content="contact, hire graphic designer, design services, get in touch">
   <meta name="author" content="Shazzreen Elyana">
 
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
 
   <!-- Page Title -->
-  <title>{{t:pages.contact.title}}</title>
+  <title>Contact Me - Shazzreen Elyana</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,7 +26,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body data-page="contact">
 
@@ -40,8 +37,8 @@
   <div class="container" style="margin-top: 90px;">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="../index.html">{{t:common.breadcrumbs.home}}</a></li>
-        <li class="breadcrumb-item active" aria-current="page">{{t:common.breadcrumbs.contact}}</li>
+        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Contact</li>
       </ol>
     </nav>
   </div>
@@ -49,8 +46,8 @@
   <!-- Page Hero -->
   <section class="page-hero" style="margin-top: 0;">
     <div class="container">
-      <h1 class="display-4">{{t:pages.contact.hero.heading}}</h1>
-      <p class="lead">{{t:pages.contact.hero.tagline}}</p>
+      <h1 class="display-4">Get In Touch</h1>
+      <p class="lead">Let's create something amazing together</p>
     </div>
   </section>
 
@@ -60,15 +57,15 @@
       <div class="row">
         <!-- Contact Information -->
         <div class="col-lg-5 mb-4 mb-lg-0">
-          <h3 class="mb-4">{{t:pages.contact.info.heading}}</h3>
-          <p class="mb-4">{{t:pages.contact.info.description}}</p>
+          <h3 class="mb-4">Contact Information</h3>
+          <p class="mb-4">Feel free to reach out to me for design projects, collaborations, or job opportunities. I'm always excited to work on new and challenging projects!</p>
 
           <!-- Contact Info Items -->
           <div class="contact-info">
             <div class="contact-info-item">
               <i class="bi bi-envelope-fill"></i>
               <div>
-                <h6 class="mb-1">{{t:pages.contact.info.email}}</h6>
+                <h6 class="mb-1">Email</h6>
                 <a href="mailto:your.email@example.com">nshazzreene@gmail.com</a>
               </div>
             </div>
@@ -76,7 +73,7 @@
             <div class="contact-info-item">
               <i class="bi bi-phone-fill"></i>
               <div>
-                <h6 class="mb-1">{{t:pages.contact.info.phone}}</h6>
+                <h6 class="mb-1">Phone</h6>
                 <a href="tel:+60123456789">013 544 9715</a>
               </div>
             </div>
@@ -84,25 +81,55 @@
             <div class="contact-info-item">
               <i class="bi bi-geo-alt-fill"></i>
               <div>
-                <h6 class="mb-1">{{t:pages.contact.info.location}}</h6>
-                <p class="mb-0">{{t:pages.contact.info.locationValue}}</p>
+                <h6 class="mb-1">Location</h6>
+                <p class="mb-0">Kajang, Malaysia</p>
               </div>
             </div>
 
 
             <div class="contact-info-item">
+              <!--
+              <i class="bi bi-clock-fill"></i>
+
+              <div>
+                <h6 class="mb-1">Availability</h6>
+                <p class="mb-0">Monday - Friday, 9:00 AM - 6:00 PM</p>
+              </div>
+              -->
             </div>
           </div>
+
+          <!-- Social Links -->
+          <!--
+          <div class="mt-4">
+            <h5 class="mb-3">Connect on Social Media</h5>
+
+            <div class="social-links">
+              <a href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank" class="social-link" aria-label="WhatsApp" title="WhatsApp">
+                <i class="bi bi-whatsapp"></i>
+              </a>
+              <a href="https://www.behance.net/YOUR_USERNAME" target="_blank" class="social-link" aria-label="Behance" title="Behance">
+                <i class="bi bi-behance"></i>
+              </a>
+              <a href="https://dribbble.com/YOUR_USERNAME" target="_blank" class="social-link" aria-label="Dribbble" title="Dribbble">
+                <i class="bi bi-dribbble"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/YOUR_USERNAME" target="_blank" class="social-link" aria-label="LinkedIn" title="LinkedIn">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+          -->
 
           <!-- Download CV -->
           <div class="mt-4">
             <a href="../assets/images/common/resume-digital.jpg" class="btn btn-outline-primary" download>
-              <i class="bi bi-download me-2"></i>{{t:common.buttons.downloadResume}}
+              <i class="bi bi-download me-2"></i>Download My Resume
             </a>
           </div>
           <div class="alert alert-info mt-4 mb-5" role="alert">
             <i class="bi bi-lightbulb-fill me-2"></i>
-            <strong>{{t:pages.contact.info.quickResponse}}</strong> {{t:pages.contact.info.quickResponseText}}
+            <strong>Quick Response:</strong> I typically respond to all inquiries within 24-48 hours. For urgent matters, please contact me directly via WhatsApp or phone.
           </div>
         </div>
 
@@ -110,7 +137,7 @@
         <div class="col-lg-7">
           <div class="card shadow-custom">
             <div class="card-body p-4">
-              <h3 class="mb-4">{{t:pages.contact.form.heading}}</h3>
+              <h3 class="mb-4">Send Me a Message</h3>
 
               <form id="contactForm" action="https://formspree.io/f/xjggvaor" method="POST" novalidate>
                 <!-- Formspree hidden fields -->
@@ -119,32 +146,32 @@
 
                 <!-- Name Field -->
                 <div class="mb-3">
-                  <label for="name" class="form-label">{{t:pages.contact.form.fullName}} <span class="text-accent">*</span></label>
-                  <input type="text" class="form-control" id="name" name="name" placeholder="{{t:pages.contact.form.fullNamePlaceholder}}" required>
+                  <label for="name" class="form-label">Full Name <span class="text-accent">*</span></label>
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" required>
                 </div>
 
                 <!-- Email Field -->
                 <div class="mb-3">
-                  <label for="email" class="form-label">{{t:pages.contact.form.emailAddress}} <span class="text-accent">*</span></label>
-                  <input type="email" class="form-control" id="email" name="email" placeholder="{{t:pages.contact.form.emailPlaceholder}}" required>
+                  <label for="email" class="form-label">Email Address <span class="text-accent">*</span></label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="your.email@example.com" required>
                 </div>
 
                 <!-- Subject Field -->
                 <div class="mb-3">
-                  <label for="subject" class="form-label">{{t:pages.contact.form.subject}} <span class="text-accent">*</span></label>
-                  <input type="text" class="form-control" id="subject" name="subject" placeholder="{{t:pages.contact.form.subjectPlaceholder}}" required>
+                  <label for="subject" class="form-label">Subject <span class="text-accent">*</span></label>
+                  <input type="text" class="form-control" id="subject" name="subject" placeholder="What is this about?" required>
                 </div>
 
                 <!-- Message Field -->
                 <div class="mb-3">
-                  <label for="message" class="form-label">{{t:pages.contact.form.message}} <span class="text-accent">*</span></label>
-                  <textarea class="form-control" id="message" name="message" rows="6" placeholder="{{t:pages.contact.form.messagePlaceholder}}" required></textarea>
+                  <label for="message" class="form-label">Message <span class="text-accent">*</span></label>
+                  <textarea class="form-control" id="message" name="message" rows="6" placeholder="Tell me about your project or inquiry..." required></textarea>
                 </div>
 
                 <!-- Submit Button -->
                 <div class="d-grid">
                   <button type="submit" class="btn btn-primary btn-lg">
-                    <i class="bi bi-send me-2"></i>{{t:common.buttons.sendMessage}}
+                    <i class="bi bi-send me-2"></i>Send Message
                   </button>
                 </div>
 
@@ -152,13 +179,15 @@
                 <div class="mt-3">
                   <small class="text-muted">
                     <i class="bi bi-info-circle me-1"></i>
-                    {{t:pages.contact.form.required}}
+                    All fields marked with <span class="text-accent">*</span> are required.
                   </small>
                 </div>
               </form>
 
             </div>
           </div>
+
+          <!-- Optional: Info about response time -->
 
         </div>
       </div>
@@ -169,39 +198,39 @@
   <section class="bg-light-gray">
     <div class="container">
       <div class="section-title">
-        <h2>{{t:pages.contact.whyWorkWithMe.heading}}</h2>
+        <h2>Why Work With Me?</h2>
       </div>
 
       <div class="row g-4">
         <div class="col-md-6 col-lg-3">
           <div class="text-center p-4 bg-white rounded-custom shadow-sm h-100">
             <i class="bi bi-award-fill text-accent" style="font-size: 3rem;"></i>
-            <h5 class="mt-3 mb-2">{{t:pages.contact.whyWorkWithMe.qualityWork.title}}</h5>
-            <p class="mb-0 text-muted">{{t:pages.contact.whyWorkWithMe.qualityWork.description}}</p>
+            <h5 class="mt-3 mb-2">Quality Work</h5>
+            <p class="mb-0 text-muted">Committed to delivering high-quality designs</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-3">
           <div class="text-center p-4 bg-white rounded-custom shadow-sm h-100">
             <i class="bi bi-lightning-charge-fill text-accent" style="font-size: 3rem;"></i>
-            <h5 class="mt-3 mb-2">{{t:pages.contact.whyWorkWithMe.fastTurnaround.title}}</h5>
-            <p class="mb-0 text-muted">{{t:pages.contact.whyWorkWithMe.fastTurnaround.description}}</p>
+            <h5 class="mt-3 mb-2">Fast Turnaround</h5>
+            <p class="mb-0 text-muted">Efficient workflow ensures timely delivery without compromising quality</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-3">
           <div class="text-center p-4 bg-white rounded-custom shadow-sm h-100">
             <i class="bi bi-chat-dots-fill text-accent" style="font-size: 3rem;"></i>
-            <h5 class="mt-3 mb-2">{{t:pages.contact.whyWorkWithMe.clearCommunication.title}}</h5>
-            <p class="mb-0 text-muted">{{t:pages.contact.whyWorkWithMe.clearCommunication.description}}</p>
+            <h5 class="mt-3 mb-2">Clear Communication</h5>
+            <p class="mb-0 text-muted">Regular updates and open communication throughout the project</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-3">
           <div class="text-center p-4 bg-white rounded-custom shadow-sm h-100">
             <i class="bi bi-infinity text-accent" style="font-size: 3rem;"></i>
-            <h5 class="mt-3 mb-2">{{t:pages.contact.whyWorkWithMe.unlimitedRevisions.title}}</h5>
-            <p class="mb-0 text-muted">{{t:pages.contact.whyWorkWithMe.unlimitedRevisions.description}}</p>
+            <h5 class="mt-3 mb-2">Unlimited Revisions</h5>
+            <p class="mb-0 text-muted">Work together until you're 100% satisfied with the final result</p>
           </div>
         </div>
       </div>

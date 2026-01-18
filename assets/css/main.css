@@ -1,7 +1,0 @@
-/* Main CSS - Imports all modules in correct order */
-@import 'variables.css';
-@import 'base.css';
-@import 'components.css';
-@import 'layouts.css';
-@import 'responsive.css';
-@import 'dark-mode.css';
