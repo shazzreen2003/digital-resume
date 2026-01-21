@@ -278,6 +278,9 @@ function generateSeoMeta(filePath, seoConfig) {
   const canonicalUrl = seoConfig.baseUrl + '/' + filePath;
 
   // Replace placeholders
+  seoMeta = seoMeta.replace(/\{\{META_DESCRIPTION\}\}/g, pageMetadata.description);
+  seoMeta = seoMeta.replace(/\{\{AUTHOR_NAME\}\}/g, seoConfig.author.name);
+  seoMeta = seoMeta.replace(/\{\{PUBLISH_DATE\}\}/g, new Date().toISOString().split('T')[0]);
   seoMeta = seoMeta.replace(/\{\{SITE_NAME\}\}/g, seoConfig.siteName);
   seoMeta = seoMeta.replace(/\{\{LOCALE\}\}/g, seoConfig.locale);
   seoMeta = seoMeta.replace(/\{\{OG_TYPE\}\}/g, pageMetadata.ogType);
