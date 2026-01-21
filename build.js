@@ -285,6 +285,18 @@ function generateSeoMeta(filePath, seoConfig) {
   seoMeta = seoMeta.replace(/\{\{OG_DESCRIPTION\}\}/g, pageMetadata.description);
   seoMeta = seoMeta.replace(/\{\{OG_URL\}\}/g, canonicalUrl);
   seoMeta = seoMeta.replace(/\{\{OG_IMAGE\}\}/g, fullImageUrl);
+  seoMeta = seoMeta.replace(/\{\{OG_IMAGE_ALT\}\}/g, pageMetadata.title + ' - ' + seoConfig.siteName);
+
+  // Add article-specific meta tags for article pages
+  let articleMeta = '';
+  if (pageMetadata.ogType === 'article') {
+    articleMeta = `  <meta property="article:author" content="${seoConfig.author.name}">\n`;
+    if (pageMetadata.projectData && pageMetadata.projectData.dateCreated) {
+      articleMeta += `  <meta property="article:published_time" content="${pageMetadata.projectData.dateCreated}-01-01T00:00:00+00:00">`;
+    }
+  }
+  seoMeta = seoMeta.replace(/\{\{ARTICLE_META\}\}/g, articleMeta);
+
   seoMeta = seoMeta.replace(/\{\{TWITTER_TITLE\}\}/g, pageMetadata.title);
   seoMeta = seoMeta.replace(/\{\{TWITTER_DESCRIPTION\}\}/g, pageMetadata.description);
   seoMeta = seoMeta.replace(/\{\{TWITTER_IMAGE\}\}/g, fullImageUrl);
