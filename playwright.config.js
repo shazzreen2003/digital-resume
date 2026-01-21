@@ -66,7 +66,7 @@ module.exports = defineConfig({
   webServer: {
     command: 'npm run build && npx serve dist -l 3000',
     url: 'http://localhost:3000',
-    reuseExistingServer: false,
+    reuseExistingServer: !process.env.CI,
     timeout: 120000,
   },
 });
