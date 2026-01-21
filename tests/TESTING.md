@@ -143,7 +143,7 @@ npm run preview
 ```
 Push to main branch
 Wait for deployment
-Check https://digital-resume-khaki-ten.vercel.app/
+Check https://www.yanasharif.com/
 ```
 
 ---

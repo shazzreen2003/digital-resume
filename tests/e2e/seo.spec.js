@@ -400,7 +400,7 @@ test.describe('SEO Files', () => {
       const response = await request.get('/sitemap.xml');
       const content = await response.text();
 
-      expect(content).toContain('https://digital-resume-khaki-ten.vercel.app');
+      expect(content).toContain('https://www.yanasharif.com');
     });
 
     test('sitemap.xml has required elements', async ({ request }) => {
@@ -434,7 +434,7 @@ test.describe('SEO Files', () => {
       const response = await request.get('/robots.txt');
       const content = await response.text();
 
-      expect(content).toContain('Sitemap: https://digital-resume-khaki-ten.vercel.app/sitemap.xml');
+      expect(content).toContain('Sitemap: https://www.yanasharif.com/sitemap.xml');
     });
   });
 });

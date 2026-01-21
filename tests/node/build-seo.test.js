@@ -26,7 +26,7 @@ describe('SEO Build Functions', () => {
 
   // Mock SEO config
   const mockSeoConfig = {
-    baseUrl: 'https://digital-resume-khaki-ten.vercel.app',
+    baseUrl: 'https://www.yanasharif.com',
     siteName: 'Shazzreen Elyana - Graphic Designer',
     locale: 'en_US',
     defaultRobots: 'index, follow',
@@ -103,7 +103,7 @@ describe('SEO Build Functions', () => {
       const result = loadSeoConfig();
 
       expect(result).toEqual(mockSeoConfig);
-      expect(result.baseUrl).toBe('https://digital-resume-khaki-ten.vercel.app');
+      expect(result.baseUrl).toBe('https://www.yanasharif.com');
       expect(result.siteName).toBe('Shazzreen Elyana - Graphic Designer');
     });
 
@@ -201,7 +201,7 @@ describe('SEO Build Functions', () => {
     test('should generate canonical URL correctly', () => {
       const result = generateSeoMeta('pages/about.html', mockSeoConfig, mockPageMetadata);
 
-      expect(result).toContain('<link rel="canonical" href="https://digital-resume-khaki-ten.vercel.app/pages/about.html">');
+      expect(result).toContain('<link rel="canonical" href="https://www.yanasharif.com/pages/about.html">');
     });
 
     test('should generate robots meta tag', () => {
@@ -213,7 +213,7 @@ describe('SEO Build Functions', () => {
     test('should use full URL for images', () => {
       const result = generateSeoMeta('pages/about.html', mockSeoConfig, mockPageMetadata);
 
-      expect(result).toContain('https://digital-resume-khaki-ten.vercel.app/assets/images/common/profile-photo.png');
+      expect(result).toContain('https://www.yanasharif.com/assets/images/common/profile-photo.png');
     });
 
     test('should handle portfolio pages with article type', () => {
@@ -385,9 +385,9 @@ describe('SEO Build Functions', () => {
       const htmlFiles = ['index.html', 'pages/about.html', 'pages/skills.html'];
       const result = generateSitemap(mockSeoConfig, htmlFiles);
 
-      expect(result).toContain('<loc>https://digital-resume-khaki-ten.vercel.app/index.html</loc>');
-      expect(result).toContain('<loc>https://digital-resume-khaki-ten.vercel.app/pages/about.html</loc>');
-      expect(result).toContain('<loc>https://digital-resume-khaki-ten.vercel.app/pages/skills.html</loc>');
+      expect(result).toContain('<loc>https://www.yanasharif.com/index.html</loc>');
+      expect(result).toContain('<loc>https://www.yanasharif.com/pages/about.html</loc>');
+      expect(result).toContain('<loc>https://www.yanasharif.com/pages/skills.html</loc>');
     });
 
     test('should set correct priorities for main pages', () => {
@@ -459,7 +459,7 @@ Sitemap: ${seoConfig.baseUrl}/sitemap.xml
     test('should include sitemap URL', () => {
       const result = generateRobotsTxt(mockSeoConfig);
 
-      expect(result).toContain('Sitemap: https://digital-resume-khaki-ten.vercel.app/sitemap.xml');
+      expect(result).toContain('Sitemap: https://www.yanasharif.com/sitemap.xml');
     });
 
     test('should include site name in header comment', () => {

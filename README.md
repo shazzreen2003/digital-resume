@@ -117,6 +117,26 @@ This will:
 npx serve dist
 ```
 
+## Available Commands
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run clean` | Clean dist folder |
+| `npm test` | Run Jest unit tests |
+| `npm run test:all` | Run all tests (Jest + Playwright) |
+| `npm run test:watch` | Run tests in watch mode |
+| `npm run test:coverage` | Run tests with coverage report |
+| `npm run test:browser` | Run browser tests only |
+| `npm run test:node` | Run Node tests only |
+| `npm run test:ci` | Run tests for CI environment |
+| `npm run test:e2e` | Run Playwright E2E tests |
+| `npm run test:e2e:ui` | Run E2E tests with UI |
+| `npm run test:e2e:headed` | Run E2E tests in headed mode |
+| `npm run test:e2e:debug` | Run E2E tests in debug mode |
+
 ## Navigation Structure
 
 The site features hover dropdown navigation for portfolio sections:
