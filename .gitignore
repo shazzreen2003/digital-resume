@@ -41,3 +41,6 @@ coverage/
 # Playwright test artifacts
 playwright-report/
 test-results/
+
+# Personal psychometric material - never publish (this repo is PUBLIC)
+Yana_Personality_Report.*
